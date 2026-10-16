@@ -44,6 +44,15 @@ repo copies are byte-identical (same MD5) to the re-uploaded files.
 - **Menu Burnt Into Screen.jpg**: camera LCD (flipped out) running live view (1/50, F3.5, Auto ISO 320, 0:00 timecode) with a faint, semi-transparent ghost of the "Power Setting Option" menu text (Power Save Start Time / Power Save by Monitor "Does Not Link" / Auto Power OFF Temp.) showing through the live image. The live image and overlays update normally, so this is a faint ghost (image retention), not a frozen screen. Likely temporary on an LCD, but it could persist if static menus stay on for hours.
 - **Shutter 1/50 and Auto ISO**: current exposure is Auto ISO (the "A" before ISO 320) and 1/50 s. 1/50 is the 180-degree value for 25 fps, which suggests the camera is on PAL (25p/50p), normal for the UK. Check NTSC/PAL Selector before Step 3/4: on PAL, "30 fps" is really 25 fps and the shutter rule is 1/50 (25p) or 1/100 (50p).
 
+## Camera menu + OBS settings photos (viewed in v1.4.0)
+- **ZV E-10 Zoom Range.jpg**: MENU > Camera Settings2 tab (page "Zoom" 6/9): Zoom Range = **ClearImage Zoom**, plus Zoom Lever Speed, Custom Key Z. Speed, Remote Zoom Speed. Step 2 setting is on.
+- **ZV E-10 File Format.jpg**: File Format list; **XAVC S HD** is the selected option (XAVC S 4K not selected).
+- **ZV E-10 4K Output Select.jpg**: options **Memory Card+HDMI** (selected) and **HDMI Only(25p)** (25p option appears because the camera is on PAL).
+- **ZV E-10 HDMI Settings.jpg**: HDMI Resolution = Auto, **HDMI Info. Display = Off**, TC Output = Off, REC Control greyed, CTRL FOR HDMI = On.
+- **OBS Cam Link 4K Settings 1.png**: Cam Link driver "Video Proc Amp" dialog: Brightness 0, Contrast 128, Hue 0, Saturation 128 (all defaults, Auto unticked); other controls greyed out.
+- **OBS Cam Link 4K Settings 2.png**: OBS Video Capture Device properties: Resolution/FPS Type = **Device Default** (Resolution and FPS greyed, FPS "Match Output FPS"), Video Format Any, Colour Space Default, Colour Range Default, Buffering Auto-Detect, Flip Vertically off, Apply rotation data on.
+- **OBS Cam Link 4K Settings 3.png**: lower part of the same dialog: Use hardware decoding off, Audio Output Mode = Capture audio only, custom audio device off.
+
 ## Take-aways for the checklist
 - Target look = sharp, low-noise, evenly lit: supports Step 4 (low ISO, manual exposure) and Step 6 (more key light).
 - The softness/noise in the problem samples is consistent with OBS crop-zoom and low light

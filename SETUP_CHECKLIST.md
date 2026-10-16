@@ -9,14 +9,15 @@ _Update v1.3.5: camera USB-C now on the WW07-G3b-PD adapter's USB-C port, shows 
 - [x] USB-C cable to dedicated USB-C PD wall adapter (not motherboard port) (photos verified v1.3.4: black USB-C cable in the side port, adapter on surge strip; alt connector WW07-G3b-PD is PD 20W max - USB-C + USB-A share 5V 3A, so keep its other ports empty; Image Files/JPG/ZV E-10 USB-C Connected 1/2.jpg)
 
 ## Step 2 — Zoom Memory & Quality
-- [ ] Keep camera switched ON (USB-C PD powered) between streams; do not power it off (no true standby exists while USB/HDMI connected)
-- [ ] MENU -> Camera Settings2 -> Zoom Range -> Clear Image Zoom (about 1.5x in 4K, 2x in HD; path corrected v1.3.5)
-- [ ] (Optional) Upgrade to manual zoom lens (Sigma 18-50 f/2.8 / Tamron 17-70 f/2.8)
+- [x] Keep camera switched ON (USB-C PD powered) between streams; do not power it off (no true standby exists while USB/HDMI connected) - agreed with user v1.4.0
+- [x] MENU -> Camera Settings2 -> Zoom Range -> ClearImage Zoom (photo verified v1.4.0: Zoom Range = ClearImage Zoom; about 1.5x in 4K, 2x in HD)
+- [ ] (Optional, deferred) Upgrade to manual zoom lens (Sigma 18-50 f/2.8 / Tamron 17-70 f/2.8) - user plans to price on Amazon UK later
+_Step 2 core items complete in v1.4.0._
 
 ## Step 3 — OBS & Cam Link 4K
 - [x] Cam Link 4K plugged into REAR 10G (red) port (upgraded from 5G blue) — photo viewed v1.3.3: Cam Link sits next to the right 10G port, most likely in the hidden left 10G port; Image Files/JPG/Cam Link 4K Connected.jpg / USB 10G Ports.jpg. Note: Cam Link 4K is USB 3.0 (5 Gbps), so 10G gives no extra speed - rear 5G/10G are equally fine
-- [ ] Menu -> Setup -> HDMI Settings -> HDMI Info Display -> OFF
-- [ ] OBS source: Custom, 3840x2160 or 1920x1080, FPS = 30 (match camera; no 60 on 4K)
+- [x] Menu -> Setup -> HDMI Settings -> HDMI Info. Display -> OFF (photo verified v1.4.0; HDMI Resolution Auto, TC Output Off, CTRL FOR HDMI On)
+- [ ] (Currently Device Default / camera File Format = XAVC S HD / 4K Output Select = Memory Card+HDMI) OBS source: Custom, 3840x2160 or 1920x1080, FPS = 30 (match camera; no 60 on 4K)
 
 ## Step 4 — Exposure & Sharpness (Manual)
 - [ ] Mode dial Movie, Exposure Mode M

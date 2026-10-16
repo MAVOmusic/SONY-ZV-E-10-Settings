@@ -3,6 +3,14 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.4.0] - Step 2 complete; Step 3 HDMI item done
+- Verified by photo: Zoom Range = ClearImage Zoom (Camera Settings2, Zoom page 6/9). Step 2 ticked (optional lens deferred).
+- Verified by photo: HDMI Info. Display = Off. Step 3 HDMI item ticked.
+- Recorded current state: File Format = XAVC S HD, 4K Output Select = Memory Card+HDMI, HDMI Resolution = Auto.
+- Recorded OBS Cam Link source: Device Default, Colour Space/Range Default, Buffering Auto-Detect, hardware decoding off, audio = capture audio only; driver Video Proc Amp all defaults.
+- Added settings screenshots (OBS x3, camera menus x4) and Settings Files/YAML/current_settings.yaml.
+- Still to do in Step 3: OBS source to Custom 3840x2160 @ 25 fps (PAL) with camera in 4K, HDMI Only(25p).
+
 ## [1.3.5] - Step 2 started: corrections after checking Sony's help guide
 - Corrected menu path: Clear Image Zoom lives under "Zoom Range" (MENU -> Camera Settings2 -> Zoom Range), not "Zoom Setting".
 - Corrected "standby" advice: no true standby on ZV-E10 while USB-powered/HDMI-connected (Power Save is disabled). Advice is now: leave the camera ON.

@@ -1,0 +1,30 @@
+# Snapshot of verified settings (from photos), updated v1.4.0
+# Source of truth for what is set NOW; targets live in CONTEXT.md / SETUP_CHECKLIST.md
+camera:
+  model: Sony ZV-E10
+  lens: E PZ 16-50mm f/3.5-5.6 OSS
+  region_system: PAL            # confirmed by user v1.3.5
+  power: USB-C PD via WW07-G3b-PD adapter (USB-C port, 20W max), shows charging
+  lcd: flipped out ~90 degrees
+  auto_power_off_temp: High     # verified photo
+  power_save_start_time: Off
+  power_save_by_monitor: Does Not Link
+  zoom_range: ClearImage Zoom   # verified photo v1.4.0
+  file_format: XAVC S HD        # verified photo v1.4.0 (4K not selected)
+  hdmi_resolution: Auto
+  hdmi_info_display: Off        # verified photo v1.4.0
+  tc_output: Off
+  ctrl_for_hdmi: On
+  four_k_output_select: Memory Card+HDMI   # target for 4K streaming: HDMI Only(25p)
+  observed_exposure: {shutter: 1/50, aperture: F3.5, iso: Auto (320 seen)}   # needs manual lock in Step 4
+obs_cam_link_source:
+  resolution_fps_type: Device Default      # target: Custom 3840x2160 @ 25 fps (PAL) when camera is 4K
+  video_format: Any
+  colour_space: Default
+  colour_range: Default
+  buffering: Auto-Detect
+  hardware_decoding: false
+  audio_output_mode: Capture audio only
+  driver_video_proc_amp: {brightness: 0, contrast: 128, hue: 0, saturation: 128}
+host:
+  cam_link_port: rear USB 10G red port (likely left one); Cam Link 4K itself is USB 3.0 / 5 Gbps
