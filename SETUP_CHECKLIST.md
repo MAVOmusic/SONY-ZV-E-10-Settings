@@ -50,8 +50,12 @@ Result of 11 screenshots (ISO 500, F3.5, 1/50, WB 4700K; Image Files/JPG/Picture
 Goal: close the "Chainbrain video looks cleaner" gap. The Vertical canvas keeps the black-and-white filter on purpose (user, v1.9.0).
 - [x] Heat: orange temperature icon gone about 10 minutes after the fan (user)
 - [ ] Like-for-like check: one frame from the user's own VOD (same player, Source quality) next to the Chainbrain VOD frame; plus a 100% (1:1) screenshot of the full 4K source (OBS preview at 100%)
-- [ ] OBS Settings -> Video: base and output resolution, FPS (25 or 50, not 30/60), downscale filter (Lanczos)
-- [ ] OBS Settings -> Output: encoder (NVENC), rate control, bitrate, keyframe 2 s, preset/tuning; separate local recording settings for YouTube uploads
+- [x] OBS Settings -> Video (screenshot v1.9.1): base 1920x1080, output 1920x1080, 25 PAL; downscale filter n/a because the resolutions match. Correct, no change
+- [x] OBS Settings -> Output -> Streaming (screenshot v1.9.1): NVENC H.264, CBR 8000 kbps, keyframe 0 (auto), P4 Medium, High Quality tuning, Two Passes (Quarter Res), profile high, B-frames 2, Look-ahead OFF, Adaptive Quantisation OFF, Rescale Output off. 8000 kbps at 25 fps is generous (about 320 kbit per frame vs about 100 for 6000 kbps at 60 fps), so bitrate is not the limit.
+- [ ] Recommended change (not applied yet): Keyframe interval 2 s; Preset P5 (or P6); Look-ahead ON; Adaptive Quantisation ON; Multipass Full Resolution optional. Check GPU load and dropped frames after (revert to P4 if the GPU struggles)
+- [ ] Output -> Recording tab (not seen yet): separate high-quality local recording for YouTube uploads
+- [ ] Aitum Multistream (Twitch main, Kick and Blaze clone it) and Aitum Vertical output settings: encoder, bitrate, keyframe, resolution, FPS (not seen yet)
+- [ ] Check the Chainbrain VOD's frame rate (Twitch player gear -> Advanced -> Video Stats). If it is 60 fps, part of the 'cleaner' look is motion smoothness; our 4K source is limited to 25 fps
 - [ ] OBS camera source: Buffering Disable, NV12 if offered, Lanczos on every clone incl. the vertical one
 - [ ] OBS Stats dock: skipped / missed / dropped frames after 10 minutes
 - [ ] Camera: focus (Continuous AF vs manual focus locked on the seat), DRO (D-Range Optimizer) value, Soft Skin Effect and Background Defocus Off

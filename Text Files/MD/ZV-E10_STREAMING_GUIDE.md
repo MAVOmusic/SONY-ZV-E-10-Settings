@@ -72,16 +72,22 @@ A 3840x2160 source on a 1920x1080 canvas looks like a massive zoom-in because OB
 - Coloured room lights (LED strips/lamps) at a low brightness (here 28%) keep the white furniture neutral instead of tinted.
 - Faster lens maths: light gain = (old f-number / new f-number) squared. F3.5 to F2.8 is about 0.6 stop; F3.5 to F1.4 is about 2.6 stops.
 
-## 9. Delay and sync
+## 9. OBS encoder (NVIDIA GPU)
+Settings -> Output -> Advanced: NVENC H.264, CBR, keyframe interval **2 s** (platforms expect this; "0 = auto" is not the same), preset **P5/P6** (P4 is fine if the GPU is busy),
+tuning High Quality, **Look-ahead and Adaptive Quantisation on** (they help flat, dark areas look less blocky), B-frames 2.
+At 25 fps even 6000-8000 kbps is a lot of data per frame, so the encoder is rarely the quality limit for a talking-head scene.
+Check View -> Stats for dropped frames after changing anything.
+
+## 10. Delay and sync
 HDMI capture adds about 100-200 ms. Set OBS Buffering = Disable, then delay the microphone with Advanced Audio Properties -> Sync Offset until a clap
 is in sync (record a clap and compare the spikes).
 
-## 10. Things that did NOT help (so you can skip them)
+## 11. Things that did NOT help (so you can skip them)
 - Recommending PP11 (does not exist on this model).
 - Lowering white balance to 4300K for cooler skin (about the same, slightly worse).
 - A Sharpen filter on top of 4K video (looked crunchy; removed).
 
-## 11. Quick checklist before a long stream
+## 12. Quick checklist before a long stream
 1. Camera on (never power-cycled), orange temperature icon not showing, fan running.
 2. Manual Exposure, 1/50, F3.5, ISO fixed, WB fixed, PP Off.
 3. OBS: 3840x2160 @ 25 source, Buffering Disable, Lanczos on every clone, canvas 25/50 fps.

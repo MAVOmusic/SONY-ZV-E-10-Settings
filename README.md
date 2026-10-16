@@ -15,7 +15,8 @@ Rig: ZV-E10 (PAL) + E PZ 16-50mm, Elgato Cam Link 4K, USB-C power, OBS 32.1.2 on
 | Colour | Picture Profile Off, Creative Style Standard (0/0/0), WB 4700K |
 | Light | Elgato Key Light 4700K 48% (fixed position), LED lamps 28% (left blue, right red) |
 | OBS crops | see `OBS & Stream Files/SCENE/crop_presets.yaml` |
-| Vertical | black-and-white filter on purpose (main look); may change to no filter by default |
+| Vertical | Aitum Vertical; black-and-white filter on purpose (main look); may change to no filter by default |
+| Streaming | OBS 1080p25, NVENC H.264 CBR 8000 kbps; Aitum Multistream to Twitch (main), Kick, Blaze |
 
 ## Files
 - `Text Files/MD/ZV-E10_STREAMING_GUIDE.md` - **hand-over guide** for anyone with the same camera (no personal data).

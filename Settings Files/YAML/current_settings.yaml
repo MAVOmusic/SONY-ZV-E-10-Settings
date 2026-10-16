@@ -107,3 +107,9 @@ step7_started_v1_9_0:
   temperature_icon: gone about 10 minutes after the fan was turned on (user)
   obs_vertical_default_filter: black and white (intentional; may change to none)
   shaderfilter_count: 25+ (to retune in Step 8)
+
+obs_output_v1_9_1:
+  canvas: {base: 1920x1080, output: 1920x1080, fps: 25 PAL, downscale_filter: n/a (same size)}
+  streaming: {output_mode: Advanced, video_encoder: NVIDIA NVENC H.264, rate_control: CBR, bitrate_kbps: 8000, keyframe_s: 0 (auto), preset: P4 Medium, tuning: High Quality, multipass: Two Passes (Quarter Resolution), profile: high, look_ahead: false, adaptive_quantisation: false, b_frames: 2, rescale_output: Disabled, audio_encoder: FFmpeg AAC, twitch_vod_track: 2}
+  plugins: {multistream: Aitum Multistream (Twitch main, Kick and Blaze clone it), vertical: Aitum Vertical}
+  recommended_not_applied: {keyframe_s: 2, preset: P5 or P6, look_ahead: true, adaptive_quantisation: true}

@@ -3,6 +3,11 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.9.1] - OBS output settings reviewed
+- OBS Video and Output (Streaming) screenshots read: 1080p25 canvas, NVENC H.264 CBR 8000 kbps, keyframe auto, P4, Look-ahead and Adaptive Quantisation off. Video settings are correct. Recommended: keyframe 2 s, P5/P6, Look-ahead and Adaptive Quantisation on (not applied yet).
+- Multistream uses Aitum Multistream (Twitch main; Kick and Blaze clone it). The vertical view is Aitum Vertical (not the plain OBS dock).
+- Finding: at 25 fps, 8000 kbps is about 3x the bits per frame of 6000 kbps at 60 fps, so bitrate is not the cause of the quality gap.
+
 ## [1.9.0] - Step 7 started, README and hand-over guide
 - README rewritten (final settings table, file list, working rules: update the docs on every edit).
 - New shareable guide `Text Files/MD/ZV-E10_STREAMING_GUIDE.md` (no personal data) for others with the same camera.
