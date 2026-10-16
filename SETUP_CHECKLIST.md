@@ -3,13 +3,14 @@
 Tick each step as completed. Update VERSION.txt and CHANGELOG.md when a setup is completed.
 
 ## Step 1 — Thermal & Power Management (24h operation)
+_Update v1.3.5: camera USB-C now on the WW07-G3b-PD adapter's USB-C port, shows charging. Region confirmed PAL (25p/50p)._
 - [x] Flip LCD screen out 90-180 degrees from body (done; photo verified v1.3.3: LCD swung out ~90 degrees to the side; Image Files/JPG/ZV E-10 Panel Out.jpg)
 - [x] Menu -> Setup (Yellow Toolbox) -> Power Option -> Auto Power OFF Temp. -> HIGH (photo verified v1.3.4: menu shows Auto Power OFF Temp. = High; Image Files/JPG/ZV E-10 Power Temp-High.jpg)
 - [x] USB-C cable to dedicated USB-C PD wall adapter (not motherboard port) (photos verified v1.3.4: black USB-C cable in the side port, adapter on surge strip; alt connector WW07-G3b-PD is PD 20W max - USB-C + USB-A share 5V 3A, so keep its other ports empty; Image Files/JPG/ZV E-10 USB-C Connected 1/2.jpg)
 
 ## Step 2 — Zoom Memory & Quality
-- [ ] Keep camera powered via USB-C PD; use standby, not full power-down
-- [ ] Menu -> Movie -> Zoom -> Zoom Setting -> Clear Image Zoom -> ON
+- [ ] Keep camera switched ON (USB-C PD powered) between streams; do not power it off (no true standby exists while USB/HDMI connected)
+- [ ] MENU -> Camera Settings2 -> Zoom Range -> Clear Image Zoom (about 1.5x in 4K, 2x in HD; path corrected v1.3.5)
 - [ ] (Optional) Upgrade to manual zoom lens (Sigma 18-50 f/2.8 / Tamron 17-70 f/2.8)
 
 ## Step 3 — OBS & Cam Link 4K
@@ -19,7 +20,7 @@ Tick each step as completed. Update VERSION.txt and CHANGELOG.md when a setup is
 
 ## Step 4 — Exposure & Sharpness (Manual)
 - [ ] Mode dial Movie, Exposure Mode M
-- [ ] Shutter 1/60 (30fps) or 1/120 (60fps)
+- [ ] Shutter 1/50 (25p, PAL) or 1/100 (50p); on NTSC 1/60 (30p) or 1/120 (60p)
 - [ ] Aperture lowest (f/3.5 wide / f/5.6 tele)
 - [ ] ISO locked 100-400 (no Auto ISO)
 - [ ] White Balance locked (e.g. 5500K), AWB off

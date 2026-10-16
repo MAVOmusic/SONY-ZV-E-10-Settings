@@ -3,6 +3,12 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.3.5] - Step 2 started: corrections after checking Sony's help guide
+- Corrected menu path: Clear Image Zoom lives under "Zoom Range" (MENU -> Camera Settings2 -> Zoom Range), not "Zoom Setting".
+- Corrected "standby" advice: no true standby on ZV-E10 while USB-powered/HDMI-connected (Power Save is disabled). Advice is now: leave the camera ON.
+- Clear Image Zoom limits recorded: about 1.5x in 4K, about 2x in HD.
+- Recorded user confirmations: camera on WW07 20W PD adapter, region PAL (25p/50p). Shutter guidance for PAL added.
+
 ## [1.3.4] - Power, menu and retention photos verified (batch 4); all photos in
 - Added and viewed: Power Temp-High, USB-C Connected 1/2, Connector Alternative (+ Specs), Alternative USB-s On Extender, Menu Burnt Into Screen.
 - Verified Auto Power OFF Temp. = High on the camera menu (Step 1 item 2).

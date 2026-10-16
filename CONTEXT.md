@@ -73,16 +73,24 @@ Last Updated: Current Session
      (5V 3A / 9V 2.22A / 12V 1.67A); USB-C + USB-A together max 5V 3A. Keep its USB-A ports unused.
    - The 4-port USB-A wall extender is USB-A only (no PD) - do not use it to power the camera.
    - Samsung fast charger wattage: unknown (not readable in photos).
-   - Region note: shutter 1/50 seen on camera suggests PAL (25p/50p); check NTSC/PAL Selector.
+   - Region: camera confirmed on PAL by user (v1.3.5): 4K is 25p, shutter 1/50 @25p or 1/100 @50p.
+   - Power now (v1.3.5): camera USB-C cable is on the WW07-G3b-PD adapter's USB-C port; camera shows charging.
 
 --- B. RESOLVING ZOOM MEMORY & QUALITY DEGRADATION ---
-1. Hardware Workaround (Zero-Cost):
-   - Leave camera powered on via USB-C PD; use standby rather than full power-down
-     to preserve power-zoom physical positions between streams.
-2. Menu Quality Fix (Clear Image Zoom):
-   - Menu -> Movie -> Zoom -> Zoom Setting -> Clear Image Zoom -> ON
-   - Benefits: Leverages the full 24.2MP sensor array before 1080p/4K downsampling,
-     providing up to 2x digital zoom with virtually zero optical quality loss.
+1. Hardware Workaround (Zero-Cost) [corrected v1.3.5]:
+   - Leave the camera switched ON (powered by USB-C PD) between streams instead of powering
+     it off, so the power-zoom lens stays where it is. There is NO true "standby" on the
+     ZV-E10 while USB-powered / HDMI-connected: Sony's Power Save (screen-off) mode is
+     disabled when powered via USB, connected to a TV/HDMI device, or during USB Streaming.
+     Keep Power Save Start Time = Off and Power Save by Monitor = Does Not Link (as set).
+   - User has left it on for 24h+ by accident: warm, not hot (with LCD out + Temp High).
+   - If power is lost (adapter/surge strip/cable), the camera turns off and the lens retracts.
+2. Menu Quality Fix (Clear Image Zoom) [corrected v1.3.5]:
+   - ZV-E10 (original firmware) path: MENU -> Camera Settings2 -> Zoom Range -> Clear Image Zoom.
+     (Newer menus: MENU -> Shooting -> Zoom -> Zoom Range.) It is called "Zoom Range", not "Zoom Setting".
+   - Per Sony specs: Clear Image Zoom is about 1.5x in 4K movies and about 2x in HD movies
+     (unavailable at 120p). It only applies beyond the lens's optical range (past 50mm on the kit lens).
+   - Default is "Optical zoom only". Do not choose "Digital Zoom" (worse quality).
 3. Long-Term Recommended Lens Upgrade:
    - Transition to a manual zoom lens (e.g., Sigma 18-50mm f/2.8 DC DN or
      Tamron 17-70mm f/2.8). Manual zoom rings hold physical position permanently
