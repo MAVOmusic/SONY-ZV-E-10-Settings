@@ -97,3 +97,8 @@ step6_done_v1_8_0:
   final_exposure: {mode: Manual Exposure, shutter: 1/50, aperture: F3.5, iso: 500, picture_profile: "Off"}
   cooling: fan on camera tripod
   airplane_mode: "On"
+
+led_lamps_v1_8_1:
+  control: phone app (Bluetooth)
+  left_lamp: {colour: blue, brightness_percent: 28}
+  right_lamp: {colour: red, brightness_percent: 28}

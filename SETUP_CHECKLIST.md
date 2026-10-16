@@ -43,5 +43,5 @@ Result of 11 screenshots (ISO 500, F3.5, 1/50, WB 4700K; Image Files/JPG/Picture
 - [x] Key Light = Elgato Key Light (original), firmware 1.0.3, 4700K 48% -> user kept the brightness at 48% (eye comfort); stand is taped and cannot be moved. No extra light needed: forehead luma 159 vs Chainbrain about 163 at ISO 500, F3.5, 1/50
 - [x] WB: 4300K tested by the user, 4700K measured basically the same (forehead B/R 0.60 vs 0.63); either is fine, 4700K matches the light
 - [x] Thermal (user): fan on the camera tripod, Airplane Mode On (Network1). Monitor Brightness is greyed out. Orange temperature icon seen in the v1.5.10 photos; result after the fan still unconfirmed - watch it during the first long stream
-- [ ] (optional) Red LED strip spills pink on the white shelf (right side); lower the red strip brightness 30-50% for a more neutral shelf like Chainbrain
+- [x] LED floor lamps (left blue, right red; phone app, Bluetooth) both at 28%. At 28% the shelf is neutral enough (shelf B/R 0.82); no change needed. Colours/brightness can be tuned in the app
 - [ ] (optional, later) Faster lens for more light and no zoom reset: Sigma 16mm f/1.4 (about 2.6 stops more light, same 16mm view, same crops) or an f/2.8 zoom (about 1.3 stops)

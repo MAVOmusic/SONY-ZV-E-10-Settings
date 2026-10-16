@@ -3,6 +3,9 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.8.1] - LED lamps recorded
+- Left and right LED floor lamps are controlled by a phone app (Bluetooth): both at 28%, left blue, right red. New OBS shot (ISO 500, PP Off, 4700K, lamps 28%): frame luma 50, forehead luma about 135 (sitting closer, slightly dimmer than the earlier 159); shelf neutral. Optional ISO 640 if the Key Light stays at 48%.
+
 ## [1.8.0] - Step 6 complete (lighting); correction
 - CORRECTION: the v1.7.0 claim that the face was about 2 stops darker than Chainbrain came from measuring the wrong image region. Re-measured on the forehead: 159 (ISO 500, PP Off, 4700K) vs about 163 for Chainbrain, so ISO 500 is right and no extra light is needed. Wrong numbers removed from the notes.
 - User photos of the Key Light setup: Elgato Key Light stand is taped and cannot move. Brightness stays at 48%. WB 4300K tested; no meaningful difference from 4700K.
