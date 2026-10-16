@@ -34,3 +34,33 @@ exposure_baseline_v1_5_8:        # all auto, before Step 4
   aperture: F3.5
   iso: AUTO (showing 250)
   key_light: {temperature_k: 4700, brightness_percent: 48}
+
+camera_menus_verified_v1_5_9:      # from Image Files/Menus photos (Movie mode, HDMI connected)
+  movie_shoot_mode: Manual Exposure        # Camera Settings2 > Movie1
+  still_shoot_mode: Intelligent Auto       # Camera Settings1 > Shoot Mode/Drive (still, irrelevant)
+  main_screen: {shutter: 1/50, aperture: F5.6, metered_manual: -1.0, iso: 400}   # aperture should be F3.5
+  iso: 400                                 # Camera Settings1 > Exposure
+  exposure_comp: 0.0
+  metering_mode: Multi
+  white_balance: Auto                      # NOT yet fixed
+  priority_set_in_awb: Standard
+  dro: D-Range Optimizer
+  creative_style: Standard
+  picture_effect: Off
+  picture_profile: Off
+  soft_skin_effect: Off
+  movie_steadyshot: Off
+  auto_slow_shutter: On                    # no effect in Manual Exposure
+  proxy_recording: "Off"
+  audio_recording: "Off"
+  wind_noise_reduction: "Off"
+  rec_lamp: On
+  focus_mode: Continuous AF
+  focus_area: Wide
+  setup_4k_output_select: HDMI Only(25p)
+  usb_connection: Mass Storage
+  usb_power_supply: "On"
+  airplane_mode: "Off"
+  bluetooth_remote_control: "Off"
+  display_quality: High
+  volume: 0

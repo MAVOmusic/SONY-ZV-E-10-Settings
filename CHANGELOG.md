@@ -3,6 +3,11 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.5.9] - Step 4 progress, camera menus reviewed
+- User added Image Files/Menus (32 photos, no EXIF/GPS, no serial numbers; all viewed). Movie Shoot Mode = Manual Exposure, 1/50, ISO 400, Movie SteadyShot Off, 4K Output Select = HDMI Only(25p) confirmed.
+- Found: aperture is F5.6 (MM -1.0), not F3.5 - about 1.4 stops lost, the likely reason the image got dark. White Balance still Auto.
+- Ticked the 4K Output Select item in Step 3 and four Step 4 items; Step 4 still open (aperture, white balance). Key Light to stay low (user eye comfort).
+
 ## [1.5.8] - Step 4 started: baseline and plan
 - Camera screen photo (all auto): 1/25, F3.5, Auto ISO 250. The 1/25 shutter at 25p is Auto Slow Shutter (long exposure, motion blur, noisy-looking dark areas).
 - Key Light currently 4700K 48% (user). Step 4 checklist rewritten with menu paths and an order. Nothing ticked yet. Elgato Control Center screenshot not committed (device name).

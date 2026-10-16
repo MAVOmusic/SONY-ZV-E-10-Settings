@@ -57,3 +57,9 @@ repo copies are byte-identical (same MD5) to the re-uploaded files.
 - Target look = sharp, low-noise, evenly lit: supports Step 4 (low ISO, manual exposure) and Step 6 (more key light).
 - The softness/noise in the problem samples is consistent with OBS crop-zoom and low light
   (see CONTEXT.md Issue A and Step F). This is a visual impression, not a measurement.
+
+## Image Files/Menus/ (32 JPG, added by the user, reviewed v1.5.9)
+Photos of every ZV-E10 menu page in Movie mode with HDMI connected. No EXIF, no serial numbers or network names visible (Network and Setup5 pages show only
+menu items). Values read from them are in Settings Files/YAML/current_settings.yaml (camera_menus_verified_v1_5_9). Key ones: Main Menu After Edits
+(1/50, F5.6, MM -1.0, ISO 400), Movie1 (Shoot Mode Manual Exposure), Movie3 (SteadyShot Off), Setup2 (4K Output Select HDMI Only(25p)),
+Color-WB-Img. Processing1 (White Balance Auto, Picture Profile Off, Creative Style Standard).

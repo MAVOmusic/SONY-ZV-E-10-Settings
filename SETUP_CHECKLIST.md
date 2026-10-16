@@ -18,18 +18,19 @@ _Step 2 core items complete in v1.4.0._
 - [x] Cam Link 4K plugged into REAR 10G (red) port (upgraded from 5G blue) — photo viewed v1.3.3: Cam Link sits next to the right 10G port, most likely in the hidden left 10G port; Image Files/JPG/Cam Link 4K Connected.jpg / USB 10G Ports.jpg. Note: Cam Link 4K is USB 3.0 (5 Gbps), so 10G gives no extra speed - rear 5G/10G are equally fine
 - [x] Menu -> Setup -> HDMI Settings -> HDMI Info. Display -> OFF (photo verified v1.4.0; HDMI Resolution Auto, TC Output Off, CTRL FOR HDMI On)
 - [x] (user-reported v1.5.0; screenshots show 4K source at 100% scale and 25.00/25.00 FPS; Lanczos set) OBS source: Custom, 3840x2160 or 1920x1080, FPS = 30 (match camera; no 60 on 4K)
+- [x] Menu -> Setup (Setup2) -> 4K Output Select -> HDMI Only(25p) (photo verified v1.5.9: Setup2 shows HDMI Only(25p); File Format and Record Setting are greyed out in Movie1, which is expected because HDMI Only does not record to the card). Proxy Recording = Off (Movie2)
 
 ## Step 4 — Exposure & Sharpness (Manual)
-Baseline (v1.5.8 photo, all auto): 1/25, F3.5, Auto ISO 250 (A ISO 250), tripod scene icon shown, Key Light 4700K 48%.
-Plan, in this order (movie mode, PAL, 4K 25p). Menu paths are from the Sony ZV-E10 help guide.
-- [ ] Key Light up first (Elgato Control Center, brightness slider) - about 80-100% at 4700K, so there is light for 1/50
-- [ ] Shoot Mode = Manual Exposure: MENU -> Camera Settings1 -> Shoot Mode (or Fn -> Shoot Mode)
-- [ ] Shutter 1/50 (25p, PAL): control wheel in Manual Exposure (aperture is the control dial; swap in Camera Settings2 -> Dial/Wheel Setup)
-- [ ] Aperture F3.5 (already the widest at 16mm)
-- [ ] ISO fixed, start 400 (no Auto ISO): MENU -> Camera Settings1 -> ISO. Do not go over about 640; add light instead
-- [ ] White Balance fixed: MENU -> Camera Settings1 -> White Balance -> Color Temp./Filter (K), start at 4700K to match the Key Light
-- [ ] SteadyShot Off on the tripod: MENU -> Camera Settings2 -> SteadyShot (Active crops the 4K angle of view)
-- Note: Auto Slow Shutter (Camera Settings2) is what drags the shutter to 1/25 in auto; it does not work in Manual Exposure or with a fixed ISO.
+Baseline (v1.5.8 photo, all auto): 1/25, F3.5, Auto ISO 250, Key Light 4700K 48%.
+Menu photos (Image Files/Menus, v1.5.9). Menu paths are from the Sony ZV-E10 help guide and the user's photos.
+- [x] Movie Shoot Mode = Manual Exposure (verified: MENU -> Camera Settings2 -> Movie1 -> Shoot Mode; the Camera Settings1 'Shoot Mode' with the still-camera icon is the STILL mode and stays Intelligent Auto, that is fine)
+- [x] Shutter 1/50 (main screen photo)
+- [ ] Aperture F3.5 - main screen photo shows F5.6 with MM -1.0 (about 1 stop under). F5.6 costs about 1.4 stops vs F3.5: set the aperture back to F3.5 (control dial in Manual Exposure)
+- [x] ISO fixed 400 (verified: Camera Settings1 -> Exposure -> ISO = ISO 400; Exposure Comp greyed, Metering Multi)
+- [ ] White Balance fixed: Camera Settings1 -> Color/WB/Img. Processing1 -> White Balance (still Auto). Use Color Temp./Filter (K), start at 4700K to match the Key Light
+- [x] Movie SteadyShot = Off (verified: Camera Settings2 -> Movie3 -> SteadyShot Off; SteadyShot Settings greyed)
+- Key Light: user wants it lower (eye comfort); keep about 48% or less, get the brightness from F3.5 and ISO 400-640 instead
+- Note: Auto Slow Shutter is On (Movie2) but it does not work in Manual Exposure.
 
 ## Step 5 — Color Profile
 - [ ] Option 1: Picture Profile OFF; Creative Style Standard/Neutral; Contrast 0, Sat +1, Sharp +1
