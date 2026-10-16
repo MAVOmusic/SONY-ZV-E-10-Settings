@@ -84,3 +84,9 @@ step4_done_v1_6_0:                  # user-reported plus OBS screenshot
   airplane_mode: "On"
   monitor_brightness: greyed out (cannot change)
   fan_on_camera: true
+
+step5_done_v1_7_0:
+  picture_profile: "Off"
+  creative_style: Standard
+  iso: 500
+  note: no PP11 on this ZV-E10 (PP1-PP10 only)

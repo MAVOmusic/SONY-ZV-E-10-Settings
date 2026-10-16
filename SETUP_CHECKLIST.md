@@ -33,9 +33,11 @@ Baseline (v1.5.8 photo, all auto): 1/25, F3.5, Auto ISO 250, Key Light 4700K 48%
 - Dial/Wheel Setup (Camera Settings2 -> Custom Operation1): wheel Tv / dial Av; the aperture was stuck at F5.6 until fixed by the user.
 - Note: Auto Slow Shutter is On (Movie2) but has no effect in Manual Exposure.
 
-## Step 5 — Color Profile
-- [ ] Option 1: Picture Profile OFF; Creative Style Standard/Neutral; Contrast 0, Sat +1, Sharp +1
-- [ ] OR Option 2: Picture Profile PP11 (S-Cinetone)
+## Step 5 — Color Profile - DONE v1.7.0
+Result of 11 screenshots (ISO 500, F3.5, 1/50, WB 4700K; Image Files/JPG/Picture Profile Tests). The ZV-E10 has only PP1-PP10, no PP11 / S-Cinetone (Sony help guide; PP11 is on the ZV-E10 II).
+- [x] Picture Profile OFF, Creative Style Standard (kept, Contrast 0, Saturation 0, Sharpness 0). Menu: MENU -> Camera Settings1 -> Color/WB/Img. Processing1 -> Picture Profile = Off
+- Why: PP Off keeps the same black level as the Chainbrain reference (28% near-black pixels in both), good contrast and colour. PP3/PP4 lift the shadows (5% black) and look flatter; PP5/PP6 (Cine1/Cine2) are flat (1% black); PP7-PP10 are S-Log2/S-Log3/HLG for grading, they look washed out in OBS. PP1/PP2 are slightly darker than Off.
+- [ ] (optional) WB cooler 4300-4500K: skin is a bit warmer/redder than Chainbrain (B/R 0.62 vs 0.70), partly red LED spill
 
 ## Step 6 — Lighting
 - [x] Thermal (user v1.6.0): fan placed at the camera, Airplane Mode On (Network1). Monitor Brightness is greyed out (cannot change). Orange temperature icon seen in v1.5.10 photos; result after the fan unconfirmed

@@ -3,6 +3,11 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.7.0] - Step 5 complete (colour profile)
+- Tested Picture Profile Off and PP1-PP10 at ISO 500 (11 screenshots, stored as JPG). No PP11 on the original ZV-E10 (earlier advice was wrong; fixed).
+- Decision: Picture Profile Off, Creative Style Standard. Matches the Chainbrain black level; PP3-PP6 are flatter, PP7-PP10 are log/HLG.
+- ISO 500 is not too bright overall (frame luma 60 vs Chainbrain 59), but the face is about 2 stops darker than Chainbrain (luma 84 vs 163): needs more light on the face (Step 6).
+
 ## [1.6.0] - Step 4 complete (exposure)
 - User fixed the aperture to F3.5, ISO 250, WB 4700K, shutter 1/50, SteadyShot Off, Manual Exposure; fan on the camera, Airplane Mode On. Monitor Brightness is greyed out.
 - Measured the OBS screenshot: clean at ISO 250 but face about 1 stop under (luma 75/255; 47% of pixels near black). Recommended ISO 500 (max 640). Step 4 ticked; final ISO is confirmed in Step 5 screenshots.

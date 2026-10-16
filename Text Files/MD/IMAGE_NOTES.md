@@ -63,3 +63,8 @@ Photos of every ZV-E10 menu page in Movie mode with HDMI connected. No EXIF, no 
 menu items). Values read from them are in Settings Files/YAML/current_settings.yaml (camera_menus_verified_v1_5_9). Key ones: Main Menu After Edits
 (1/50, F5.6, MM -1.0, ISO 400), Movie1 (Shoot Mode Manual Exposure), Movie3 (SteadyShot Off), Setup2 (4K Output Select HDMI Only(25p)),
 Color-WB-Img. Processing1 (White Balance Auto, Picture Profile Off, Creative Style Standard).
+
+## Image Files/JPG/Picture Profile Tests/ (11 JPG, v1.7.0)
+OBS screenshots of the same scene at ISO 500, F3.5, 1/50, WB 4700K with Picture Profile Off and PP1-PP10 (converted from PNG, q88, to save repo size).
+Measured on the main preview (luma 0-255): Off 60 (28% near-black), PP1 57, PP2 55, PP3 71 (5%), PP4 71 (5%), PP5 70 (1%), PP6 68 (1%), PP7 44, PP8 60, PP9 61, PP10 62.
+Face luma: Off 84, PP4 83, PP3 81, PP6 81, PP5 79, PP10 70, PP1 67, PP2 68. Chainbrain reference: whole frame luma 59 (28% near-black), face luma about 163, face RGB about 201/148/141.
