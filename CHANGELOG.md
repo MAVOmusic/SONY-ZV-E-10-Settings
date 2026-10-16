@@ -3,6 +3,11 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.6.0] - Step 4 complete (exposure)
+- User fixed the aperture to F3.5, ISO 250, WB 4700K, shutter 1/50, SteadyShot Off, Manual Exposure; fan on the camera, Airplane Mode On. Monitor Brightness is greyed out.
+- Measured the OBS screenshot: clean at ISO 250 but face about 1 stop under (luma 75/255; 47% of pixels near black). Recommended ISO 500 (max 640). Step 4 ticked; final ISO is confirmed in Step 5 screenshots.
+- Step 6 lighting rule relaxed from ISO 100-400 to ISO 250-640 at F3.5. Screenshot added.
+
 ## [1.5.10] - Step 4: white balance done, aperture still stuck
 - User set WB 4700K and ISO 640, Key Light 48%, and removed a Sharpen filter from the main OBS source. OBS result looks natural and brighter.
 - Aperture still F5.6 (photos: ISO 400 MM -0.7, ISO 640 MM -0.3). Dial/Wheel Setup = wheel Tv / dial Av read from the menu photos; fixes recorded in the checklist.

@@ -73,3 +73,14 @@ step4_progress_v1_5_10:            # user-reported plus two main-screen photos
   dial_wheel_setup: "wheel=Tv, dial=Av"   # Camera Settings2 > Custom Operation1
   dial_wheel_lock: Unlock
   temperature_icon: orange thermometer icon visible on live view (warm camera)
+
+step4_done_v1_6_0:                  # user-reported plus OBS screenshot
+  mode: Manual Exposure
+  shutter: 1/50
+  aperture: F3.5
+  iso: 250                           # recommended 500, max 640
+  white_balance: 4700K
+  steadyshot_movie: Off
+  airplane_mode: "On"
+  monitor_brightness: greyed out (cannot change)
+  fan_on_camera: true

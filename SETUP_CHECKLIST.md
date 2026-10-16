@@ -20,23 +20,23 @@ _Step 2 core items complete in v1.4.0._
 - [x] (user-reported v1.5.0; screenshots show 4K source at 100% scale and 25.00/25.00 FPS; Lanczos set) OBS source: Custom, 3840x2160 or 1920x1080, FPS = 30 (match camera; no 60 on 4K)
 - [x] Menu -> Setup (Setup2) -> 4K Output Select -> HDMI Only(25p) (photo verified v1.5.9: Setup2 shows HDMI Only(25p); File Format and Record Setting are greyed out in Movie1, which is expected because HDMI Only does not record to the card). Proxy Recording = Off (Movie2)
 
-## Step 4 — Exposure & Sharpness (Manual)
+## Step 4 — Exposure & Sharpness (Manual) - DONE v1.6.0 (final ISO to be confirmed by the user)
 Baseline (v1.5.8 photo, all auto): 1/25, F3.5, Auto ISO 250, Key Light 4700K 48%.
-Menu photos (Image Files/Menus, v1.5.9). Menu paths are from the Sony ZV-E10 help guide and the user's photos.
-- [x] Movie Shoot Mode = Manual Exposure (verified: MENU -> Camera Settings2 -> Movie1 -> Shoot Mode; the Camera Settings1 'Shoot Mode' with the still-camera icon is the STILL mode and stays Intelligent Auto, that is fine)
-- [x] Shutter 1/50 (main screen photo)
-- [ ] Aperture F3.5 - photos still show F5.6 (MM -0.7 at ISO 400, MM -0.3 at ISO 640). F5.6 costs about 1.4 stops vs F3.5. User's dial only changed ISO. Dial/Wheel Setup (Camera Settings2 -> Custom Operation1, page 8/9) = wheel Tv, dial Av; Dial/Wheel Lock = Unlock. Fixes to try: leave ISO-select state (centre button), turn the TOP ridged dial for aperture, or switch Dial/Wheel Setup to 'F/no. SS'
-- [x] ISO fixed 400 (verified: Camera Settings1 -> Exposure -> ISO = ISO 400; Exposure Comp greyed, Metering Multi)
-- [x] White Balance 4700K (user-reported v1.5.10; Camera Settings1 -> Color/WB/Img. Processing1 -> White Balance -> K). Image now looks natural
-- [x] Movie SteadyShot = Off (verified: Camera Settings2 -> Movie3 -> SteadyShot Off; SteadyShot Settings greyed)
-- Key Light now 48% (user, Control Center); keep it there or lower, get the brightness from F3.5 and ISO 400-640 instead
-- OBS: a Sharpen filter was on the main source and was turned off by the user (v1.5.10); sharpening amplifies grain.
-- WARNING: an orange thermometer-style temperature icon is on the live view in both new photos (camera is warm, orange = recording/streaming time is limited). See thermal notes in Step 6.
-- Note: Auto Slow Shutter is On (Movie2) but it does not work in Manual Exposure.
+- [x] Movie Shoot Mode = Manual Exposure (MENU -> Camera Settings2 -> Movie1 -> Shoot Mode; the still 'Shoot Mode' in Camera Settings1 stays Intelligent Auto, irrelevant)
+- [x] Shutter 1/50 (25p PAL) - photo v1.5.8/1.5.9
+- [x] Aperture F3.5 (user-reported v1.6.0; consistent with the screenshot: ISO 250 at F3.5 looks like ISO 640 at F5.6 did)
+- [x] ISO fixed (MENU -> Camera Settings1 -> Exposure -> ISO). Measured on the v1.6.0 OBS screenshot at ISO 250: face luma about 75/255, frame mean 37, 47% of pixels near black = about 1 stop under for skin. Raise to ISO 500 (up to 640). Clean at 250, so noise is not the limit
+- [x] White Balance 4700K (user-reported; MENU -> Camera Settings1 -> Color/WB/Img. Processing1 -> White Balance -> K)
+- [x] Movie SteadyShot Off (MENU -> Camera Settings2 -> Movie3 -> SteadyShot)
+- [x] OBS main source Sharpen filter removed (user)
+- Key Light 4700K 48% (eye comfort); keep or lower.
+- Dial/Wheel Setup (Camera Settings2 -> Custom Operation1): wheel Tv / dial Av; the aperture was stuck at F5.6 until fixed by the user.
+- Note: Auto Slow Shutter is On (Movie2) but has no effect in Manual Exposure.
 
 ## Step 5 — Color Profile
 - [ ] Option 1: Picture Profile OFF; Creative Style Standard/Neutral; Contrast 0, Sat +1, Sharp +1
 - [ ] OR Option 2: Picture Profile PP11 (S-Cinetone)
 
 ## Step 6 — Lighting
-- [ ] Increase key light; keep ISO 100-400; do not raise ISO for low light
+- [x] Thermal (user v1.6.0): fan placed at the camera, Airplane Mode On (Network1). Monitor Brightness is greyed out (cannot change). Orange temperature icon seen in v1.5.10 photos; result after the fan unconfirmed
+- [ ] Increase key light; ISO 250-640 at F3.5 is fine; prefer light over ISO above 640
