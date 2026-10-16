@@ -110,6 +110,15 @@ Edit Transform (Ctrl+E) for the item in the Vertical scene:
   raise Left to about 1070 and lower Right to 1555 if it shows as a bright stripe.
 - Optional tighter version: Top 250, Bottom 0, Left 1020, Right 1746 (visible 1074x1910).
 
-Reference (YouTube Shorts screenshot): the head is about 28% of the frame width. At 16mm a full-height 9:16 slice cannot be wider than 1215 px, which
-puts the headphones at about 39% of the width, so the new vertical will be tighter than the old Short. It cannot be wider without leaving the 4K
-frame; the 16mm lens is already at its widest.
+CORRECTION (v1.5.6): the "head is 39% of the width" estimate above came from a frame where you were leaning at the camera, and the claim that
+the Short could not be matched was wrong. Measured on a seated frame, see below.
+
+### Measured against the YouTube Shorts reference (v1.5.6)
+User tried L1020 R1605 T250 B0 (1215x1910 window, a little wider than 9:16, so Cover trims about 70 px each side: real picture L1090 R1676).
+- Glasses width: 14.7% of the frame now, 16.5% in the Short; face (cheek to cheek) 16.3% now, 19.2% in the Short. Zoom needed is about 1.15x.
+- Glasses centre in the Short: 52% across, 47% down. Now: 51% across, 52% down (already centred sideways).
+- Result for 1.15x: visible 934x1661 (exact 9:16), left 1145, top 465 -> **Left 1145, Right 1761, Top 465, Bottom 34**.
+  Upscale from source is about 1.16x, like the horizontal clones, so still acceptable with Lanczos.
+- Posture changes how it looks: leaning forward makes the head larger than in the sitting frame, so judge in your playing pose.
+- Fine tuning: head too high/low -> trade Top against Bottom (keep sum 499); head left/right -> trade Left against Right (keep sum 2906).
+  Zoom in or out -> keep the 9:16 rule: Left+Right = 3840 - (2160 - Top - Bottom) * 9 / 16.

@@ -3,6 +3,11 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.5.6] - Vertical crop measured against the Shorts reference
+- User result L1020 R1605 T250 B0 looked wider than the Short. Measured glasses/face width and position against the YouTube Shorts frame: about 1.15x tighter needed.
+- New vertical crop L1145 R1761 T465 B34 (exact 9:16, 934x1661). Corrected the earlier claim that the Short could not be matched (it was based on a leaning pose).
+- Added the screenshot of the user's result.
+
 ## [1.5.5] - Vertical canvas setup
 - Diagnosed the Vertical clone: 3840x2160 with 3840x2160 bounds and no crop shows only the top-left corner of the 4K frame; Fit to Screen uses the 1920x1080 canvas.
 - Added vertical Edit Transform recipe (bounds 1080x1920, Cover, Crop Bounds, crop L1020 R1605 T0 B0) to OBS_ZOOM_GUIDE.md and crop_presets.yaml.
