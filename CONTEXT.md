@@ -12,7 +12,18 @@ Last Updated: Current Session
 - Equipped Lens: Sony E PZ 16-50mm f/3.5-5.6 OSS (Power Zoom Kit Lens)
 - Capture Card: Elgato Cam Link 4K (USB 3.0 interface)
 - Power Supply: Continuous USB-C Power Delivery (PD) connection
-- Host System: High-spec PC running OBS Studio
+- Host System: Windows 10 Home 64-bit (build 19045), OBS Studio
+- CPU: AMD Ryzen 5 8500G w/ Radeon 740M Graphics (12 threads, ~3.6GHz)
+- RAM: 128 GB (131072 MB) - ample headroom for OBS + 4K capture
+- GPU: NVIDIA GeForce RTX 4060 (8 GB dedicated) driver 32.0.15.6094 (2024-08-14)
+- Secondary GPU: AMD Radeon 740M (integrated, used for display/compute)
+- Display: 1920x1080 @60Hz (DVI, monitor GA241) via RTX 4060
+- Storage: ~3.8 TB NVMe/RAID array (C:) + 2x ~1.9 TB Seagate expansion (E:, F:)
+- USB Controllers: AMD (1022:15BB/15BD) + ASMedia 3.0 (1B21:1142) + AMD USB4 Host Router
+- Capture device: Elgato Cam Link 4K (USB VID 0FD9 / PID 0066) detected, no driver issues
+- Cam Link connection: rear 10G (red) port (upgraded from 5G blue); photos in Image Files/JPG/
+- Peripherals: Stream Deck XL, FootSwitch, Razer Ornata V3 X / DeathAdder Essential
+- DxDiag: no problems reported on display/sound/input tabs
 
 2. DIAGNOSED ISSUES & ROOT CAUSES
 --------------------------------------------------------------------------------
@@ -50,6 +61,9 @@ Last Updated: Current Session
    - Menu -> Setup (Yellow Toolbox) -> Power Option -> Auto Power OFF Temp. -> HIGH
 3. Power Routing: Ensure USB-C cable connects to a dedicated USB-C Wall Adapter
    supporting Power Delivery (PD) rather than an unpowered motherboard USB port.
+   - Note: User found an alternative USB-C connector/adapter that may perform better
+     than the ultra-fast Samsung phone charger; photos/specs in Image Files/JPG/
+     (Connector Alternative I've Found*.jpg, Alternative USB-s On Extender.jpg).
 
 --- B. RESOLVING ZOOM MEMORY & QUALITY DEGRADATION ---
 1. Hardware Workaround (Zero-Cost):
@@ -99,6 +113,17 @@ Option 2: Cinematic Out-of-Camera (S-Cinetone)
 - Never compensate for low room light with camera ISO.
 - Increase physical Key Light illumination on the subject, keep camera ISO at 100-400.
   A well-lit 1080p image at ISO 100 will visually outperform an unlit 4K image at ISO 3200.
+
+5. HOST SYSTEM NOTES (from DxDiag, sanitized)
+--------------------------------------------------------------------------------
+- Cam Link 4K is enumerated as a USB Video Device with no problems. Currently on a
+  REAR 10G (red) port (upgraded from 5G blue) on the AMD/ASMedia controller -
+  good. Avoid front-panel Generic USB Hubs (05E3:0610/0608, USB 2.0-class).
+- Display pipeline runs 1920x1080@60Hz on DVI. If streaming 1080p60, set camera
+  to 1080p60 and OBS source to 60 FPS; if streaming 4K, camera+source must be 30 FPS.
+- 128 GB RAM + RTX 4060 means OBS x264/NVENC encoding and 4K preview are not
+  CPU/GPU bound; USB bandwidth and frame-rate matching remain the real limits.
+- No thermal or driver issues reported by DxDiag.
 
 4. INSTRUCTIONS FOR SUBSEQUENT AI INSTANCES
 --------------------------------------------------------------------------------

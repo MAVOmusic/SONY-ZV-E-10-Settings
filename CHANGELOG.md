@@ -3,6 +3,23 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.3.0] - Step 1 complete
+- Step 1 fully ticked: LCD out, Auto Power OFF Temp HIGH, USB-C PD power.
+- Added setup photos for power/thermal (ZV E-10 Power Temp-High, USB-C Connected 1/2, Panel Out).
+- Noted alternative USB-C connector found (may beat Samsung fast charger); photos/specs saved.
+
+## [1.2.0] - Connection & thermal progress
+- Cam Link 4K moved to rear 10G (red) port (upgraded from 5G blue); photos added.
+- LCD panel flipped out for thermal dissipation (Step 1 partial).
+- Added setup photos: Cam Link 4K Connected/Model, USB 10G Ports, ZV E-10 Panel Out.
+- Checklist updated: Step 1 LCD out ticked; Step 3 port ticked.
+
+## [1.1.0] - Host system info integrated
+- Read DxDiag (sanitized): added host system specs (CPU/RAM/GPU/USB controllers/display) to CONTEXT.md.
+- Confirmed Cam Link 4K enumerated, no driver/display/sound issues.
+- Noted USB hub topology: avoid front-panel Generic USB Hubs (05E3:0610/0608); use rear AMD/ASMedia USB 3.0 ports.
+- DxDiag/images were NOT committed (kept in /tmp only) for security.
+
 ## [1.0.0] - Initial
 - Stored Sony ZV-E10 streaming configuration & diagnostic context block (V1.0) as CONTEXT.md.
 - Created file-format folder structure (Text/Image/Settings/Programming + extras) with per-format subfolders.
