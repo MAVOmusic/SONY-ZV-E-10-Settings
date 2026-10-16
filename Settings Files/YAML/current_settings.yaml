@@ -28,3 +28,9 @@ obs_cam_link_source:
   driver_video_proc_amp: {brightness: 0, contrast: 128, hue: 0, saturation: 128}
 host:
   cam_link_port: rear USB 10G red port (likely left one); Cam Link 4K itself is USB 3.0 / 5 Gbps
+
+exposure_baseline_v1_5_8:        # all auto, before Step 4
+  shutter: 1/25
+  aperture: F3.5
+  iso: AUTO (showing 250)
+  key_light: {temperature_k: 4700, brightness_percent: 48}

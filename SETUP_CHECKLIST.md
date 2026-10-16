@@ -20,11 +20,16 @@ _Step 2 core items complete in v1.4.0._
 - [x] (user-reported v1.5.0; screenshots show 4K source at 100% scale and 25.00/25.00 FPS; Lanczos set) OBS source: Custom, 3840x2160 or 1920x1080, FPS = 30 (match camera; no 60 on 4K)
 
 ## Step 4 — Exposure & Sharpness (Manual)
-- [ ] Mode dial Movie, Exposure Mode M
-- [ ] Shutter 1/50 (25p, PAL) or 1/100 (50p); on NTSC 1/60 (30p) or 1/120 (60p)
-- [ ] Aperture lowest (f/3.5 wide / f/5.6 tele)
-- [ ] ISO locked 100-400 (no Auto ISO)
-- [ ] White Balance locked (e.g. 5500K), AWB off
+Baseline (v1.5.8 photo, all auto): 1/25, F3.5, Auto ISO 250 (A ISO 250), tripod scene icon shown, Key Light 4700K 48%.
+Plan, in this order (movie mode, PAL, 4K 25p). Menu paths are from the Sony ZV-E10 help guide.
+- [ ] Key Light up first (Elgato Control Center, brightness slider) - about 80-100% at 4700K, so there is light for 1/50
+- [ ] Shoot Mode = Manual Exposure: MENU -> Camera Settings1 -> Shoot Mode (or Fn -> Shoot Mode)
+- [ ] Shutter 1/50 (25p, PAL): control wheel in Manual Exposure (aperture is the control dial; swap in Camera Settings2 -> Dial/Wheel Setup)
+- [ ] Aperture F3.5 (already the widest at 16mm)
+- [ ] ISO fixed, start 400 (no Auto ISO): MENU -> Camera Settings1 -> ISO. Do not go over about 640; add light instead
+- [ ] White Balance fixed: MENU -> Camera Settings1 -> White Balance -> Color Temp./Filter (K), start at 4700K to match the Key Light
+- [ ] SteadyShot Off on the tripod: MENU -> Camera Settings2 -> SteadyShot (Active crops the 4K angle of view)
+- Note: Auto Slow Shutter (Camera Settings2) is what drags the shutter to 1/25 in auto; it does not work in Manual Exposure or with a fixed ISO.
 
 ## Step 5 — Color Profile
 - [ ] Option 1: Picture Profile OFF; Creative Style Standard/Neutral; Contrast 0, Sat +1, Sharp +1

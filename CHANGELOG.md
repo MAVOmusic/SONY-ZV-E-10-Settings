@@ -3,6 +3,10 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.5.8] - Step 4 started: baseline and plan
+- Camera screen photo (all auto): 1/25, F3.5, Auto ISO 250. The 1/25 shutter at 25p is Auto Slow Shutter (long exposure, motion blur, noisy-looking dark areas).
+- Key Light currently 4700K 48% (user). Step 4 checklist rewritten with menu paths and an order. Nothing ticked yet. Elgato Control Center screenshot not committed (device name).
+
 ## [1.5.7] - Vertical crop accepted
 - User-tuned vertical crop L800 R1270 T660 B50 checked: matches the Shorts reference (headphones 28% of width, glasses centred). Exact 9:16 equivalent L1277 R1747 T660 B50.
 - Quality check: 1.32x upscale (816 px -> 1080 px), acceptable for phones; grain is the bigger issue (Step 4/6). Added screenshot.
