@@ -1,0 +1,32 @@
+# Sony ZV-E10 Streaming Setup Checklist
+
+Tick each step as completed. Update VERSION.txt and CHANGELOG.md when a setup is completed.
+
+## Step 1 — Thermal & Power Management (24h operation)
+- [ ] Flip LCD screen out 90-180 degrees from body
+- [ ] Menu -> Setup (Yellow Toolbox) -> Power Option -> Auto Power OFF Temp. -> HIGH
+- [ ] USB-C cable to dedicated USB-C PD wall adapter (not motherboard port)
+
+## Step 2 — Zoom Memory & Quality
+- [ ] Keep camera powered via USB-C PD; use standby, not full power-down
+- [ ] Menu -> Movie -> Zoom -> Zoom Setting -> Clear Image Zoom -> ON
+- [ ] (Optional) Upgrade to manual zoom lens (Sigma 18-50 f/2.8 / Tamron 17-70 f/2.8)
+
+## Step 3 — OBS & Cam Link 4K
+- [ ] Cam Link 4K plugged into rear motherboard USB 3.0/3.1 port (blue/red)
+- [ ] Menu -> Setup -> HDMI Settings -> HDMI Info Display -> OFF
+- [ ] OBS source: Custom, 3840x2160 or 1920x1080, FPS = 30 (match camera; no 60 on 4K)
+
+## Step 4 — Exposure & Sharpness (Manual)
+- [ ] Mode dial Movie, Exposure Mode M
+- [ ] Shutter 1/60 (30fps) or 1/120 (60fps)
+- [ ] Aperture lowest (f/3.5 wide / f/5.6 tele)
+- [ ] ISO locked 100-400 (no Auto ISO)
+- [ ] White Balance locked (e.g. 5500K), AWB off
+
+## Step 5 — Color Profile
+- [ ] Option 1: Picture Profile OFF; Creative Style Standard/Neutral; Contrast 0, Sat +1, Sharp +1
+- [ ] OR Option 2: Picture Profile PP11 (S-Cinetone)
+
+## Step 6 — Lighting
+- [ ] Increase key light; keep ISO 100-400; do not raise ISO for low light
