@@ -3,6 +3,10 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.3.2] - Reference images verified
+- Re-uploaded Chainbrain + 3 Mavo problem samples confirmed byte-identical to repo copies; viewed all four.
+- Added Text Files/MD/IMAGE_NOTES.md with verified visual descriptions.
+
 ## [1.3.1] - System info re-verified
 - Re-read DxDiag, System Information, Settings > About and Task Manager screenshots (kept local only).
 - Added sanitized facts to CONTEXT.md: board/BIOS, Windows 22H2 build, storage, GPU detail, WER crash log summary.
