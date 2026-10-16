@@ -1,4 +1,4 @@
-# OBS 4K Cam Link: scaling and crop-zoom guide (v1.5.0)
+# OBS 4K Cam Link: scaling and crop-zoom guide (v1.5.1)
 
 Canvas: 1920x1080 @ 25 fps (PAL; status bar shows 25.00 / 25.00 FPS). Cam Link source: 3840x2160 @ 25.
 
@@ -30,12 +30,31 @@ is 2x wider and 2x taller (4x the area), so you only see its top-left quarter
 Up to 2.0x every canvas pixel still comes from a real source pixel: sharp. Above 2.0x OBS has to upscale (soft).
 (Camera Clear Image Zoom/optical zoom is separate; optical zoom keeps even more detail.)
 
-## Starting point for the "LED lights at the edges" framing (from the 2026-10-16 screenshot)
-In the positioned full-frame view the blue LED strip sat about 75 px from the left edge and the red one about 85 px from the
-right edge of a 890 px wide preview (about 4.3 source px per preview px), so roughly z = 1.2.
-Try: crop left 310, right 350, top 110, bottom 265 (horizontal total 660, vertical total 375). Adjust left/right until each LED is
-at the edge, then keep (left+right)/3840 and (top+bottom)/2160 equal. Move the picture up/down by trading top and bottom crop.
-This is an estimate read off a screenshot, fine-tune by eye.
+## OBS 32 wording (v1.5.1 correction)
+This OBS (32.1.2) has no "Scale to inner bounds" entry; the bounds dropdown shows **Cover** (it scales until the bounds are filled and,
+with "Crop Bounds" ticked, trims the overflow). For a crop that is exactly 16:9 Cover behaves the same as scale-to-inner, so use:
+Position 0,0 / Bounds type **Cover** / Bounds 1920 x 1080 / Crop Bounds ticked. Crop fields then set the zoom.
+(Screenshots: OBS Edit Transform - Crop To 0 Changes Zoom Out.png, OBS Edit Transform - No Scale To Inner Bounds Option.png.)
+- Crop 0/0/0/0 with Cover = whole 4K frame fitted to the canvas = the widest ("zoomed out") view. That is correct, not a bug.
+- More crop = more zoom. Left+Right must stay under 3840 and Top+Bottom under 2160. The black screen in the second screenshot was
+  Left/Right 3840 each and Top/Bottom 2160 each (everything cropped away). Use Reset, then type small numbers.
+
+## Correction: LED-edge framing
+My v1.5.0 estimate (about 1.2x) used the wrong baseline. The full, uncropped 4K frame is far wider: in the screenshot the blue LED is about
+26% of the frame width from the left edge and the red LED about 33% from the right edge, so the LEDs are only about 40% of the width apart
+(roughly 1555 of 3840 source px). Putting both LEDs at the edges needs about **2.4x** (visible area about 1600 x 900).
+2.4x is slightly above the lossless 2.0x limit (1600 x 900 source px stretched to 1920 x 1080 = 1.2x upscale, mild softness).
+Best result: use 1.2x of OPTICAL zoom on the lens (about 16 -> 19-20mm, W/T lever) and then crop about 2.0x (1:1 pixels).
+
+Crop-only starting point for 2.4x (visible 1600 x 900), estimated from the screenshot and centred between the LEDs, head lower-centre:
+Left 980, Right 1260, Top 1110, Bottom 150 (horizontal total 2240, vertical total 1260). Move the picture sideways by trading Left against Right,
+up/down by trading Top against Bottom (keep each pair's total the same). After using the lens zoom, redo the numbers with z about 2.0
+(Left+Right 1920, Top+Bottom 1080) and re-centre.
+
+## Vertical (9:16) canvas, starting idea
+A full-height 9:16 slice of the 4K frame is 1215 x 2160 source px and downsizes to 1080 x 1920 (sharp). Starting values centred on the head
+(about 41% across the frame): Left 966, Right 1659, Top 0, Bottom 0. Needs the vertical canvas to be 1080 x 1920 (not yet confirmed) and its own
+copy of the camera source with its own crop.
 
 ## Clones
 [CLONE] sources follow the master Cam Link source size (now 4K), so each clone needs its own Fit to Screen / crop / Lanczos.

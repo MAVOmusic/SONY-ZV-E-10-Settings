@@ -3,6 +3,11 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.5.1] - OBS crop troubleshooting
+- Edit Transform screenshots added. OBS 32 shows bounds type "Cover" (no "Scale to inner bounds"); Cover works for 16:9 crops.
+- Explained crop 0 = full zoomed-out frame, and why crop 3840/2160 gives a black screen.
+- Corrected the LED-edge estimate: needs about 2.4x not 1.2x; recommend about 1.2x lens zoom plus about 2.0x crop. Added crop numbers and a vertical-canvas starting point.
+
 ## [1.5.0] - Step 3 complete (OBS side): 4K source at 25 fps
 - OBS Cam Link source now 4K (appears at 100% = 2x size on the 1080p canvas); OBS FPS 25; Lanczos set (user reported, screenshots added).
 - Added Text Files/MD/OBS_ZOOM_GUIDE.md: Fit to Screen, Scale-to-inner-bounds crop zoom, crop formula and starting values.
