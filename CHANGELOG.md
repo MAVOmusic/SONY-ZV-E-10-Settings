@@ -3,6 +3,11 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.5.2] - First crop result + per-clone presets
+- Tested crop 980/1260/1110/150: LEDs at both edges, horizontal framing matches old VOD target.
+- Added suggested vertical tweaks for the "before songs" and "playing songs" clones; stored in OBS & Stream Files/SCENE/crop_presets.yaml.
+- Added screenshots: uncropped, cropped, old VOD target frames (before songs / playing songs).
+
 ## [1.5.1] - OBS crop troubleshooting
 - Edit Transform screenshots added. OBS 32 shows bounds type "Cover" (no "Scale to inner bounds"); Cover works for 16:9 crops.
 - Explained crop 0 = full zoomed-out frame, and why crop 3840/2160 gives a black screen.

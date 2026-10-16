@@ -1,4 +1,4 @@
-# OBS 4K Cam Link: scaling and crop-zoom guide (v1.5.1)
+# OBS 4K Cam Link: scaling and crop-zoom guide (v1.5.2)
 
 Canvas: 1920x1080 @ 25 fps (PAL; status bar shows 25.00 / 25.00 FPS). Cam Link source: 3840x2160 @ 25.
 
@@ -50,6 +50,16 @@ Crop-only starting point for 2.4x (visible 1600 x 900), estimated from the scree
 Left 980, Right 1260, Top 1110, Bottom 150 (horizontal total 2240, vertical total 1260). Move the picture sideways by trading Left against Right,
 up/down by trading Top against Bottom (keep each pair's total the same). After using the lens zoom, redo the numbers with z about 2.0
 (Left+Right 1920, Top+Bottom 1080) and re-centre.
+
+## Result of the first try (v1.5.2)
+Crop 980 / 1260 / 1110 / 150 on the new camera position puts the blue LED on the left edge and the red LED on the right edge, head slightly
+left of centre. Horizontal framing matches the old VOD target almost exactly (clock about 11% across, M letter about 91%). Only the vertical
+position differs, and the two old VOD frames differ from each other because each clone has its own framing:
+- Before songs (head close-up): clock about 17.6% down the frame vs 22% now -> window down about 43 source px: Top 1150, Bottom 110 (Left 980, Right 1260).
+- While playing songs (bass visible, about 2% wider): clock about 30% down -> window up about 69 px and slightly wider:
+  Left 964, Right 1244, Top 1032, Bottom 210 (visible 1632 x 918).
+Saved in OBS & Stream Files/SCENE/crop_presets.yaml. Each clone has its own Edit Transform, so enter these separately.
+Check sharpness at 100% preview zoom, not the 56% window. For the best sharpness add about 1.2x optical zoom on the lens and crop about 2.0x instead.
 
 ## Vertical (9:16) canvas, starting idea
 A full-height 9:16 slice of the 4K frame is 1215 x 2160 source px and downsizes to 1080 x 1920 (sharp). Starting values centred on the head
