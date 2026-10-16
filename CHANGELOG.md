@@ -3,6 +3,10 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.9.3] - Camera AF/DRO applied, vertical encoder read
+- User applied AF Transition Speed 4, AF Subj. Shift Sens. 1 and DRO Off (photos verified). OBS shot with a cap: frame luma 44, 41% near-black (more crushed than before); face unchanged. Recommendation: DRO back On, or ISO 640 plus brighter lamps if DRO stays Off.
+- Aitum Vertical streaming fields (NVENC H.264 6000 kbps, tuning Ultra Low Latency) are controlled from Aitum Multistream > Vertical Canvas; to be checked there. Added the new OBS screenshot (JPG).
+
 ## [1.9.2] - Recording, multistream and Chainbrain stats
 - Recording tab: MKV using the stream encoder (NVENC H.264 CBR 8000 kbps). Recommended a separate CQP recording encoder.
 - Aitum Multistream (Kick, Blaze) use the Main Encoder; Aitum Vertical records at 6000 kbps with the main settings. Both plugins have updates, to be done after the test stream.

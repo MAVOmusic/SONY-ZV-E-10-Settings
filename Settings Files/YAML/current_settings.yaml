@@ -121,3 +121,8 @@ step7_v1_9_2:
   chainbrain_youtube: {resolution: 1920x1080, fps: 60, video_codec: AV1, audio: Opus}
   camera_af: {focus_mode: Continuous AF, focus_area: Wide, af_transition_speed: 7, af_subj_shift_sens: 5, dro_auto_hdr: D-Range Optimizer (level unknown)}
   recommended_not_applied: {af_transition_speed: 3-4, af_subj_shift_sens: 1-2, dro: Off (test), recording_encoder: NVENC H.264 CQP 18 P5}
+
+step7_v1_9_3:
+  camera_applied: {af_transition_speed: 4, af_subj_shift_sens: "1 (Locked on)", dro_auto_hdr: "Off", white_balance: C.Temp./Filter}
+  dro_off_measure: {frame_luma: 44, near_black_percent: 41, cheek_luma: 93}
+  aitum_vertical_streaming_shown: {encoder: NVENC H.264, rate: CBR 6000, keyframe_s: 2, preset: P5, tuning: Ultra Low Latency, look_ahead: false, aq: false, b_frames: 2, note: controlled from Aitum Multistream Vertical Canvas tab}
