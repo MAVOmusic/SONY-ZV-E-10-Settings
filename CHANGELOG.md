@@ -3,6 +3,11 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.5.5] - Vertical canvas setup
+- Diagnosed the Vertical clone: 3840x2160 with 3840x2160 bounds and no crop shows only the top-left corner of the 4K frame; Fit to Screen uses the 1920x1080 canvas.
+- Added vertical Edit Transform recipe (bounds 1080x1920, Cover, Crop Bounds, crop L1020 R1605 T0 B0) to OBS_ZOOM_GUIDE.md and crop_presets.yaml.
+- Added 2 screenshots (vertical Edit Transform, YouTube Shorts target look). Values are untested starting points.
+
 ## [1.5.4] - 16mm crops aligned; latency advice
 - User-tuned 16mm crops accepted (LEDs at both edges): before 1010/1250/1130/95, during 1010/1250/1032/210. Exact 16:9 equivalents recorded.
 - Added latency section (Buffering Disable, NV12, audio Sync Offset) and 4 screenshots.

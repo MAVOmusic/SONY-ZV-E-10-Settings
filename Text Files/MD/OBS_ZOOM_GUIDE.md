@@ -95,3 +95,21 @@ copy of the camera source with its own crop.
 ## Clones
 [CLONE] sources follow the master Cam Link source size (now 4K), so each clone needs its own Fit to Screen / crop / Lanczos.
 Vertical canvas (9:16): same idea, but the crop box must have a 9:16 shape; check source pixels still >= canvas pixels.
+
+## Vertical canvas: setup for `[CLONE] Upload Cam` (v1.5.5)
+Why it looks wrong now: the item is 3840x2160 with Cover bounds 3840x2160 and no crop, so it sits 1:1 on a 1080x1920 canvas and only the
+top-left 1080x1920 of the 4K frame (door, hanger) is visible. Fit to Screen sizes it to 1920x1080 (the main canvas), so type the bounds by hand.
+The dock preview is 9:16 (1080x1920 assumed; confirm in Settings -> Video, Vertical canvas).
+
+Edit Transform (Ctrl+E) for the item in the Vertical scene:
+- Position 0 / 0, Alignment top-left. Size fields are read-only results, leave them.
+- Bounds type Cover, Bounds Width 1080, Height 1920, Crop Bounds ticked.
+- Crop (source px), start values at 16mm: Left 1020, Right 1605, Top 0, Bottom 0 (visible 1215x2160, exactly 9:16, scale 0.889 = downscale, sharp).
+- The window must be 9:16: Left+Right = 3840 - (Height * 9/16), where Height = 2160 - Top - Bottom.
+- Slide sideways by trading Left against Right (same total 2625). Left 1020 puts the left LED strip (about x1023 in the source) right on the edge;
+  raise Left to about 1070 and lower Right to 1555 if it shows as a bright stripe.
+- Optional tighter version: Top 250, Bottom 0, Left 1020, Right 1746 (visible 1074x1910).
+
+Reference (YouTube Shorts screenshot): the head is about 28% of the frame width. At 16mm a full-height 9:16 slice cannot be wider than 1215 px, which
+puts the headphones at about 39% of the width, so the new vertical will be tighter than the old Short. It cannot be wider without leaving the 4K
+frame; the 16mm lens is already at its widest.

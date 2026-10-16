@@ -14,3 +14,9 @@ note_cover: with Cover, a window that is slightly less wide-screen than 16:9 is 
 alt_lens_18mm_not_repeatable_after_power_off:
   before_playing: {left: 889, right: 1191, top: 1157, bottom: 13}
   during_playing: {left: 869, right: 1176, top: 1027, bottom: 123}
+vertical_canvas_1080x1920:     # [CLONE] Upload Cam in the Vertical scene (starting values, untested)
+  edit_transform: {position: [0, 0], bounds: Cover, bounds_size: [1080, 1920], crop_bounds: true}
+  full_height_9_16: {left: 1020, right: 1605, top: 0, bottom: 0}     # visible 1215x2160, scale 0.889
+  without_led_stripe: {left: 1070, right: 1555, top: 0, bottom: 0}
+  tighter_no_ceiling: {left: 1020, right: 1746, top: 250, bottom: 0} # visible 1074x1910
+  rule: left + right = 3840 - (2160 - top - bottom) * 9 / 16
