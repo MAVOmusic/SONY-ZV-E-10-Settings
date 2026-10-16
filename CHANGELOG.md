@@ -3,6 +3,11 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.5.10] - Step 4: white balance done, aperture still stuck
+- User set WB 4700K and ISO 640, Key Light 48%, and removed a Sharpen filter from the main OBS source. OBS result looks natural and brighter.
+- Aperture still F5.6 (photos: ISO 400 MM -0.7, ISO 640 MM -0.3). Dial/Wheel Setup = wheel Tv / dial Av read from the menu photos; fixes recorded in the checklist.
+- Noticed an orange temperature icon on the camera live view; added a thermal warning to the checklist. Added 3 images.
+
 ## [1.5.9] - Step 4 progress, camera menus reviewed
 - User added Image Files/Menus (32 photos, no EXIF/GPS, no serial numbers; all viewed). Movie Shoot Mode = Manual Exposure, 1/50, ISO 400, Movie SteadyShot Off, 4K Output Select = HDMI Only(25p) confirmed.
 - Found: aperture is F5.6 (MM -1.0), not F3.5 - about 1.4 stops lost, the likely reason the image got dark. White Balance still Auto.

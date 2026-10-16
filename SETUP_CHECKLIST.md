@@ -25,11 +25,13 @@ Baseline (v1.5.8 photo, all auto): 1/25, F3.5, Auto ISO 250, Key Light 4700K 48%
 Menu photos (Image Files/Menus, v1.5.9). Menu paths are from the Sony ZV-E10 help guide and the user's photos.
 - [x] Movie Shoot Mode = Manual Exposure (verified: MENU -> Camera Settings2 -> Movie1 -> Shoot Mode; the Camera Settings1 'Shoot Mode' with the still-camera icon is the STILL mode and stays Intelligent Auto, that is fine)
 - [x] Shutter 1/50 (main screen photo)
-- [ ] Aperture F3.5 - main screen photo shows F5.6 with MM -1.0 (about 1 stop under). F5.6 costs about 1.4 stops vs F3.5: set the aperture back to F3.5 (control dial in Manual Exposure)
+- [ ] Aperture F3.5 - photos still show F5.6 (MM -0.7 at ISO 400, MM -0.3 at ISO 640). F5.6 costs about 1.4 stops vs F3.5. User's dial only changed ISO. Dial/Wheel Setup (Camera Settings2 -> Custom Operation1, page 8/9) = wheel Tv, dial Av; Dial/Wheel Lock = Unlock. Fixes to try: leave ISO-select state (centre button), turn the TOP ridged dial for aperture, or switch Dial/Wheel Setup to 'F/no. SS'
 - [x] ISO fixed 400 (verified: Camera Settings1 -> Exposure -> ISO = ISO 400; Exposure Comp greyed, Metering Multi)
-- [ ] White Balance fixed: Camera Settings1 -> Color/WB/Img. Processing1 -> White Balance (still Auto). Use Color Temp./Filter (K), start at 4700K to match the Key Light
+- [x] White Balance 4700K (user-reported v1.5.10; Camera Settings1 -> Color/WB/Img. Processing1 -> White Balance -> K). Image now looks natural
 - [x] Movie SteadyShot = Off (verified: Camera Settings2 -> Movie3 -> SteadyShot Off; SteadyShot Settings greyed)
-- Key Light: user wants it lower (eye comfort); keep about 48% or less, get the brightness from F3.5 and ISO 400-640 instead
+- Key Light now 48% (user, Control Center); keep it there or lower, get the brightness from F3.5 and ISO 400-640 instead
+- OBS: a Sharpen filter was on the main source and was turned off by the user (v1.5.10); sharpening amplifies grain.
+- WARNING: an orange thermometer-style temperature icon is on the live view in both new photos (camera is warm, orange = recording/streaming time is limited). See thermal notes in Step 6.
 - Note: Auto Slow Shutter is On (Movie2) but it does not work in Manual Exposure.
 
 ## Step 5 — Color Profile
