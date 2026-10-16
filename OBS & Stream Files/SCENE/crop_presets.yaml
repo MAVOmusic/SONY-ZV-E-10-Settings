@@ -22,3 +22,5 @@ vertical_canvas_1080x1920:     # [CLONE] Upload Cam in the Vertical scene (start
   rule: left + right = 3840 - (2160 - top - bottom) * 9 / 16
   user_tried_v1_5_5: {left: 1020, right: 1605, top: 250, bottom: 0}  # 1215x1910; Cover trims to real L1090 R1676 T250 B0
   match_shorts_reference_v1_5_6: {left: 1145, right: 1761, top: 465, bottom: 34}  # visible 934x1661, ~1.15x tighter, measured on glasses/face width
+  user_final_v1_5_7: {left: 800, right: 1270, top: 660, bottom: 50}   # 1770x1450 window, Cover trims 477 px per side
+  user_final_v1_5_7_exact_9_16: {left: 1277, right: 1747, top: 660, bottom: 50}   # visible 816x1450, upscale 1.324x, same picture

@@ -3,6 +3,10 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.5.7] - Vertical crop accepted
+- User-tuned vertical crop L800 R1270 T660 B50 checked: matches the Shorts reference (headphones 28% of width, glasses centred). Exact 9:16 equivalent L1277 R1747 T660 B50.
+- Quality check: 1.32x upscale (816 px -> 1080 px), acceptable for phones; grain is the bigger issue (Step 4/6). Added screenshot.
+
 ## [1.5.6] - Vertical crop measured against the Shorts reference
 - User result L1020 R1605 T250 B0 looked wider than the Short. Measured glasses/face width and position against the YouTube Shorts frame: about 1.15x tighter needed.
 - New vertical crop L1145 R1761 T465 B34 (exact 9:16, 934x1661). Corrected the earlier claim that the Short could not be matched (it was based on a leaning pose).

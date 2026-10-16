@@ -122,3 +122,12 @@ User tried L1020 R1605 T250 B0 (1215x1910 window, a little wider than 9:16, so C
 - Posture changes how it looks: leaning forward makes the head larger than in the sitting frame, so judge in your playing pose.
 - Fine tuning: head too high/low -> trade Top against Bottom (keep sum 499); head left/right -> trade Left against Right (keep sum 2906).
   Zoom in or out -> keep the 9:16 rule: Left+Right = 3840 - (2160 - Top - Bottom) * 9 / 16.
+
+### User's final vertical crop (v1.5.7): L800 R1270 T660 B50
+- Window 1770x1450 is much wider than 9:16, so Cover scales by 1.324 (height fills 1920) and trims 477 px from each side. The picture really shown is
+  **L1277 R1747 T660 B50**, visible 816x1450 (exact 9:16). Same picture; the exact numbers are cleaner because L/R trades then behave predictably.
+- Match to the Short (measured): headphones 28% of width vs 28% in the Short; glasses 19.4% vs 16.5%; glasses centre 50% across / 44% down vs 52% / 47%.
+  Close enough; framing accepted.
+- Quality: source 816 px -> 1080 px is a 1.32x upscale (the horizontal clones are 1.2x). Slightly soft, acceptable for phone Shorts (the reference Short
+  is itself soft). Needs Lanczos on this item. Grain/blotchy shadows are amplified by the upscale, so fix them at the camera (Step 4 ISO/exposure, Step 6 light).
+- Rule of thumb: upscale up to about 1.3x fine, beyond that cannot be fixed in OBS; it would need a longer focal length (not repeatable after power-off).
