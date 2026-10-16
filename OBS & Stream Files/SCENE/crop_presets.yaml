@@ -1,24 +1,14 @@
 # OBS Edit Transform presets for the 4K Cam Link clones (canvas 1920x1080, source 3840x2160, PAL 25 fps)
 # Crop values are SOURCE pixels. Bounds: Cover, 1920x1080, Position 0,0, Crop Bounds ticked, Lanczos filtering.
-# Estimates read off screenshots (v1.5.2) - fine-tune by eye. Update here when final values are chosen.
-camera_position_note: camera was nudged by the user before the 980-1260-1110-150 test; numbers below assume that position
-presets:
-  first_try_led_edges:            # tested by user, LEDs land on both edges, close to the old VOD framing
-    left: 980
-    right: 1260
-    top: 1110
-    bottom: 150
-    visible_source_px: [1600, 900]   # about 2.4x
-  before_songs_suggested:         # old VOD: clock about 17.6% down the frame (first try: 22%) -> window moves DOWN about 43 px
-    left: 980
-    right: 1260
-    top: 1150
-    bottom: 110
-  playing_songs_suggested:        # old VOD: clock about 30% down, about 2% wider view, more of the bass visible -> window moves UP
-    left: 964
-    right: 1244
-    top: 1032
-    bottom: 210
-    visible_source_px: [1632, 918]
-# Which clone is which is still to be confirmed with the user:
-clones: ["[CLONE] CLOSEUP CLEAN 2", "[CLONE] CLOSEUP CLEAN 2 2"]
+# Estimates read off screenshots (v1.5.3) - fine-tune by eye.
+clones:
+  before_playing: "[CLONE] CLOSEUP CLEAN 2 2"   # colour, head close-up
+  during_playing: "[CLONE] CLOSEUP CLEAN 2"     # black and white, bass visible
+presets_lens_16mm:            # lens fully wide = the lens's own rest position, fully repeatable after a power cycle
+  before_playing: {left: 980, right: 1260, top: 1150, bottom: 110}   # visible 1600x900 (about 2.4x, 1.2x upscale)
+  during_playing: {left: 964, right: 1244, top: 1032, bottom: 210}   # visible 1632x918
+presets_lens_18mm:            # NOT repeatable after power-off (power zoom has no stops). 18mm is about 1.1x bigger than 16mm.
+  note: the 16mm crops at 18mm are too tight (LEDs fall out of frame, tested v1.5.3)
+  before_playing: {left: 889, right: 1191, top: 1157, bottom: 13}    # visible 1760x990 (about 2.18x, 1.09x upscale)
+  during_playing: {left: 869, right: 1176, top: 1027, bottom: 123}   # visible 1795x1010
+status: user is choosing between 16mm + crop (repeatable) and 18mm + smaller crop (slightly sharper); decision pending

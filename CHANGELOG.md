@@ -3,6 +3,11 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.5.3] - 16mm vs 18mm comparison
+- Tested 16mm crops at 18mm: too tight. Added 18mm crop numbers and the clone mapping (2 2 = before playing, 2 = during playing).
+- Documented sharpness maths and repeatability trade-off; recommendation: 16mm + crop. Noted visible noise in dark areas (exposure, Step 4/6).
+- Added 4 screenshots (18mm, cropped and uncropped).
+
 ## [1.5.2] - First crop result + per-clone presets
 - Tested crop 980/1260/1110/150: LEDs at both edges, horizontal framing matches old VOD target.
 - Added suggested vertical tweaks for the "before songs" and "playing songs" clones; stored in OBS & Stream Files/SCENE/crop_presets.yaml.

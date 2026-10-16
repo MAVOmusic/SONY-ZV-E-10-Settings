@@ -1,4 +1,4 @@
-# OBS 4K Cam Link: scaling and crop-zoom guide (v1.5.2)
+# OBS 4K Cam Link: scaling and crop-zoom guide (v1.5.3)
 
 Canvas: 1920x1080 @ 25 fps (PAL; status bar shows 25.00 / 25.00 FPS). Cam Link source: 3840x2160 @ 25.
 
@@ -60,6 +60,18 @@ position differs, and the two old VOD frames differ from each other because each
   Left 964, Right 1244, Top 1032, Bottom 210 (visible 1632 x 918).
 Saved in OBS & Stream Files/SCENE/crop_presets.yaml. Each clone has its own Edit Transform, so enter these separately.
 Check sharpness at 100% preview zoom, not the 56% window. For the best sharpness add about 1.2x optical zoom on the lens and crop about 2.0x instead.
+
+## 16mm + crop vs 18mm + smaller crop (v1.5.3)
+Clone mapping: "[CLONE] CLOSEUP CLEAN 2 2" = before playing (colour); "[CLONE] CLOSEUP CLEAN 2" = during playing (black and white).
+User zoomed the lens to 18mm and reused the 16mm crops: too tight, both LEDs fell out of frame (18mm is about 1.1x bigger than 16mm,
+so the crop zoom must drop from 2.4x to about 2.18x).
+- Sharpness maths: 16mm needs a 1600 x 900 source slice stretched to 1080p (1.2x upscale). 18mm needs about 1760 x 990 (1.09x upscale).
+  20mm would be about 1:1. So optical zoom is slightly sharper, but only by roughly 10-20% resolution.
+- Repeatability: the PZ lens rests at 16mm and has no click stops, so 16mm + crop is exactly repeatable after any power-off; 18mm is not.
+- Visible in the screenshots: grain and blotchy colour noise in the dark areas, which is a bigger quality limit than the 1.2x upscale.
+  That is an exposure/lighting issue (Auto ISO, Steps 4 and 6).
+- Recommendation: use 16mm + crop (presets in OBS & Stream Files/SCENE/crop_presets.yaml), compare at 1:1 using a windowed preview projector,
+  and only switch to 18mm if the difference is clearly visible.
 
 ## Vertical (9:16) canvas, starting idea
 A full-height 9:16 slice of the 4K frame is 1215 x 2160 source px and downsizes to 1080 x 1920 (sharp). Starting values centred on the head
