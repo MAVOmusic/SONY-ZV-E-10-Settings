@@ -1,0 +1,4 @@
+# Sensitive system-info files (machine name/ID, serials, username, paths) - never commit
+DxDiag*
+Msinfo32*
+System - About*

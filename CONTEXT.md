@@ -24,6 +24,11 @@ Last Updated: Current Session
 - Cam Link connection: rear 10G (red) port (upgraded from 5G blue); photos in Image Files/JPG/
 - Peripherals: Stream Deck XL, FootSwitch, Razer Ornata V3 X / DeathAdder Essential
 - DxDiag: no problems reported on display/sound/input tabs
+- System: CyberPowerPC "GamingPC" prebuilt, MSI PRO X870-P WIFI (MS-7E47) board,
+  BIOS AMI 1.A40 (2025-03-11), UEFI, Secure Boot on; Windows 10 Home 22H2 (build 19045.6466)
+- Storage detail: 3.64 TB SSD AMD-RAID Array 1 (C:), Disk 1 USB (E:/F:)
+- GPU detail: RTX 4060 8 GB + Radeon 740M 2 GB iGPU; ~51 C / 46% 3D load seen in
+  Task Manager (Image Files/PNG/Task Manager - Performance.png)
 
 2. DIAGNOSED ISSUES & ROOT CAUSES
 --------------------------------------------------------------------------------
@@ -124,6 +129,13 @@ Option 2: Cinematic Out-of-Camera (S-Cinetone)
 - 128 GB RAM + RTX 4060 means OBS x264/NVENC encoding and 4K preview are not
   CPU/GPU bound; USB bandwidth and frame-rate matching remain the real limits.
 - No thermal or driver issues reported by DxDiag.
+- DxDiag crash/hang log (Windows Error Reporting) shows only explorer.exe crashes,
+  Rocksmith2014.exe hangs, CapCut and installer (setup.exe) entries - no OBS, Cam Link
+  or camera-related faults.
+- Cam Link 4K uses the generic Microsoft "USB Video Device" (usbvideo) driver; no
+  Elgato driver needed.
+- Keyboard/mouse sit on USB 3.0 root hubs via Generic USB Hubs; keep the Cam Link on its
+  own rear port, not shared with those hubs.
 
 4. INSTRUCTIONS FOR SUBSEQUENT AI INSTANCES
 --------------------------------------------------------------------------------

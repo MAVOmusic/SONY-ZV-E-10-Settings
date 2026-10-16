@@ -3,6 +3,14 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.3.1] - System info re-verified
+- Re-read DxDiag, System Information, Settings > About and Task Manager screenshots (kept local only).
+- Added sanitized facts to CONTEXT.md: board/BIOS, Windows 22H2 build, storage, GPU detail, WER crash log summary.
+- Added Task Manager GPU screenshot (no identifiers) to Image Files/PNG/.
+- Added .gitignore rules blocking DxDiag, Msinfo32 and System - About files.
+- Withheld from git: DxDiag.txt (machine name + Machine ID), Msinfo32 and About screenshots
+  (machine name, username, Device ID, Product ID).
+
 ## [1.3.0] - Step 1 complete
 - Step 1 fully ticked: LCD out, Auto Power OFF Temp HIGH, USB-C PD power.
 - Added setup photos for power/thermal (ZV E-10 Power Temp-High, USB-C Connected 1/2, Panel Out).
