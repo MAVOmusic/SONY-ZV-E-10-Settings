@@ -3,6 +3,12 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.5.0] - Step 3 complete (OBS side): 4K source at 25 fps
+- OBS Cam Link source now 4K (appears at 100% = 2x size on the 1080p canvas); OBS FPS 25; Lanczos set (user reported, screenshots added).
+- Added Text Files/MD/OBS_ZOOM_GUIDE.md: Fit to Screen, Scale-to-inner-bounds crop zoom, crop formula and starting values.
+- Added OBS main window screenshots (default 4K size and positioned) to Image Files/PNG/.
+- To do: per-item Fit to Screen/crop on clones, tune crop for LED-edge framing, confirm camera File Format = 4K and 4K Output Select = HDMI Only(25p).
+
 ## [1.4.0] - Step 2 complete; Step 3 HDMI item done
 - Verified by photo: Zoom Range = ClearImage Zoom (Camera Settings2, Zoom page 6/9). Step 2 ticked (optional lens deferred).
 - Verified by photo: HDMI Info. Display = Off. Step 3 HDMI item ticked.
