@@ -3,6 +3,13 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.9.0] - Step 7 started, README and hand-over guide
+- README rewritten (final settings table, file list, working rules: update the docs on every edit).
+- New shareable guide `Text Files/MD/ZV-E10_STREAMING_GUIDE.md` (no personal data) for others with the same camera.
+- Checklist: Step 7 (picture quality fine-tuning) and Step 8 (ShaderFilter retune) added. Step 3 FPS text fixed (25, not 30). f/2.8 zoom figure corrected (about 0.6 stop, not 1.3).
+- User: temperature icon disappeared about 10 minutes after the fan; Vertical black-and-white is intentional.
+- Chainbrain 2 screenshot reviewed, not committed (chat names). Bitrate guidance (Twitch about 6000 kbps CBR, YouTube higher) comes from third-party summaries, to be confirmed against the platform docs.
+
 ## [1.8.1] - LED lamps recorded
 - Left and right LED floor lamps are controlled by a phone app (Bluetooth): both at 28%, left blue, right red. New OBS shot (ISO 500, PP Off, 4700K, lamps 28%): frame luma 50, forehead luma about 135 (sitting closer, slightly dimmer than the earlier 159); shelf neutral. Optional ISO 640 if the Key Light stays at 48%.
 

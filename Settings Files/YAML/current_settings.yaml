@@ -102,3 +102,8 @@ led_lamps_v1_8_1:
   control: phone app (Bluetooth)
   left_lamp: {colour: blue, brightness_percent: 28}
   right_lamp: {colour: red, brightness_percent: 28}
+
+step7_started_v1_9_0:
+  temperature_icon: gone about 10 minutes after the fan was turned on (user)
+  obs_vertical_default_filter: black and white (intentional; may change to none)
+  shaderfilter_count: 25+ (to retune in Step 8)
