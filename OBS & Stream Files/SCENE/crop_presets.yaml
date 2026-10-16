@@ -1,14 +1,16 @@
-# OBS Edit Transform presets for the 4K Cam Link clones (canvas 1920x1080, source 3840x2160, PAL 25 fps)
+# OBS Edit Transform presets for the 4K Cam Link clones (canvas 1920x1080, source 3840x2160, PAL 25 fps, lens 16mm F3.5)
 # Crop values are SOURCE pixels. Bounds: Cover, 1920x1080, Position 0,0, Crop Bounds ticked, Lanczos filtering.
-# Estimates read off screenshots (v1.5.3) - fine-tune by eye.
 clones:
   before_playing: "[CLONE] CLOSEUP CLEAN 2 2"   # colour, head close-up
   during_playing: "[CLONE] CLOSEUP CLEAN 2"     # black and white, bass visible
-presets_lens_16mm:            # lens fully wide = the lens's own rest position, fully repeatable after a power cycle
-  before_playing: {left: 980, right: 1260, top: 1150, bottom: 110}   # visible 1600x900 (about 2.4x, 1.2x upscale)
-  during_playing: {left: 964, right: 1244, top: 1032, bottom: 210}   # visible 1632x918
-presets_lens_18mm:            # NOT repeatable after power-off (power zoom has no stops). 18mm is about 1.1x bigger than 16mm.
-  note: the 16mm crops at 18mm are too tight (LEDs fall out of frame, tested v1.5.3)
-  before_playing: {left: 889, right: 1191, top: 1157, bottom: 13}    # visible 1760x990 (about 2.18x, 1.09x upscale)
-  during_playing: {left: 869, right: 1176, top: 1027, bottom: 123}   # visible 1795x1010
-status: user is choosing between 16mm + crop (repeatable) and 18mm + smaller crop (slightly sharper); decision pending
+user_final_v1_5_4:            # entered by the user, LEDs land on both edges (checked from screenshots)
+  before_playing: {left: 1010, right: 1250, top: 1130, bottom: 95}   # visible 1580x935 (not exactly 16:9)
+  during_playing: {left: 1010, right: 1250, top: 1032, bottom: 210}  # visible 1580x918 (not exactly 16:9)
+exact_16_9_equivalent:        # same picture, but numbers match what Cover really shows (1580x889): optional tidy-up
+  before_playing: {left: 1010, right: 1250, top: 1153, bottom: 118}
+  during_playing: {left: 1010, right: 1250, top: 1047, bottom: 225}
+note_cover: with Cover, a window that is slightly less wide-screen than 16:9 is scaled to fill the width and the extra height is trimmed
+  equally from top and bottom, so the real picture equals the 'exact_16_9_equivalent' numbers.
+alt_lens_18mm_not_repeatable_after_power_off:
+  before_playing: {left: 889, right: 1191, top: 1157, bottom: 13}
+  during_playing: {left: 869, right: 1176, top: 1027, bottom: 123}

@@ -1,4 +1,4 @@
-# OBS 4K Cam Link: scaling and crop-zoom guide (v1.5.3)
+# OBS 4K Cam Link: scaling and crop-zoom guide (v1.5.4)
 
 Canvas: 1920x1080 @ 25 fps (PAL; status bar shows 25.00 / 25.00 FPS). Cam Link source: 3840x2160 @ 25.
 
@@ -72,6 +72,20 @@ so the crop zoom must drop from 2.4x to about 2.18x).
   That is an exposure/lighting issue (Auto ISO, Steps 4 and 6).
 - Recommendation: use 16mm + crop (presets in OBS & Stream Files/SCENE/crop_presets.yaml), compare at 1:1 using a windowed preview projector,
   and only switch to 18mm if the difference is clearly visible.
+
+## Final 16mm crops (v1.5.4) and a note on the numbers
+User-tuned: before playing 1010 / 1250 / 1130 / 95, during playing 1010 / 1250 / 1032 / 210. Both LEDs sit at the frame edges; head position matches the
+old VOD frames. The visible windows are 1580 x 935 and 1580 x 918, slightly less wide than 16:9 (1580 x 889). With Cover the extra height is trimmed
+equally top and bottom, so the picture really shown is Top 1153 / Bottom 118 and Top 1047 / Bottom 225. Nothing is stretched. Optional: type the
+equivalent numbers so the fields match what you see.
+
+## Delay / latency (v1.5.4)
+Some lag on fast movement is normal for an HDMI capture chain (camera HDMI out, Cam Link, USB, OBS). Typical total is roughly 100-200 ms; 25 fps also adds 40 ms per frame.
+- Source properties: set **Buffering** from Auto-Detect to **Disable** (lowest latency).
+- Prefer a video format of NV12 if the dropdown offers it (less USB data than YUY2); leave hardware decoding off for this device.
+- Do not fight the delay, match to it: delay the microphone/Rocksmith audio with Advanced Audio Properties -> Sync Offset until a clap is in sync.
+  Measure by recording a clap on camera and comparing the video and sound spikes in the recording.
+- 50 fps (1080p50, camera HD, no 4K crop) would feel more responsive but loses the 4K headroom for lossless zoom.
 
 ## Vertical (9:16) canvas, starting idea
 A full-height 9:16 slice of the 4K frame is 1215 x 2160 source px and downsizes to 1080 x 1920 (sharp). Starting values centred on the head

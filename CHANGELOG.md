@@ -3,6 +3,10 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.5.4] - 16mm crops aligned; latency advice
+- User-tuned 16mm crops accepted (LEDs at both edges): before 1010/1250/1130/95, during 1010/1250/1032/210. Exact 16:9 equivalents recorded.
+- Added latency section (Buffering Disable, NV12, audio Sync Offset) and 4 screenshots.
+
 ## [1.5.3] - 16mm vs 18mm comparison
 - Tested 16mm crops at 18mm: too tight. Added 18mm crop numbers and the clone mapping (2 2 = before playing, 2 = during playing).
 - Documented sharpness maths and repeatability trade-off; recommendation: 16mm + crop. Noted visible noise in dark areas (exposure, Step 4/6).
