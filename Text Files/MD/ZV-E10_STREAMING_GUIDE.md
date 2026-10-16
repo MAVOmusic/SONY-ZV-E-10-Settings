@@ -80,7 +80,6 @@ is in sync (record a clap and compare the spikes).
 - Recommending PP11 (does not exist on this model).
 - Lowering white balance to 4300K for cooler skin (about the same, slightly worse).
 - A Sharpen filter on top of 4K video (looked crunchy; removed).
-- Sony help-guide URLs that were guessed instead of searched (404).
 
 ## 11. Quick checklist before a long stream
 1. Camera on (never power-cycled), orange temperature icon not showing, fan running.
