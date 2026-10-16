@@ -56,13 +56,13 @@ PNG:
 JPG:
 - Image Files/JPG/ZV E-10 Front.jpg, Back.jpg, Side.jpg — hardware photos
 - Image Files/JPG/ZV E-10 Panel Out.jpg — LCD flipped out (Step 1A)  [VERIFIED v1.3.3]
-- Image Files/JPG/ZV E-10 Power Temp-High.jpg — Auto Power OFF Temp HIGH (Step 1B)  [NOT IN REPO YET]
-- Image Files/JPG/ZV E-10 USB-C Connected 1.jpg, 2.jpg — USB-C PD power (Step 1C)  [NOT IN REPO YET]
+- Image Files/JPG/ZV E-10 Power Temp-High.jpg — Auto Power OFF Temp HIGH (Step 1B)  [VERIFIED v1.3.4]
+- Image Files/JPG/ZV E-10 USB-C Connected 1.jpg, 2.jpg — USB-C PD power (Step 1C)  [VERIFIED v1.3.4]
 - Image Files/JPG/Cam Link 4K Connected.jpg, Cam Link 4K Model.jpg — Cam Link on 10G red port  [Connected: VERIFIED (likely left 10G port); Model: serial REDACTED]
 - Image Files/JPG/USB 10G Ports.jpg — port identification  [VERIFIED v1.3.3]
-- Image Files/JPG/Alternative USB-s On Extender.jpg — extender USB slots (not recommended for power)  [NOT IN REPO YET]
-- Image Files/JPG/Connector Alternative I've Found.jpg, ...Specs.jpg — alternative connector  [NOT IN REPO YET]
-- Image Files/JPG/ZV E-10 Menu Burnt Into Screen.jpg — LCD image retention photo (UNVERIFIED)  [NOT IN REPO YET]
+- Image Files/JPG/Alternative USB-s On Extender.jpg — extender USB slots (not recommended for power)  [VERIFIED v1.3.4]
+- Image Files/JPG/Connector Alternative I've Found.jpg, ...Specs.jpg — alternative connector, 20W PD (serial redacted)  [VERIFIED v1.3.4]
+- Image Files/JPG/ZV E-10 Menu Burnt Into Screen.jpg — LCD image retention photo (viewed v1.3.4: faint ghost, live view still updating)
 
 EXCLUDED (security) — NOT stored in git:
 - DxDiag.txt, Msinfo32 - System Summary.PNG, System - About.PNG, Task Manager - Performance.PNG
@@ -106,7 +106,7 @@ SETUP CHECKLIST STATUS (SETUP_CHECKLIST.md)
 Step 1 — Thermal & Power: COMPLETE (v1.3.0)
   [x] LCD flipped out (photo: ZV E-10 Panel Out.jpg)
   [x] Auto Power OFF Temp -> HIGH (photo: ZV E-10 Power Temp-High.jpg)
-  [x] USB-C PD power (photos: ZV E-10 USB-C Connected 1/2.jpg; alt connector found)
+  [x] USB-C PD power (photos verified v1.3.4: black USB-C cable in camera side port; alt connector found)
 Step 2 — Zoom & Quality: NOT STARTED
   [ ] keep camera on/standby; Clear Image Zoom ON; optional manual lens
 Step 3 — OBS & Cam Link 4K: PARTIAL
@@ -118,12 +118,11 @@ Step 5 — Color Profile: NOT STARTED
 Step 6 — Lighting: NOT STARTED
 
 OPEN ISSUES / UNVERIFIED
-- LCD "burnt menu" image retention reported after Step 1 test run; previous AI could NOT view
-  the photo. Status unknown: faint ghost (likely temporary retention) vs solid frozen screen.
-  Needs vision-capable verification. Photo: Image Files/JPG/ZV E-10 Menu Burnt Into Screen.jpg
-  (not yet in repo; user must re-upload).
-- Alternative USB-C connector vs Samsung Super Fast Charger: wattage/specs not recorded
-  (previous AI could not read the specs photo). User to provide wattage in text.
+- LCD "burnt menu": photo viewed in v1.3.4. It is a faint ghost of the Power Setting menu behind a
+  normally updating live view = image retention, not a frozen screen. Monitor it; see IMAGE_NOTES.md.
+- Alternative connector (WW07-G3b-PD): USB-C PD max 20W (9V 2.22A / 12V 1.67A, 15W at 5V 3A); USB-C+USB-A
+  together limited to 5V 3A. The Samsung charger's wattage is still unknown (not readable in photos).
+  User to say which adapter currently powers the camera.
 - Cam Link on 10G red port: photo viewed (v1.3.3). Consistent with the LEFT red 10G port (hidden behind the dongle); right 10G port empty; 5G port holds another cable. Moderate confidence - see Text Files/MD/IMAGE_NOTES.md.
 
 PREVIOUS AI LIMITATIONS (important)

@@ -3,6 +3,14 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.3.4] - Power, menu and retention photos verified (batch 4); all photos in
+- Added and viewed: Power Temp-High, USB-C Connected 1/2, Connector Alternative (+ Specs), Alternative USB-s On Extender, Menu Burnt Into Screen.
+- Verified Auto Power OFF Temp. = High on the camera menu (Step 1 item 2).
+- Alt connector WW07-G3b-PD: PD 20W max; serial number on label redacted in the committed copy.
+- Burnt-in menu photo: faint ghost behind a live view that still updates = image retention, not frozen.
+- CORRECTION to v1.3.3 notes: the braided cable in Panel Out/Front/Side is the micro-HDMI lead, not USB-C. USB-C power is the black cable in USB-C Connected 1.
+- Noted camera shows 1/50 and Auto ISO 320 (PAL region likely; Step 4 needs ISO lock).
+
 ## [1.3.3] - Hardware photos verified (batch 3)
 - Added and viewed: Cam Link 4K Connected, Cam Link 4K Model, USB 10G Ports, ZV E-10 Panel Out.
 - Back/Front/Side already in repo (byte-identical to re-uploads).

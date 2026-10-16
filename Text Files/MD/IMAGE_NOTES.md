@@ -25,14 +25,24 @@ repo copies are byte-identical (same MD5) to the re-uploaded files.
 - Task Manager GPU page: RTX 4060 at 46% 3D, 51 C, driver 32.0.15.6094 (2024-08-14). No identifiers.
 
 ## Hardware photos (viewed in v1.3.3)
-- **Panel Out.jpg**: ZV-E10 on a tripod, lens facing left, LCD swung out ~90 degrees to the side of the body (screen reflects a hand-drawn sign), braided USB-C cable in the side port with the port cover open. Confirms Step 1A (LCD out) and a cable-powered camera.
+- **Panel Out.jpg**: ZV-E10 on a tripod, lens facing left, LCD swung out ~90 degrees to the side of the body (screen reflects a hand-drawn sign), a braided grey cable with a metal plug in the side port (port cover open). CORRECTION (v1.3.4): this braided cable is the 4K micro-HDMI lead to the Cam Link, not the USB-C power cable (seen in the USB-C Connected photos). Confirms Step 1A (LCD out) only.
 - **Back.jpg**: rear of the camera, LCD closed against the body and dark. Lots of dust/lint on the screen. A faint darker reddish rounded area on the left of the screen may be a reflection or retention; cannot tell from this photo (dedicated burnt-screen photo still missing).
-- **Side.jpg**: power-zoom lever (W/T), E-mount marking, USB-C cable in the open side port.
-- **Front.jpg**: lens E PZ 16-50mm f/3.5-5.6 OSS, 40.5mm filter thread, USB-C in the side port.
+- **Side.jpg**: power-zoom lever (W/T), E-mount marking, side port cover open with the braided HDMI lead plugged in (earlier note said USB-C; corrected v1.3.4).
+- **Front.jpg**: lens E PZ 16-50mm f/3.5-5.6 OSS, 40.5mm filter thread, side port holds the braided HDMI lead (grey metal plug).
 - **USB 10G Ports.jpg**: MSI rear I/O. Two red USB 10G ports (side by side) both empty here, a USB-C 20G port empty, USB 2.0 ports (two pairs) with cables plugged in, a cable in the USB 5G port above the 10G pair, ethernet LED lit.
 - **Cam Link 4K Connected.jpg**: the Cam Link dongle (HDMI cable at the bottom left) points at the rear panel between the USB 5G port (holding another cable) and the visible right red 10G port, which is empty. The dongle hides the left 10G port, so it is most likely plugged into the LEFT red 10G port. Moderate confidence: the plug itself is not visible. USB 2.0 ports below carry other cables.
 - **Cam Link 4K Model.jpg**: label shows model 20GAM9901 (Corsair Memory BV, made in Taiwan), USB-A 3.0 plug with blue tongues, HDMI IN on the other end. The serial number is blacked out in the committed copy.
 - Cam Link 4K is USB 3.0 / 5 Gbps, so the faster 10G port gives no speed gain; what matters is avoiding USB 2.0 ports and shared hubs.
+
+## Power / menu / retention photos (viewed in v1.3.4)
+- **Power Temp-High.jpg**: LCD menu "Power Setting Option" page 1: Power Save Start Time = Off, Power Save by Monitor = Does Not Link, **Auto Power OFF Temp. = High**. Verified.
+- **USB-C Connected 1.jpg**: side-angle of the camera, menu again showing Auto Power OFF Temp. High. Two cables in the side ports: top = thick black USB-C power cable, below = braided 4K micro-HDMI lead. Verified.
+- **USB-C Connected 2.jpg**: black surge-protector strip with several adapters/PSUs (green LEDs on). A black adapter with a thin black USB-C cable in its front sits on the middle socket (looks like the phone fast charger). Its wattage is not readable in the photo.
+- **Connector Alternative I've Found.jpg**: white UK plug-in adapter: 1x USB-C labelled PD/20W, 2x USB-A QC3.0, pass-through 13A socket.
+- **...Found - Specs.jpg**: label: model WW07-G3b-PD, USB-C output 5V 3A / 9V 2.22A / 12V 1.67A (15W / 20W / 20W), USB-A same, **USB-C + USB-A together max 5V 3A**. Manufacturer LENCENT, BS 1363. Serial number blacked out in the committed copy.
+- **Alternative USB-s On Extender.jpg**: wall-mounted white extension strip with 4 USB-A ports (one has a white cable), a PSU in one of its mains sockets. USB-A only, no PD - not suitable for powering the camera.
+- **Menu Burnt Into Screen.jpg**: camera LCD (flipped out) running live view (1/50, F3.5, Auto ISO 320, 0:00 timecode) with a faint, semi-transparent ghost of the "Power Setting Option" menu text (Power Save Start Time / Power Save by Monitor "Does Not Link" / Auto Power OFF Temp.) showing through the live image. The live image and overlays update normally, so this is a faint ghost (image retention), not a frozen screen. Likely temporary on an LCD, but it could persist if static menus stay on for hours.
+- **Shutter 1/50 and Auto ISO**: current exposure is Auto ISO (the "A" before ISO 320) and 1/50 s. 1/50 is the 180-degree value for 25 fps, which suggests the camera is on PAL (25p/50p), normal for the UK. Check NTSC/PAL Selector before Step 3/4: on PAL, "30 fps" is really 25 fps and the shutter rule is 1/50 (25p) or 1/100 (50p).
 
 ## Take-aways for the checklist
 - Target look = sharp, low-noise, evenly lit: supports Step 4 (low ISO, manual exposure) and Step 6 (more key light).

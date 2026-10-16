@@ -69,6 +69,11 @@ Last Updated: Current Session
    - Note: User found an alternative USB-C connector/adapter that may perform better
      than the ultra-fast Samsung phone charger; photos/specs in Image Files/JPG/
      (Connector Alternative I've Found*.jpg, Alternative USB-s On Extender.jpg).
+   - Alternative adapter spec (from label, v1.3.4): model WW07-G3b-PD, USB-C PD up to 20W
+     (5V 3A / 9V 2.22A / 12V 1.67A); USB-C + USB-A together max 5V 3A. Keep its USB-A ports unused.
+   - The 4-port USB-A wall extender is USB-A only (no PD) - do not use it to power the camera.
+   - Samsung fast charger wattage: unknown (not readable in photos).
+   - Region note: shutter 1/50 seen on camera suggests PAL (25p/50p); check NTSC/PAL Selector.
 
 --- B. RESOLVING ZOOM MEMORY & QUALITY DEGRADATION ---
 1. Hardware Workaround (Zero-Cost):

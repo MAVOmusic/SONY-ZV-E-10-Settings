@@ -4,8 +4,8 @@ Tick each step as completed. Update VERSION.txt and CHANGELOG.md when a setup is
 
 ## Step 1 — Thermal & Power Management (24h operation)
 - [x] Flip LCD screen out 90-180 degrees from body (done; photo verified v1.3.3: LCD swung out ~90 degrees to the side; Image Files/JPG/ZV E-10 Panel Out.jpg)
-- [x] Menu -> Setup (Yellow Toolbox) -> Power Option -> Auto Power OFF Temp. -> HIGH (photo: Image Files/JPG/ZV E-10 Power Temp-High.jpg)
-- [x] USB-C cable to dedicated USB-C PD wall adapter (not motherboard port) (photos: Image Files/JPG/ZV E-10 USB-C Connected 1/2.jpg; alt connector: Connector Alternative I've Found.jpg)
+- [x] Menu -> Setup (Yellow Toolbox) -> Power Option -> Auto Power OFF Temp. -> HIGH (photo verified v1.3.4: menu shows Auto Power OFF Temp. = High; Image Files/JPG/ZV E-10 Power Temp-High.jpg)
+- [x] USB-C cable to dedicated USB-C PD wall adapter (not motherboard port) (photos verified v1.3.4: black USB-C cable in the side port, adapter on surge strip; alt connector WW07-G3b-PD is PD 20W max - USB-C + USB-A share 5V 3A, so keep its other ports empty; Image Files/JPG/ZV E-10 USB-C Connected 1/2.jpg)
 
 ## Step 2 — Zoom Memory & Quality
 - [ ] Keep camera powered via USB-C PD; use standby, not full power-down
