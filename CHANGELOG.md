@@ -3,6 +3,12 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.3.3] - Hardware photos verified (batch 3)
+- Added and viewed: Cam Link 4K Connected, Cam Link 4K Model, USB 10G Ports, ZV E-10 Panel Out.
+- Back/Front/Side already in repo (byte-identical to re-uploads).
+- Cam Link Model photo: serial number blacked out before commit (model 20GAM9901 left visible).
+- Panel Out confirms LCD flipped out and USB-C cable connected; Cam Link on rear USB, see IMAGE_NOTES.md.
+
 ## [1.3.2] - Reference images verified
 - Re-uploaded Chainbrain + 3 Mavo problem samples confirmed byte-identical to repo copies; viewed all four.
 - Added Text Files/MD/IMAGE_NOTES.md with verified visual descriptions.

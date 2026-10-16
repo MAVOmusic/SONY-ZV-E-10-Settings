@@ -55,11 +55,11 @@ PNG:
 - Image Files/PNG/Mavo (OBS Zoom In).png (1918x1078) — problem sample
 JPG:
 - Image Files/JPG/ZV E-10 Front.jpg, Back.jpg, Side.jpg — hardware photos
-- Image Files/JPG/ZV E-10 Panel Out.jpg — LCD flipped out (Step 1A)  [NOT IN REPO YET]
+- Image Files/JPG/ZV E-10 Panel Out.jpg — LCD flipped out (Step 1A)  [VERIFIED v1.3.3]
 - Image Files/JPG/ZV E-10 Power Temp-High.jpg — Auto Power OFF Temp HIGH (Step 1B)  [NOT IN REPO YET]
 - Image Files/JPG/ZV E-10 USB-C Connected 1.jpg, 2.jpg — USB-C PD power (Step 1C)  [NOT IN REPO YET]
-- Image Files/JPG/Cam Link 4K Connected.jpg, Cam Link 4K Model.jpg — Cam Link on 10G red port  [NOT IN REPO YET]
-- Image Files/JPG/USB 10G Ports.jpg — port identification  [NOT IN REPO YET]
+- Image Files/JPG/Cam Link 4K Connected.jpg, Cam Link 4K Model.jpg — Cam Link on 10G red port  [Connected: VERIFIED (likely left 10G port); Model: serial REDACTED]
+- Image Files/JPG/USB 10G Ports.jpg — port identification  [VERIFIED v1.3.3]
 - Image Files/JPG/Alternative USB-s On Extender.jpg — extender USB slots (not recommended for power)  [NOT IN REPO YET]
 - Image Files/JPG/Connector Alternative I've Found.jpg, ...Specs.jpg — alternative connector  [NOT IN REPO YET]
 - Image Files/JPG/ZV E-10 Menu Burnt Into Screen.jpg — LCD image retention photo (UNVERIFIED)  [NOT IN REPO YET]
@@ -124,7 +124,7 @@ OPEN ISSUES / UNVERIFIED
   (not yet in repo; user must re-upload).
 - Alternative USB-C connector vs Samsung Super Fast Charger: wattage/specs not recorded
   (previous AI could not read the specs photo). User to provide wattage in text.
-- Cam Link on 10G red port confirmed by user text; photo not yet verified.
+- Cam Link on 10G red port: photo viewed (v1.3.3). Consistent with the LEFT red 10G port (hidden behind the dongle); right 10G port empty; 5G port holds another cable. Moderate confidence - see Text Files/MD/IMAGE_NOTES.md.
 
 PREVIOUS AI LIMITATIONS (important)
 - The previous AI had NO vision capability. All image-based conclusions were unverified

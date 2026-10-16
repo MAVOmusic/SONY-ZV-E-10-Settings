@@ -3,7 +3,7 @@
 Tick each step as completed. Update VERSION.txt and CHANGELOG.md when a setup is completed.
 
 ## Step 1 — Thermal & Power Management (24h operation)
-- [x] Flip LCD screen out 90-180 degrees from body (done; photo: Image Files/JPG/ZV E-10 Panel Out.jpg)
+- [x] Flip LCD screen out 90-180 degrees from body (done; photo verified v1.3.3: LCD swung out ~90 degrees to the side; Image Files/JPG/ZV E-10 Panel Out.jpg)
 - [x] Menu -> Setup (Yellow Toolbox) -> Power Option -> Auto Power OFF Temp. -> HIGH (photo: Image Files/JPG/ZV E-10 Power Temp-High.jpg)
 - [x] USB-C cable to dedicated USB-C PD wall adapter (not motherboard port) (photos: Image Files/JPG/ZV E-10 USB-C Connected 1/2.jpg; alt connector: Connector Alternative I've Found.jpg)
 
@@ -13,7 +13,7 @@ Tick each step as completed. Update VERSION.txt and CHANGELOG.md when a setup is
 - [ ] (Optional) Upgrade to manual zoom lens (Sigma 18-50 f/2.8 / Tamron 17-70 f/2.8)
 
 ## Step 3 — OBS & Cam Link 4K
-- [x] Cam Link 4K plugged into REAR 10G (red) port (upgraded from 5G blue) — photo: Image Files/JPG/Cam Link 4K Connected.jpg / USB 10G Ports.jpg
+- [x] Cam Link 4K plugged into REAR 10G (red) port (upgraded from 5G blue) — photo viewed v1.3.3: Cam Link sits next to the right 10G port, most likely in the hidden left 10G port; Image Files/JPG/Cam Link 4K Connected.jpg / USB 10G Ports.jpg. Note: Cam Link 4K is USB 3.0 (5 Gbps), so 10G gives no extra speed - rear 5G/10G are equally fine
 - [ ] Menu -> Setup -> HDMI Settings -> HDMI Info Display -> OFF
 - [ ] OBS source: Custom, 3840x2160 or 1920x1080, FPS = 30 (match camera; no 60 on 4K)
 
