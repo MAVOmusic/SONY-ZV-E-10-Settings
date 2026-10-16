@@ -47,6 +47,11 @@ Auto exposure on a webcam setup drifts and adds noise. Settings that worked (ind
   a dark room is normal.
 - Auto Slow Shutter has no effect in Manual Exposure.
 
+### Focus (stops the picture "breathing")
+Continuous AF with Wide area can refocus on the background or hunt when you move. In Camera Settings2 -> Movie2: **AF Transition Speed** lower (about 3-4; default 5-7 is fast)
+and **AF Subj. Shift Sens.** lower (1-2 = locked on the subject; 5 = very responsive). Camera Settings1 -> AF1 holds Focus Mode and Face/Eye AF Set.
+DRO/Auto HDR (Camera Settings1 -> Color/WB/Img. Processing1) changes shadows by scene; try Off if the brightness drifts.
+
 ## 6. Zoom by cropping in OBS (stays sharp up to 2x)
 A 3840x2160 source on a 1920x1080 canvas looks like a massive zoom-in because OBS places it at 100%. It is not a camera zoom.
 1. Select the source, press **Ctrl+F** (Fit to Screen). That is your normal wide view, with 4x the pixels behind it.

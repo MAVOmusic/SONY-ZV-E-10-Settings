@@ -53,12 +53,17 @@ Goal: close the "Chainbrain video looks cleaner" gap. The Vertical canvas keeps 
 - [x] OBS Settings -> Video (screenshot v1.9.1): base 1920x1080, output 1920x1080, 25 PAL; downscale filter n/a because the resolutions match. Correct, no change
 - [x] OBS Settings -> Output -> Streaming (screenshot v1.9.1): NVENC H.264, CBR 8000 kbps, keyframe 0 (auto), P4 Medium, High Quality tuning, Two Passes (Quarter Res), profile high, B-frames 2, Look-ahead OFF, Adaptive Quantisation OFF, Rescale Output off. 8000 kbps at 25 fps is generous (about 320 kbit per frame vs about 100 for 6000 kbps at 60 fps), so bitrate is not the limit.
 - [ ] Recommended change (not applied yet): Keyframe interval 2 s; Preset P5 (or P6); Look-ahead ON; Adaptive Quantisation ON; Multipass Full Resolution optional. Check GPU load and dropped frames after (revert to P4 if the GPU struggles)
-- [ ] Output -> Recording tab (not seen yet): separate high-quality local recording for YouTube uploads
-- [ ] Aitum Multistream (Twitch main, Kick and Blaze clone it) and Aitum Vertical output settings: encoder, bitrate, keyframe, resolution, FPS (not seen yet)
-- [ ] Check the Chainbrain VOD's frame rate (Twitch player gear -> Advanced -> Video Stats). If it is 60 fps, part of the 'cleaner' look is motion smoothness; our 4K source is limited to 25 fps
+- [x] Output -> Recording (screenshot v1.9.2): Standard, MKV, video encoder = (Use stream encoder) = same NVENC H.264 CBR 8000 kbps, AAC, audio track 1 only, file into a dated folder on the Desktop. Works, but a separate recording encoder is better for YouTube (and allows Pause)
+- [ ] Recommended (not applied): Recording video encoder = NVIDIA NVENC H.264, Rate Control CQP about 18, preset P5, keep MKV (remux to MP4 for editing)
+- [x] Aitum Multistream 1.0.7 (v1.9.2): Kick and Blaze both use 'Main Encoder', so they get the same picture as Twitch and no extra GPU load; the OBS Output changes apply to all three
+- [x] Aitum Vertical 1.6.3 Recording tab (v1.9.2): 6000 kbps, start/stop with main recording, 'Use main OBS settings' ticked (stream encoder). Not seen yet: Vertical Streaming tab (resolution, FPS, bitrate). Optional: raise the vertical recording bitrate to 8000
+- [ ] Do not update Aitum (Multistream 1.0.8 and Vertical 1.6.6 are available) before the test stream, so the comparison stays clean
+- [x] Chainbrain frame rate (YouTube Stats for nerds, v1.9.2): 1920x1080 @ 60 fps, AV1 (av01) video, Opus audio. His video is 60 fps; ours is 25 fps, so motion smoothness is a real difference. Our 4K source is limited to 25p
 - [ ] OBS camera source: Buffering Disable, NV12 if offered, Lanczos on every clone incl. the vertical one
 - [ ] OBS Stats dock: skipped / missed / dropped frames after 10 minutes
-- [ ] Camera: focus (Continuous AF vs manual focus locked on the seat), DRO (D-Range Optimizer) value, Soft Skin Effect and Background Defocus Off
+- [x] Camera menus read from the existing photos (v1.9.2): Focus Mode Continuous AF and Focus Area Wide (Camera Settings1 -> AF1, page 4/11); AF Transition Speed 7 (Fast) and AF Subj. Shift Sens. 5 (Responsive) (Camera Settings2 -> Movie2); DRO/Auto HDR = D-Range Optimizer (Camera Settings1 -> Color/WB/Img. Processing1, page 8/11; level not visible); Soft Skin Effect Off
+- [ ] Recommended (not applied): AF Transition Speed 3-4 and AF Subj. Shift Sens. 1-2 (Locked-on) so the focus stops hunting on a seated person; DRO Off as a test (check near-black stays about 30%); need a photo of the opened DRO item (shows the level)
+- [ ] Test stream with all the changes at once, then compare the VOD with Chainbrain (user will stream first)
 - [ ] Light: optional diffusion over the Key Light panel (smoother skin); ISO 640 if the face looks dim
 - [ ] Optional: local recording at CQP/high bitrate for YouTube; faster lens later
 

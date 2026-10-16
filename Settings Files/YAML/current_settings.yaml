@@ -113,3 +113,11 @@ obs_output_v1_9_1:
   streaming: {output_mode: Advanced, video_encoder: NVIDIA NVENC H.264, rate_control: CBR, bitrate_kbps: 8000, keyframe_s: 0 (auto), preset: P4 Medium, tuning: High Quality, multipass: Two Passes (Quarter Resolution), profile: high, look_ahead: false, adaptive_quantisation: false, b_frames: 2, rescale_output: Disabled, audio_encoder: FFmpeg AAC, twitch_vod_track: 2}
   plugins: {multistream: Aitum Multistream (Twitch main, Kick and Blaze clone it), vertical: Aitum Vertical}
   recommended_not_applied: {keyframe_s: 2, preset: P5 or P6, look_ahead: true, adaptive_quantisation: true}
+
+step7_v1_9_2:
+  recording: {type: Standard, format: mkv, video_encoder: stream encoder (NVENC H.264 CBR 8000), audio_encoder: FFmpeg AAC, audio_tracks: [1]}
+  aitum_multistream: {version: 1.0.7, kick: Main Encoder, blaze: Main Encoder}
+  aitum_vertical: {version: 1.6.3, recording_bitrate_kbps: 6000, use_main_obs_settings: true}
+  chainbrain_youtube: {resolution: 1920x1080, fps: 60, video_codec: AV1, audio: Opus}
+  camera_af: {focus_mode: Continuous AF, focus_area: Wide, af_transition_speed: 7, af_subj_shift_sens: 5, dro_auto_hdr: D-Range Optimizer (level unknown)}
+  recommended_not_applied: {af_transition_speed: 3-4, af_subj_shift_sens: 1-2, dro: Off (test), recording_encoder: NVENC H.264 CQP 18 P5}

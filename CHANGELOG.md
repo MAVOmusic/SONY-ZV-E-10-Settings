@@ -3,6 +3,13 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.9.2] - Recording, multistream and Chainbrain stats
+- Recording tab: MKV using the stream encoder (NVENC H.264 CBR 8000 kbps). Recommended a separate CQP recording encoder.
+- Aitum Multistream (Kick, Blaze) use the Main Encoder; Aitum Vertical records at 6000 kbps with the main settings. Both plugins have updates, to be done after the test stream.
+- Chainbrain YouTube stats: 1080p60, AV1/Opus. Our source is 25 fps, so smoothness differs.
+- Camera: AF Transition Speed 7 and AF Subj. Shift Sens. 5 (fast and responsive) found in the Movie2 menu photo; recommend slower, locked-on values. DRO location documented.
+- The recording folder path is not recorded (it contains the Windows user name).
+
 ## [1.9.1] - OBS output settings reviewed
 - OBS Video and Output (Streaming) screenshots read: 1080p25 canvas, NVENC H.264 CBR 8000 kbps, keyframe auto, P4, Look-ahead and Adaptive Quantisation off. Video settings are correct. Recommended: keyframe 2 s, P5/P6, Look-ahead and Adaptive Quantisation on (not applied yet).
 - Multistream uses Aitum Multistream (Twitch main; Kick and Blaze clone it). The vertical view is Aitum Vertical (not the plain OBS dock).
