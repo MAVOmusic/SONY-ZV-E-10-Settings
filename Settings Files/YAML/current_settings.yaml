@@ -90,3 +90,10 @@ step5_done_v1_7_0:
   creative_style: Standard
   iso: 500
   note: no PP11 on this ZV-E10 (PP1-PP10 only)
+
+step6_done_v1_8_0:
+  key_light: {model: Elgato Key Light, firmware: 1.0.3, temperature_k: 4700, brightness_percent: 48, position: fixed (taped stand)}
+  camera_wb_tested: 4300K            # about the same as 4700K
+  final_exposure: {mode: Manual Exposure, shutter: 1/50, aperture: F3.5, iso: 500, picture_profile: "Off"}
+  cooling: fan on camera tripod
+  airplane_mode: "On"

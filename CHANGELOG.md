@@ -3,10 +3,16 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.8.0] - Step 6 complete (lighting); correction
+- CORRECTION: the v1.7.0 claim that the face was about 2 stops darker than Chainbrain came from measuring the wrong image region. Re-measured on the forehead: 159 (ISO 500, PP Off, 4700K) vs about 163 for Chainbrain, so ISO 500 is right and no extra light is needed. Wrong numbers removed from the notes.
+- User photos of the Key Light setup: Elgato Key Light stand is taped and cannot move. Brightness stays at 48%. WB 4300K tested; no meaningful difference from 4700K.
+- Photos and the Key Light device screenshot (serial number, IP) were NOT committed: they show a serial number, an IP address, personal folder names on the monitors and names on the whiteboard. Only firmware 1.0.3 and the model were recorded.
+- Fan on the camera and Airplane Mode On recorded. Orange temperature icon still to be checked in a long run. Optional: lower the red LED strip, faster lens later. Added the 4300K screenshot (JPG).
+
 ## [1.7.0] - Step 5 complete (colour profile)
 - Tested Picture Profile Off and PP1-PP10 at ISO 500 (11 screenshots, stored as JPG). No PP11 on the original ZV-E10 (earlier advice was wrong; fixed).
 - Decision: Picture Profile Off, Creative Style Standard. Matches the Chainbrain black level; PP3-PP6 are flatter, PP7-PP10 are log/HLG.
-- ISO 500 is not too bright overall (frame luma 60 vs Chainbrain 59), but the face is about 2 stops darker than Chainbrain (luma 84 vs 163): needs more light on the face (Step 6).
+- ISO 500: frame luma 60 vs Chainbrain 59. (The face-brightness claim originally written here was wrong, see 1.8.0.)
 
 ## [1.6.0] - Step 4 complete (exposure)
 - User fixed the aperture to F3.5, ISO 250, WB 4700K, shutter 1/50, SteadyShot Off, Manual Exposure; fan on the camera, Airplane Mode On. Monitor Brightness is greyed out.

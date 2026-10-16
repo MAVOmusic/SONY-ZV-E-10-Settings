@@ -67,4 +67,4 @@ Color-WB-Img. Processing1 (White Balance Auto, Picture Profile Off, Creative Sty
 ## Image Files/JPG/Picture Profile Tests/ (11 JPG, v1.7.0)
 OBS screenshots of the same scene at ISO 500, F3.5, 1/50, WB 4700K with Picture Profile Off and PP1-PP10 (converted from PNG, q88, to save repo size).
 Measured on the main preview (luma 0-255): Off 60 (28% near-black), PP1 57, PP2 55, PP3 71 (5%), PP4 71 (5%), PP5 70 (1%), PP6 68 (1%), PP7 44, PP8 60, PP9 61, PP10 62.
-Face luma: Off 84, PP4 83, PP3 81, PP6 81, PP5 79, PP10 70, PP1 67, PP2 68. Chainbrain reference: whole frame luma 59 (28% near-black), face luma about 163, face RGB about 201/148/141.
+Face luma numbers in the first version of this note were measured on the wrong region and were removed (v1.8.0). Chainbrain reference: whole frame luma 59 (28% near-black), face luma about 163. With the right region, PP Off at ISO 500 has forehead luma about 159.

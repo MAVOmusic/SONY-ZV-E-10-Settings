@@ -25,7 +25,7 @@ Baseline (v1.5.8 photo, all auto): 1/25, F3.5, Auto ISO 250, Key Light 4700K 48%
 - [x] Movie Shoot Mode = Manual Exposure (MENU -> Camera Settings2 -> Movie1 -> Shoot Mode; the still 'Shoot Mode' in Camera Settings1 stays Intelligent Auto, irrelevant)
 - [x] Shutter 1/50 (25p PAL) - photo v1.5.8/1.5.9
 - [x] Aperture F3.5 (user-reported v1.6.0; consistent with the screenshot: ISO 250 at F3.5 looks like ISO 640 at F5.6 did)
-- [x] ISO fixed (MENU -> Camera Settings1 -> Exposure -> ISO). Measured on the v1.6.0 OBS screenshot at ISO 250: face luma about 75/255, frame mean 37, 47% of pixels near black = about 1 stop under for skin. Raise to ISO 500 (up to 640). Clean at 250, so noise is not the limit
+- [x] ISO fixed (MENU -> Camera Settings1 -> Exposure -> ISO). At ISO 250 the OBS screenshot was dim (frame mean luma 37, 47% near-black); ISO 500 gives frame luma 60 and a forehead luma of about 159, matching Chainbrain (frame 59, face about 163). ISO 500 is the final value. (CORRECTION v1.8.0: the earlier face luma numbers were measured on the wrong image region.)
 - [x] White Balance 4700K (user-reported; MENU -> Camera Settings1 -> Color/WB/Img. Processing1 -> White Balance -> K)
 - [x] Movie SteadyShot Off (MENU -> Camera Settings2 -> Movie3 -> SteadyShot)
 - [x] OBS main source Sharpen filter removed (user)
@@ -39,6 +39,9 @@ Result of 11 screenshots (ISO 500, F3.5, 1/50, WB 4700K; Image Files/JPG/Picture
 - Why: PP Off keeps the same black level as the Chainbrain reference (28% near-black pixels in both), good contrast and colour. PP3/PP4 lift the shadows (5% black) and look flatter; PP5/PP6 (Cine1/Cine2) are flat (1% black); PP7-PP10 are S-Log2/S-Log3/HLG for grading, they look washed out in OBS. PP1/PP2 are slightly darker than Off.
 - [ ] (optional) WB cooler 4300-4500K: skin is a bit warmer/redder than Chainbrain (B/R 0.62 vs 0.70), partly red LED spill
 
-## Step 6 — Lighting
-- [x] Thermal (user v1.6.0): fan placed at the camera, Airplane Mode On (Network1). Monitor Brightness is greyed out (cannot change). Orange temperature icon seen in v1.5.10 photos; result after the fan unconfirmed
-- [ ] Increase key light; ISO 250-640 at F3.5 is fine; prefer light over ISO above 640
+## Step 6 — Lighting - DONE v1.8.0
+- [x] Key Light = Elgato Key Light (original), firmware 1.0.3, 4700K 48% -> user kept the brightness at 48% (eye comfort); stand is taped and cannot be moved. No extra light needed: forehead luma 159 vs Chainbrain about 163 at ISO 500, F3.5, 1/50
+- [x] WB: 4300K tested by the user, 4700K measured basically the same (forehead B/R 0.60 vs 0.63); either is fine, 4700K matches the light
+- [x] Thermal (user): fan on the camera tripod, Airplane Mode On (Network1). Monitor Brightness is greyed out. Orange temperature icon seen in the v1.5.10 photos; result after the fan still unconfirmed - watch it during the first long stream
+- [ ] (optional) Red LED strip spills pink on the white shelf (right side); lower the red strip brightness 30-50% for a more neutral shelf like Chainbrain
+- [ ] (optional, later) Faster lens for more light and no zoom reset: Sigma 16mm f/1.4 (about 2.6 stops more light, same 16mm view, same crops) or an f/2.8 zoom (about 1.3 stops)
