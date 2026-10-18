@@ -153,3 +153,9 @@ outputs, and Aitum Vertical recording uses the main OBS horizontal
 settings.** So this encoder block is dormant: it does not affect the
 Twitch/Kick horizontal streams or the vertical recordings, its
 keyframe 0 (vs main 2 s) needs no fix, and no settings change follows.
+
+## Lyrics screenshots (v1.10.0, JPG q88 in Image Files/JPG)
+- `Lyrics Chroma Key.jpg`: Effect Filters on the Rocksmith lyrics source - Chroma Key (enabled): Custom Colour #000000, Similarity 1, Smoothness 1, Spill Reduction 1, Opacity 1.0000, Contrast -4.00, Brightness 1.0000, Gamma 1.00. Colour Correction also enabled; a second "Chroma Key 2" is disabled (eye crossed out).
+- `Lyrics Color Correction.jpg`: Gamma -3.00, Contrast 4.00, Brightness 1.0000, Saturation 5.00, Hue Shift 180.00, Opacity 1.0000, Color Multiply #FFFF00 (yellow), Color Add #000000.
+- `Lyrics Results.jpg`: the resulting yellow lyric line over the CD wall - letters are semi-transparent with solid yellow blobs eating into words ("all these things" worst). Cause: black-only keying leaves anti-aliased edges/noise, then Gamma -3 + Contrast 4 crushes the shapes.
+- `Lyrics Shader - Simulated Preview.jpg`: NumPy/Pillow SIMULATION (not an OBS capture): old screenshot vs the lyrics_karaoke.shader algorithm run on a synthetic noisy raw lyric line ("all" in green = game highlight colour, kept green; rest flat yellow with black outline). Validates the key/outline logic; OBS test still pending.

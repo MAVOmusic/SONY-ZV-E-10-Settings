@@ -80,6 +80,9 @@ Goal: close the "Chainbrain video looks cleaner" gap. The Vertical canvas keeps 
 
 ## Step 8 - ShaderFilter retune (STARTED v1.9.6, waiting for the filter list)
 25+ ShaderFilter looks were made for the old look. After Step 7 is final, re-check each against the new black level, brightness and colour.
+- [x] Lyrics look identified (v1.10.0, screenshots JPG in Image Files/JPG): Rocksmith lyrics source uses Chroma Key (#000000, Similarity/Smoothness/Spill 1, Contrast -4) + Colour Correction (Gamma -3, Contrast 4, Saturation 5, Hue Shift 180, Multiply #FFFF00) (+ a disabled Chroma Key 2). Result is blobby/semi-transparent because black-only keying + extreme gamma/contrast crush the anti-aliased letters
+- [x] New `OBS & Stream Files/SHADER/lyrics_karaoke.shader` written (v1.10.0) to REPLACE that pair on the raw lyrics source: soft brightness key + de-speckle, flat yellow text, Highlight colour for coloured source pixels (game sung-syllable highlight), dark outline + glow, optional Bold for Shorts. Simulation preview: Image Files/JPG/Lyrics Shader - Simulated Preview.jpg; guide: Text Files/MD/LYRICS_SHADER_GUIDE.md
+- [ ] USER TEST in OBS: disable (do not delete) the old lyrics filters, add lyrics_karaoke.shader with defaults, check one full song at 100%/fullscreen/vertical; tune per guide (Threshold/Bold/Highlight split). Record result here before calling it final. Note: a shader cannot add word-timing/bouncing-ball - that still comes from Rocksmith
 - [ ] List all filters and where each is used (horizontal clone, vertical clone, which song type)
 - [ ] Decide the default (no filter by default, or black-and-white)
 - [ ] Retune each filter at the final exposure; test on YouTube-style output

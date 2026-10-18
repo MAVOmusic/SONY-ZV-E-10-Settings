@@ -1,0 +1,65 @@
+# Lyrics karaoke shader — guide (v1.10.0)
+
+## Why the old pair looks messy
+The Rocksmith lyrics source was cleaned up with OBS **Chroma Key**
+(Custom Colour `#000000`, Similarity 1, Smoothness 1, Spill Reduction 1,
+Contrast −4.00) followed by **Colour Correction** (Gamma −3.00,
+Contrast 4.00, Saturation 5.00, Hue Shift 180, Color Multiply `#FFFF00`).
+Chroma Key at those settings only removes almost-pure black, so
+anti-aliased letter edges and compression noise survive as
+semi-transparent mush; the extreme gamma/contrast then crushes the
+letter shapes into blobs (worst where anything bright overlaps the line).
+
+## The shader
+`OBS & Stream Files/SHADER/lyrics_karaoke.shader` (obs-shaderfilter)
+replaces **both** filters. On the raw lyrics source (black background,
+light text) it:
+
+1. Keys on brightness with a soft threshold — faint noise drops out,
+   letters become solid.
+2. De-speckles (3×3 minimum mix) — isolated noise dots are deleted.
+3. Paints the letters a flat colour (default karaoke yellow
+   `1.0 / 0.85 / 0.0`). Source pixels that are strongly *coloured*
+   (saturation above “Highlight split”) get the Highlight colour
+   instead, so if the game colours the currently-sung syllable, that
+   karaoke highlight survives; grey/white text is never affected.
+4. Adds a solid dark outline and an optional soft glow so the line
+   reads over the camera/CD wall, in fullscreen and in Shorts.
+5. Optional Bold (letter dilation) for the small vertical canvas text.
+
+Output is transparent where there is no text, so the source sits
+directly over the camera scene.
+
+## How to set it up (test it, keep the old pair disabled as backup)
+1. On the lyrics source, **untick** (don't delete yet) Chroma Key,
+   Colour Correction and Chroma Key 2.
+2. Add → ShaderFilter → load `lyrics_karaoke.shader`. Keep the source
+   crop tight around the lyric line — the shader keys *any* bright
+   pixel, so note-highway graphics inside the crop would be painted too.
+3. Defaults: Threshold 0.25, Softness 0.35, De-speckle 0.5, Bold 0,
+   Outline 2 px, Glow 0.35, Highlight split 0.45.
+4. Check at 100% preview, fullscreen and on the vertical canvas:
+   - Letters thin/broken → Threshold 0.18, or Bold 1.
+   - Grey haze around letters → Threshold 0.35.
+   - Noise dots survive → De-speckle 0.75–1.0.
+   - Everything turns Highlight colour → Highlight split 0.7–1.0
+     (1.0 = highlight never used, all text one colour).
+   - Text too small in Shorts → Bold 1–1.5 and Outline 3 on the
+     vertical clone's copy of the filter.
+5. Only delete the old Chroma Key / Colour Correction once a full song
+   (quiet + loud/bright sections) looks right. `TEST: show cleaned key`
+   shows white-on-black text only — handy to prove the key is clean.
+
+## Honest limits
+- A per-pixel shader cannot add sing-along timing (no bouncing ball,
+  no word-by-word wipe). Line changes and any sung-word colour still
+  come from Rocksmith — the shader preserves them, it can't create them.
+- It must run on the **raw** source. Applied *after* the old filters it
+  cannot recover letter shapes they already destroyed.
+- Status: **not yet tested in OBS** (same as the sharpen shader was at
+  first). The algorithm was validated by a NumPy/Pillow simulation on a
+  synthetic noisy lyric line — see
+  `Image Files/JPG/Lyrics Shader - Simulated Preview.jpg` (top: the old
+  result; middle/bottom: simulated new result, incl. a green highlight
+  word). First OBS test results should be recorded in
+  `SETUP_CHECKLIST.md` Step 8 before this is called final.

@@ -1,6 +1,6 @@
-# CONTEXT.md — Sony ZV-E10 Streaming Setup (current, v1.9.8)
+# CONTEXT.md — Sony ZV-E10 Streaming Setup (current, v1.10.0)
 
-Last updated: 2026-10-18 (v1.9.8). This file is the single current-state summary.
+Last updated: 2026-10-18 (v1.10.0). This file is the single current-state summary.
 It supersedes `AI_HANDOFF_CONTEXT.md` (v1.3-era, kept for history only — do not
 trust its settings, branch notes, or "vision check" instructions).
 Update this file on EVERY settings change, together with `SETUP_CHECKLIST.md`,
@@ -56,6 +56,16 @@ and `README.md`.
 - Sharpening: `OBS & Stream Files/SHADER/edge_aware_sharpen.shader`
   (Amount 2.0, Threshold 0.01, Radius 2.0) — confirmed working v1.9.6;
   keep it **first** in the filter list on each clone.
+- Lyrics (v1.10.0): Rocksmith lyric line is shown via Chroma Key
+  (#000000, all 1, Contrast −4) + Colour Correction (Gamma −3,
+  Contrast 4, Saturation 5, Hue 180, Multiply #FFFF00) = yellow but
+  blobby. New `OBS & Stream Files/SHADER/lyrics_karaoke.shader` is
+  written to replace that pair on the RAW lyrics source (soft
+  brightness key + de-speckle, flat yellow, highlight colour for
+  coloured source pixels, dark outline/glow, optional Bold) —
+  simulation-validated, **OBS test pending** (old pair stays disabled
+  as backup). Guide: `Text Files/MD/LYRICS_SHADER_GUIDE.md`. A shader
+  cannot add word-timing; that still comes from Rocksmith.
 
 ## Key findings / lessons (corrected — earlier wrong claims removed)
 
