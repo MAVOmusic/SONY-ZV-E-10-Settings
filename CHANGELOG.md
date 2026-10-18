@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.13.2] - REAL fix for wide-scroll shader: naked prose lines, not (only) elapsed_time
+- The v1.13.1 fix was incomplete (user: 'same error'). Root cause actually found by mapping the parser's error lines through the plugin template (51 lines): the generated header text after the first // line was NOT commented - lines 2-12 were bare English prose in the code, so the parser failed at the first uniforms. The duplicate elapsed_time declaration would also have been wrong (wrapper declares it), so both fixes stand. All other NEW shaders were scanned: no other naked-prose lines, and no other file redeclares a wrapper uniform. LESSON recorded: multi-line replacement text inserted after a // marker must have // on EVERY line.
+
 ## [1.13.1] - Fix: wide-scroll lyrics shader failed to parse (duplicate elapsed_time)
 - The user's screenshot showed obs-shaderfilter errors (Expected 'name'/'type') before the shader even loaded. Cause found in the plugin source: the wrapper template already declares uniform float elapsed_time (plus elapsed_time_start/show/active/enable and random/uniform params), so the re-declaration added in v1.13.0 broke its effect parser. Removed; documented in the file. RULE for all future shaders: never declare elapsed_time (or the other wrapper uniforms) in a .shader file - just use them.
 

@@ -1,15 +1,15 @@
 // Karaoke lyrics WIDE-SCROLL VERTICAL variant (v1.13.0 - OPTIONAL test, not final)
-PURPOSE: bigger lyrics on Shorts WITHOUT editing CDLC. It zooms the
-lyric strip (default 1.30x) and slowly ping-pong scrolls sideways, so
-a long line that would overflow at that size travels instead of being
-cut. Lines that already fit will also drift a little - that is the
-unavoidable price: a per-pixel shader cannot measure a line's length
-(no frame analysis in obs-shaderfilter), so it cannot know which lines
-need scrolling. If the drift annoys on short lines, this variant is
-not for you and the plain _vertical file stays the final one.
-True auto-fit would need the timed lyric data extracted from the CDLC
-(the vocals are already synced inside the file - a batch converter is
-a separate project, not hours per song, but not built yet).
+// PURPOSE: bigger lyrics on Shorts WITHOUT editing CDLC. It zooms the
+// lyric strip (default 1.30x) and slowly ping-pong scrolls sideways, so
+// a long line that would overflow at that size travels instead of being
+// cut. Lines that already fit will also drift a little - that is the
+// unavoidable price: a per-pixel shader cannot measure a line's length
+// (no frame analysis in obs-shaderfilter), so it cannot know which lines
+// need scrolling. If the drift annoys on short lines, this variant is
+// not for you and the plain _vertical file stays the final one.
+// True auto-fit would need the timed lyric data extracted from the CDLC
+// (the vocals are already synced inside the file - a batch converter is
+// a separate project, not hours per song, but not built yet).
 // NOTE (v1.12.1): the user uploaded his on-disk copy to check whether OBS
 // writes slider values back into the .shader file. IT DOES NOT - his copy
 // still had the old defaults Fill Solidity 2.0 / Backing Plate 0.45, while

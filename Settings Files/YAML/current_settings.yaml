@@ -210,3 +210,6 @@ v1_13_0:
 
 v1_13_1:
   fix: "lyrics_karaoke_vertical_wide_scroll.shader: removed duplicate 'uniform float elapsed_time;' - obs-shaderfilter wrapper already declares it (obs-shaderfilter.c template), duplicate broke the effect parser with Expected 'name'/'type'. Rule: never declare wrapper uniforms (elapsed_time, elapsed_time_start/show/active/enable) in .shader files."
+
+v1_13_2:
+  real_fix: "wide-scroll shader failed because header lines 2-12 were bare prose without // (inserted after a // first line). Parser error lines mapped through the 51-line plugin template pointed at the first uniforms. Fixed by commenting every line; the v1.13.1 elapsed_time fix was also valid and stands. All NEW shaders scanned clean."
