@@ -1,4 +1,4 @@
-# CONTEXT.md — Sony ZV-E10 Streaming Setup (current, v1.10.0)
+# CONTEXT.md — Sony ZV-E10 Streaming Setup (current, v1.10.1)
 
 Last updated: 2026-10-18 (v1.10.1). This file is the single current-state summary.
 It supersedes `AI_HANDOFF_CONTEXT.md` (v1.3-era, kept for history only — do not
@@ -63,9 +63,16 @@ and `README.md`.
   written to replace that pair on the RAW lyrics source (soft
   brightness key + de-speckle, flat yellow, highlight colour for
   coloured source pixels, dark outline/glow, optional Bold) —
-  simulation-validated, **OBS test pending** (old pair stays disabled
-  as backup). Guide: `Text Files/MD/LYRICS_SHADER_GUIDE.md`. A shader
-  cannot add word-timing; that still comes from Rocksmith.
+  coloured source pixels, dark outline/glow, optional Bold) —
+  OBS test 1: shader works, sung word came out green (highlight split
+  live). Problem: Rocksmith's **dim history line** was keyed out —
+  user wants it kept. Fixed in shader v1.10.1 (Threshold 0.12,
+  De-speckle 0.25, History Opacity 0.6); re-test pending. Also: keep
+  Crop/Pad above the shader / tight scene crop — it keys any bright
+  pixel (note highway included). Guide:
+  `Text Files/MD/LYRICS_SHADER_GUIDE.md`. A shader cannot add
+  word-timing or make a line linger after Rocksmith removes it;
+  that still comes from Rocksmith.
 
 ## Key findings / lessons (corrected — earlier wrong claims removed)
 

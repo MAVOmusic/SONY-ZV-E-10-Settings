@@ -1,4 +1,24 @@
-# Lyrics karaoke shader — guide (v1.10.0)
+# Lyrics karaoke shader — guide (v1.10.1)
+
+## v1.10.1 — keep the history line (after OBS test 1)
+Test 1 verdict: the shader works and the sung word really does come out
+in the Highlight colour — but Rocksmith shows the previous/next line
+**dim**, and the v1.10.0 defaults (Threshold 0.25, De-speckle 0.5) deleted
+that dim line entirely, so there was no history of the line on screen.
+v1.10.1 changes: Threshold 0.12, Softness 0.5, De-speckle 0.25, and a new
+**History Opacity (0.6)**: dim text is kept readable but secondary, with
+a fainter outline; the bright main line stays solid. If the history line
+still vanishes: Threshold 0.08 and/or History Opacity 0.75. Raise
+Threshold only in 0.02 steps — every step also eats the history line.
+Also seen in test 1: the Filters preview showed the shader painting the
+whole Rocksmith frame (note highway) — it keys *any* bright pixel. Put a
+**Crop/Pad filter above the shader** on the Lyrics source (or keep your
+existing tight scene crop); never use the full game frame as the
+visible output. One more limit, stated plainly: a per-pixel shader has
+no access to previous frames, so it cannot make a line *linger after
+Rocksmith removes it* — the history it keeps is the dim line Rocksmith
+itself displays. If a timed hold/fade is what you want, say so; that
+needs a different tool, not this shader.
 
 ## Why the old pair looks messy
 The Rocksmith lyrics source was cleaned up with OBS **Chroma Key**
