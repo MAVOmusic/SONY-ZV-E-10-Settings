@@ -1,6 +1,6 @@
-# CONTEXT.md — Sony ZV-E10 Streaming Setup (current, v1.10.1)
+# CONTEXT.md — Sony ZV-E10 Streaming Setup (current, v1.10.2)
 
-Last updated: 2026-10-18 (v1.10.1). This file is the single current-state summary.
+Last updated: 2026-10-18 (v1.10.2). This file is the single current-state summary.
 It supersedes `AI_HANDOFF_CONTEXT.md` (v1.3-era, kept for history only — do not
 trust its settings, branch notes, or "vision check" instructions).
 Update this file on EVERY settings change, together with `SETUP_CHECKLIST.md`,
@@ -67,9 +67,13 @@ and `README.md`.
   OBS test 1: shader works, sung word came out green (highlight split
   live). Problem: Rocksmith's **dim history line** was keyed out —
   user wants it kept. Fixed in shader v1.10.1 (Threshold 0.12,
-  De-speckle 0.25, History Opacity 0.6); re-test pending. Also: keep
-  Crop/Pad above the shader / tight scene crop — it keys any bright
-  pixel (note highway included). Guide:
+  De-speckle 0.25, History Opacity 0.6); test 2: history stays but
+  the line's middle blended into the CD wall (semi-transparent letter
+  centres). Shader **v1.10.2**: Fill Solidity 2.0 (opaque cores),
+  Outline 3 px full strength, RED Outer Border 2 px, Backing Plate
+  0.45, Glow removed; re-test pending. Also: keep Crop/Pad above the
+  shader / tight scene crop — it keys any bright pixel (note
+  highway included). Guide:
   `Text Files/MD/LYRICS_SHADER_GUIDE.md`. A shader cannot add
   word-timing or make a line linger after Rocksmith removes it;
   that still comes from Rocksmith.

@@ -1,4 +1,16 @@
-// Karaoke lyrics cleaner for the obs-shaderfilter plugin (v1.10.1)
+// Karaoke lyrics cleaner for the obs-shaderfilter plugin (v1.10.2)
+// v1.10.2: STRONGER BORDERS. User test of v1.10.1: better, history line
+// stays, but the middle of the line still blends into the busy CD-wall
+// background and is unreadable at stream size. Three causes fixed:
+// (1) the soft key left letter centres semi-transparent, so the
+// background showed THROUGH the letters - new Fill Solidity pushes
+// letter cores to fully opaque; (2) the outline was thinned again by
+// the history tier - the outline is now always full strength;
+// (3) new two-tone border: black inner stroke (default 3 px) + RED
+// outer border (default 2 px, user approved red if needed) + an
+// optional dark backing plate behind the whole line, which kills the
+// busy background directly around the words. At small (Shorts) sizes
+// raise Outline to 4 and Outer Border to 3.
 // v1.10.1: KEEP THE LINE HISTORY. User test of v1.10.0: Rocksmith shows the
 // main line bright and the previous/next line DIM; the old threshold
 // (0.25) + de-speckle deleted that dim line, so there was no history of
@@ -41,7 +53,7 @@
 // come from Rocksmith itself.
 //
 // Suggested starting values (the defaults): Threshold 0.12, Softness 0.5,
-// De-speckle 0.25, History Opacity 0.6, Bold 0, Outline width 2, Glow 0.35.
+// De-speckle 0.25, History Opacity 0.6, Bold 0, Outline width 2, Backing Plate 0.45.
 // If the dim history line vanishes again: Threshold 0.08, History Opacity 0.75.
 // If letters look thin/broken: raise Bold to 1 (do NOT raise Threshold).
 // If grey background haze remains: raise Threshold in 0.02 steps only -
@@ -118,15 +130,36 @@ uniform float outline_px<
     float minimum = 0.0;
     float maximum = 6.0;
     float step = 0.5;
-> = 2.0;
+> = 3.0;
 
-uniform float glow_strength<
-    string label = "Glow strength (0 = off)";
+uniform float3 outer_color<
+    string label = "Outer border colour (second ring, outside the black outline)";
+    string widget_type = "color";
+> = {1.0, 0.08, 0.08};
+
+uniform float outer_px<
+    string label = "Outer border width (pixels, 0 = off)";
     string widget_type = "slider";
     float minimum = 0.0;
-    float maximum = 1.0;
+    float maximum = 6.0;
+    float step = 0.5;
+> = 2.0;
+
+uniform float plate_opacity<
+    string label = "Backing plate opacity (dark plate behind the whole line, 0 = off)";
+    string widget_type = "slider";
+    float minimum = 0.0;
+    float maximum = 0.85;
     float step = 0.05;
-> = 0.35;
+> = 0.45;
+
+uniform float fill_solidity<
+    string label = "Fill solidity (pushes letter centres to fully opaque; raise if background shows through letters)";
+    string widget_type = "slider";
+    float minimum = 1.0;
+    float maximum = 4.0;
+    float step = 0.25;
+> = 2.0;
 
 uniform float text_opacity<
     string label = "Text opacity";
@@ -190,9 +223,11 @@ float4 mainImage(VertData v_in) : TARGET
 {
     float4 src = image.Sample(textureSampler, v_in.uv);
 
-    float fill = key_dilated(v_in.uv, bold_px);
-    float outline_zone = key_dilated(v_in.uv, bold_px + outline_px);
-    float glow_zone = key_dilated(v_in.uv, bold_px + outline_px + 4.0);
+    float fill_raw = key_dilated(v_in.uv, bold_px);
+    float fill = saturate(fill_raw * fill_solidity); // solid letter cores
+    float inner_zone = key_dilated(v_in.uv, bold_px + outline_px);
+    float outer_zone = key_dilated(v_in.uv, bold_px + outline_px + outer_px);
+    float plate_zone = key_dilated(v_in.uv, bold_px + outline_px + outer_px + 3.0);
 
     if (test_show_key)
         return float4(fill, fill, fill, 1.0);
@@ -206,30 +241,25 @@ float4 mainImage(VertData v_in) : TARGET
     float use_highlight = smoothstep(highlight_split, highlight_split + 0.2, saturation);
     float3 fill_rgb = lerp(text_color, highlight_color, use_highlight);
 
-    // Bright main line: tier ~1 (solid, full outline). Dim history line:
-    // its key is weaker, so tier is lower and it is kept at
-    // history_opacity with only a faint outline - visible, not deleted.
-    float tier = saturate(fill * 1.5);
+    // Bright main line: tier ~1. Dim history line: tier lower, kept at
+    // history_opacity. Borders are NOT reduced by tier any more (v1.10.2):
+    // a thinner border on the dim line is what made it unreadable.
+    float tier = saturate(fill_raw * 1.5);
     float keep = lerp(history_opacity, 1.0, tier);
 
-    float outline = saturate(outline_zone - fill) * (0.3 + 0.7 * tier);
-    float glow = saturate(glow_zone - outline_zone) * glow_strength * tier;
+    float a_text  = fill * text_opacity * keep;
+    float a_inner = saturate(inner_zone - fill) ;                    // black stroke
+    float a_outer = saturate(outer_zone - inner_zone);               // red ring
+    float a_plate = saturate(plate_zone - outer_zone) * plate_opacity; // dark plate
 
-    // Composite glow -> outline -> text (straight alpha out).
-    float a_glow = glow;
-    float a_outline = outline;
-    float a_text = fill * text_opacity * keep;
-
-    float out_a = a_text + a_outline * (1.0 - a_text) + a_glow * (1.0 - a_text) * (1.0 - a_outline);
-    float3 out_rgb = fill_rgb;
-    if (a_outline > a_text)
-        out_rgb = outline_color;
-    if (a_text < 0.01 && a_outline < 0.01)
-        out_rgb = text_color; // glow takes the text colour
-
-    // Blend colours by coverage so edges stay clean.
-    float total = a_text + a_outline + a_glow + 1e-5;
-    out_rgb = (fill_rgb * a_text + outline_color * a_outline + text_color * a_glow) / total;
-
-    return float4(out_rgb, saturate(out_a));
+    // Coverage-weighted colour blend; alpha is the union of all layers.
+    float w_text = a_text;
+    float w_in   = a_inner * (1.0 - a_text);
+    float w_out  = a_outer * (1.0 - a_text) * (1.0 - a_inner);
+    float w_plate= a_plate * (1.0 - a_text) * (1.0 - a_inner) * (1.0 - a_outer);
+    float out_a  = saturate(w_text + w_in + w_out + w_plate);
+    float3 out_rgb = (fill_rgb * w_text + outline_color * w_in +
+                      outer_color * w_out + float3(0.0, 0.0, 0.0) * w_plate) /
+                     max(out_a, 1e-5);
+        return float4(out_rgb, saturate(out_a));
 }

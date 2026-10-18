@@ -1,4 +1,18 @@
-# Lyrics karaoke shader — guide (v1.10.1)
+# Lyrics karaoke shader — guide (v1.10.2)
+
+## v1.10.2 — stronger borders (after OBS test 2)
+Test 2: the history line stayed, but the middle of the line still blended
+into the CD wall at small size. Causes: (1) the soft key left letter
+centres semi-transparent, so the background showed *through* the letters;
+(2) the dim-line tier thinned the outline again. Fixes: **Fill Solidity
+(2.0)** pushes letter cores fully opaque; **Outline now 3 px at full
+strength for every line**; a **red Outer Border (2 px)** rings the black
+stroke (red approved by the user); a **Backing Plate (0.45)** darkens
+the background immediately around the words. The old soft Glow slider
+is gone - the plate replaces it. Confirm v1.10.2 is loaded by the new
+sliders (Fill Solidity / Outer Border / Backing Plate). Still blending
+over the brightest covers: Outline 4, Outer Border 3, Backing Plate 0.6.
+For tiny Shorts text those three are the first knobs to turn up.
 
 ## v1.10.1 — keep the history line (after OBS test 1)
 Test 1 verdict: the shader works and the sung word really does come out
