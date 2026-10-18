@@ -91,4 +91,7 @@ Goal: close the "Chainbrain video looks cleaner" gap. The Vertical canvas keeps 
 - [ ] Decide the default (no filter by default, or black-and-white)
 - [ ] Retune each filter at the final exposure; test on YouTube-style output
 - [ ] Check GPU cost (shaders run at the source size: 4K source costs more than 1080p)
+- [x] Shader library (v1.11.0): user's 163 files (his own GitHub commits into SHADER/) moved into OBS & Stream Files/SHADER/NEW/ as canonical + NEW/textures from upstream + 1 upstream-only extra (glitch-periodic); our edge/lyrics shaders moved into NEW/ too. Only 11 of his files differ in content from current upstream (his plugin's versions - kept). NEW/SHADER_CATALOG.md catalogues all 166 files (.effect = Use Effect File option; transitions flagged as not source filters)
+- [x] Workflow agreed: (1) user's 25 tuned looks first, one by one, settings + example image -> fine-tune -> FINAL recorded in NEW/SHADER_NOTES.md; (2) then the remaining shaders one by one for music-stream ideas (song styles/moods, camera/lyrics/vertical, GPU)
+- [x] Starting shader hsl_hsv_saturation.shader: READ (code) and simulated on the user's frame - HSL vs HSV vs Parallel at 0.5/1.6/2.5 recorded in NEW/SHADER_NOTES.md; alpha=1 note (never on Lyrics source). WAITING for the user's settings + example image for it
 

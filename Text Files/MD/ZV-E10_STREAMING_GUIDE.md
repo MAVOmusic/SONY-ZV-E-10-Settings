@@ -89,7 +89,7 @@ is in sync (record a clap and compare the spikes).
 
 ## 10b. Sharpening without adding noise
 The built-in OBS Sharpen filter lifts every pixel difference, including sensor noise in dark areas. Better: sharpen brightness only, ignore small differences
-(noise), fade the effect out in shadows and limit halos. An obs-shaderfilter example is in `OBS & Stream Files/SHADER/edge_aware_sharpen.shader`
+(noise), fade the effect out in shadows and limit halos. An obs-shaderfilter example is in `OBS & Stream Files/SHADER/NEW/edge_aware_sharpen.shader`
 (put it above any colour/look shaders; start with Amount 1.5, Threshold 0.03, Radius 1.0, raise the threshold if noise shows).
 
 ## 11. Things that did NOT help (so you can skip them)

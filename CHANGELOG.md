@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.11.0] - Shader library imported into SHADER/NEW, catalogued, hsl_hsv_saturation ready
+- The user's 163 files arrived as his own GitHub commits (cb88ea9 'First 100 Shaders', c783ccf 'Rest of the Shader files') into SHADER/ - this commit moves them all into OBS & Stream Files/SHADER/NEW/ as the canonical copies (they match his installed plugin). Checked against the official exeldro/obs-shaderfilter repo: identical after line-ending normalisation except 11 files (ascii, corner_pin, cut_rect_per_corner, rounded_rect, rounded_rect2, rounded_rect_per_corner, rounded_rect_per_side, rounded_stroke, rounded_stroke_gradient, zoom, zoom_blur_transition) - his versions kept. One upstream-only extra added (glitch-periodic.shader) + upstream textures/ that some shaders reference. Our edge_aware_sharpen.shader + lyrics_karaoke.shader moved into NEW/ too.
+- NEW/SHADER_CATALOG.md: all 166 files catalogued (type .shader/.effect, first-pass category, settings list, warnings - .effect needs 'Use Effect File' ticked, transitions kept but flagged as not source filters). NEW/SHADER_NOTES.md started: hsl_hsv_saturation analysed from code + simulated on the user's frame (Image Files/JPG/Shaders/hsl_hsv_saturation - Simulation.jpg). Agreed order: user's 25 tuned looks first (starting with hsl_hsv_saturation), then a one-by-one review of the rest for music-stream moods/styles.
+
 ## [1.10.3] - Lyrics shader CONFIRMED FINAL (user-tested)
 - User OBS test 3 with own tuning: Fill Solidity 4.0 and Backing Plate 0.4 - "works... best we can do". Result screenshot committed (Image Files/JPG/Lyrics Corrected.jpg, 296x27 strip: solid text, red outer border readable over the whole line, sung word 'tell' green, dim part still legible). These two values are now the shader defaults, so the file loads as the final look. Lyrics shader item closed; remaining Step 8 work is the other 25+ look filters.
 

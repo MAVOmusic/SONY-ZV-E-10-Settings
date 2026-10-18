@@ -1,6 +1,6 @@
-# CONTEXT.md — Sony ZV-E10 Streaming Setup (current, v1.10.3)
+# CONTEXT.md — Sony ZV-E10 Streaming Setup (current, v1.11.0)
 
-Last updated: 2026-10-18 (v1.10.3). This file is the single current-state summary.
+Last updated: 2026-10-18 (v1.11.0). This file is the single current-state summary.
 It supersedes `AI_HANDOFF_CONTEXT.md` (v1.3-era, kept for history only — do not
 trust its settings, branch notes, or "vision check" instructions).
 Update this file on EVERY settings change, together with `SETUP_CHECKLIST.md`,
@@ -53,13 +53,13 @@ and `README.md`.
   Aitum Vertical recording uses these main settings (its greyed "mp4"/6000
   is a placeholder). Vertical canvas: black-and-white filter is
   **intentional** (may become "no filter" by default in Step 8).
-- Sharpening: `OBS & Stream Files/SHADER/edge_aware_sharpen.shader`
+- Sharpening: `OBS & Stream Files/SHADER/NEW/edge_aware_sharpen.shader`
   (Amount 2.0, Threshold 0.01, Radius 2.0) — confirmed working v1.9.6;
   keep it **first** in the filter list on each clone.
 - Lyrics (v1.10.0): Rocksmith lyric line is shown via Chroma Key
   (#000000, all 1, Contrast −4) + Colour Correction (Gamma −3,
   Contrast 4, Saturation 5, Hue 180, Multiply #FFFF00) = yellow but
-  blobby. New `OBS & Stream Files/SHADER/lyrics_karaoke.shader` is
+  blobby. New `OBS & Stream Files/SHADER/NEW/lyrics_karaoke.shader` is
   written to replace that pair on the RAW lyrics source (soft
   brightness key + de-speckle, flat yellow, highlight colour for
   coloured source pixels, dark outline/glow, optional Bold) —
@@ -149,3 +149,15 @@ stream from it and vertical recording uses the main horizontal settings.
   front-on face is to be lifted; OBS Stats after 10 min; plugin updates
   after a clean test stream. (Done v1.9.8: like-for-like fullscreen
   frame check; Aitum Multistream > Vertical Canvas screenshot.)
+
+## Shader library (v1.11.0)
+`OBS & Stream Files/SHADER/NEW/` holds 166 shader/effect files: the
+user's 163 (his GitHub commits, moved from SHADER/; his installed
+plugin's versions, checked vs upstream - only 11 differ in content)
++ 1 upstream-only extra + upstream `textures/`, plus our two own
+shaders moved there.
+`NEW/SHADER_CATALOG.md` = file/settings/warning index;
+`NEW/SHADER_NOTES.md` = deep per-shader analysis (hsl_hsv_saturation
+done, READY). Agreed workflow: user's 25 tuned looks first
+(settings + example image, starting with hsl_hsv_saturation), then
+one-by-one ideas for the rest (moods/song styles). Step 8 continues.
