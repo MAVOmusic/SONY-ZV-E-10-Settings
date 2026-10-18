@@ -24,9 +24,14 @@ horizontal; vertical near-black 43.8% → 37.9%, detail energy down from
 gritty 2203 → 1700.
 
 Use: on the camera clone for moody/ballad/retro songs and as the
-vertical default look when wanted. Do NOT stack with
-`Sharpen/edge_aware_sharpen.shader` — this shader already sharpens;
-using both double-sharpens (use edge-aware alone on colour looks).
+vertical default look when wanted. SHARPEN STATE AS TESTED: the FINAL
+pictures above were made WITHOUT the standalone
+`Sharpen/edge_aware_sharpen.shader` filter, but WITH this shader's
+own internal Sharpen sliders at 2.0 (H) / 1.8 (V) — that internal
+sharpening is part of why the look works. Do NOT run standalone
+Sharpen + internal sharpen together (double-sharpening) unless the
+internal amount is set to 0; a global always-on-Sharpen decision for
+all 25 looks is pending a dedicated test pack (see SHADER_NOTES).
 Filter order in OBS: this shader after the sharpen shader's slot,
 i.e. simply don't enable both on the same clone.
 

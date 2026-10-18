@@ -3,7 +3,7 @@
 A tested Sony ZV-E10 streaming setup (Cam Link 4K + OBS), written up step by step with photos and measurements.
 Rig: ZV-E10 (PAL) + E PZ 16-50mm, Elgato Cam Link 4K, USB-C power, OBS 32.1.2 on Windows 10, Elgato Key Light plus RGB floor lamps.
 
-**Current version:** see `VERSION.txt`. **Status:** Steps 1-6 done; Step 7 (quality fine-tuning) nearly done, Step 8 (ShaderFilter retune) started. Vertical YouTube outputs in Aitum Multistream are dormant (not streamed from; vertical recording uses the main horizontal settings). All screenshots are JPG (q88) since v1.9.7 — `Image Files/PNG/` is empty; do not commit large PNGs. Sharpening: `OBS & Stream Files/SHADER/NEW/Sharpen/edge_aware_sharpen.shader`. Lyrics: `OBS & Stream Files/SHADER/NEW/Karaoke/lyrics_karaoke.shader` (karaoke-yellow Rocksmith lyrics, replaces the Chroma Key + Colour Correction pair; guide in `Text Files/MD/LYRICS_SHADER_GUIDE.md`, OBS test pending).
+**Current version:** see `VERSION.txt`. **Status:** Steps 1-6 done; Step 7 (quality fine-tuning) nearly done, Step 8 (ShaderFilter retune) started. Vertical YouTube outputs in Aitum Multistream are dormant (not streamed from; vertical recording uses the main horizontal settings). All screenshots are JPG (q88) since v1.9.7 — `Image Files/PNG/` is empty; do not commit large PNGs. Sharpening: `OBS & Stream Files/SHADER/NEW/Sharpen/edge_aware_sharpen.shader`. Lyrics: `OBS & Stream Files/SHADER/NEW/Karaoke/lyrics_karaoke_horizontal.shader (+ _vertical)` (karaoke-yellow Rocksmith lyrics, replaces the Chroma Key + Colour Correction pair; guide in `Text Files/MD/LYRICS_SHADER_GUIDE.md`, OBS test pending).
 
 ## Final settings in one place
 | Area | Setting |

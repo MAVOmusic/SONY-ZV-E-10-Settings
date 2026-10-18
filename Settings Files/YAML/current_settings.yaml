@@ -196,3 +196,8 @@ shader_look_01_final_v1_12_0:
   folder_rule: "SHADER/OLD = user's 163 uploaded; SHADER/NEW/<Look>/ = ours only, always _horizontal + _vertical baked-in files"
   stage_colour_pop: {files: "OBS & Stream Files/SHADER/NEW/Stage Colour Pop/mavo_stage_colour_pop_horizontal/vertical.shader", horizontal: {hsl_gain: 1.25, hsl_gamma: 0.95, hsv_gain: 1.15, order: Parallel}, vertical: {hsl_gain: 1.35, hsl_gamma: 0.95, hsv_gain: 1.25, order: Parallel}, status: recommended starting point}
   images: "only Black And White - Before After (Horizontal/Vertical).jpg kept for shader 1; earlier shader-1 images removed from working tree (in git history)"
+
+v1_12_1:
+  lyrics_upload_check: {finding: "OBS does NOT save slider values into the .shader file - user's on-disk copy had stale defaults (Fill Solidity 2.0, Backing Plate 0.45); his confirmed 4.0/0.4 exist only in his OBS filter settings", action: "repo split into lyrics_karaoke_horizontal (4.0/0.4) + lyrics_karaoke_vertical (+Bold 1, Outer 3), single file removed"}
+  sharpen_state: {black_and_white: "standalone edge_aware OFF on both clones; internal sharpen sliders at defaults 2.0 H / 1.8 V during tests", stage_colour_pop: "standalone edge_aware OFF, no internal sharpen exists in that shader"}
+  sharpen_policy: {status: PENDING user test pack, recommendation: "edge_aware ALWAYS ON first on both clones as baseline (B&W internal then 0); alternative = no global sharpen", applies_to: all 25 looks}

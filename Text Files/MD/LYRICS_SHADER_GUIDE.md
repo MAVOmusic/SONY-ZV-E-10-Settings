@@ -51,7 +51,7 @@ semi-transparent mush; the extreme gamma/contrast then crushes the
 letter shapes into blobs (worst where anything bright overlaps the line).
 
 ## The shader
-`OBS & Stream Files/SHADER/NEW/Karaoke/lyrics_karaoke.shader` (obs-shaderfilter)
+`OBS & Stream Files/SHADER/NEW/Karaoke/lyrics_karaoke_horizontal.shader (+ _vertical)` (obs-shaderfilter)
 replaces **both** filters. On the raw lyrics source (black background,
 light text) it:
 

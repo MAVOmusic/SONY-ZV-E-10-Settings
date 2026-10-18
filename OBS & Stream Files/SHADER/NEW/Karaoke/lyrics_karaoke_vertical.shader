@@ -1,4 +1,13 @@
-// Karaoke lyrics cleaner for the obs-shaderfilter plugin (v1.10.2)
+// Karaoke lyrics cleaner VERTICAL (mobile) for obs-shaderfilter (v1.12.1 - same final look, small-text defaults)
+// NOTE (v1.12.1): the user uploaded his on-disk copy to check whether OBS
+// writes slider values back into the .shader file. IT DOES NOT - his copy
+// still had the old defaults Fill Solidity 2.0 / Backing Plate 0.45, while
+// his confirmed tuned values (Fill Solidity 4.0 / Backing Plate 0.4) live
+// only in his OBS filter settings. This repo copy therefore keeps the
+// tuned values BAKED IN as defaults (4.0 / 0.4 below). Nothing else in
+// his upload differed, so his other sliders were at these defaults.
+// A _vertical copy sits next to this file (same values + Bold 1,
+// Outer Border 3 for the smaller Shorts text).
 // v1.10.2: STRONGER BORDERS. User test of v1.10.1: better, history line
 // stays, but the middle of the line still blends into the busy CD-wall
 // background and is unreadable at stream size. Three causes fixed:
@@ -122,7 +131,7 @@ uniform float bold_px<
     float minimum = 0.0;
     float maximum = 3.0;
     float step = 0.5;
-> = 0.0;
+> = 1.0;
 
 uniform float outline_px<
     string label = "Outline width (pixels, 0 = off)";
@@ -143,7 +152,7 @@ uniform float outer_px<
     float minimum = 0.0;
     float maximum = 6.0;
     float step = 0.5;
-> = 2.0;
+> = 3.0;
 
 uniform float plate_opacity<
     string label = "Backing plate opacity (dark plate behind the whole line, 0 = off)";
@@ -151,7 +160,7 @@ uniform float plate_opacity<
     float minimum = 0.0;
     float maximum = 0.85;
     float step = 0.05;
-> = 0.45;
+> = 0.4;
 
 uniform float fill_solidity<
     string label = "Fill solidity (pushes letter centres to fully opaque; raise if background shows through letters)";
@@ -159,7 +168,7 @@ uniform float fill_solidity<
     float minimum = 1.0;
     float maximum = 4.0;
     float step = 0.25;
-> = 2.0;
+> = 4.0;
 
 uniform float text_opacity<
     string label = "Text opacity";

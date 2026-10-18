@@ -1,6 +1,6 @@
-# CONTEXT.md — Sony ZV-E10 Streaming Setup (current, v1.12.0)
+# CONTEXT.md — Sony ZV-E10 Streaming Setup (current, v1.12.1)
 
-Last updated: 2026-10-18 (v1.12.0). This file is the single current-state summary.
+Last updated: 2026-10-18 (v1.12.1). This file is the single current-state summary.
 It supersedes `AI_HANDOFF_CONTEXT.md` (v1.3-era, kept for history only — do not
 trust its settings, branch notes, or "vision check" instructions).
 Update this file on EVERY settings change, together with `SETUP_CHECKLIST.md`,
@@ -59,7 +59,7 @@ and `README.md`.
 - Lyrics (v1.10.0): Rocksmith lyric line is shown via Chroma Key
   (#000000, all 1, Contrast −4) + Colour Correction (Gamma −3,
   Contrast 4, Saturation 5, Hue 180, Multiply #FFFF00) = yellow but
-  blobby. New `OBS & Stream Files/SHADER/NEW/Karaoke/lyrics_karaoke.shader` is
+  blobby. New `OBS & Stream Files/SHADER/NEW/Karaoke/lyrics_karaoke_horizontal.shader (+ _vertical)` is
   written to replace that pair on the RAW lyrics source (soft
   brightness key + de-speckle, flat yellow, highlight colour for
   coloured source pixels, dark outline/glow, optional Bold) —
