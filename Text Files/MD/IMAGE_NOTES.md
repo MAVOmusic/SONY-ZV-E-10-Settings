@@ -4,24 +4,24 @@ Descriptions below come from actually viewing the files. Image-to-filename mappi
 order the user attached them (Chainbrain, Camera Zoom In 1, Camera Zoom In 2, OBS Zoom In); the
 repo copies are byte-identical (same MD5) to the re-uploaded files.
 
-## Image Files/PNG/Chainbrain.png (1922x1079) - TARGET LOOK
+## Image Files/JPG/Chainbrain.jpg (1922x1079) - TARGET LOOK
 - Twitch VOD screenshot: bearded man, black cap, over-ear headphones, plaid flannel, blue guitar.
 - Wide framing, subject about 1/3 of frame; room (guitars, game shelves) stays readable.
 - Sharp face and texture, clean low-noise shadows, neutral-to-warm skin tones, natural contrast.
 
-## Image Files/PNG/Mavo (Camera Zoom In 1).png (1920x1080) - problem sample
+## Image Files/JPG/Mavo (Camera Zoom In 1).jpg (1920x1080) - problem sample
 - Bass-playing shot, subject mid-frame in front of a CD wall, with stream overlays (goals, request list).
 - Face and beard look soft/smeared with blocky noise; strong red/orange rim light colours one side.
 
-## Image Files/PNG/Mavo (Camera Zoom In 2).png (1919x1076) - problem sample
+## Image Files/JPG/Mavo (Camera Zoom In 2).jpg (1919x1076) - problem sample
 - Tighter, side-on crop (head turned), same CD wall, overlays unchanged.
 - Skin and beard detail is soft and blocky; red/magenta cast on face and glasses from the rim light.
 
-## Image Files/PNG/Mavo (OBS Zoom In).png (1918x1078) - problem sample
+## Image Files/JPG/Mavo (OBS Zoom In).jpg (1918x1078) - problem sample
 - Front-on, cap/headphones/glasses close to camera, overlays unchanged.
 - Face is soft and low in detail, with dark shadows crushed and noisy.
 
-## Image Files/PNG/Task Manager - Performance.png (1075x816)
+## Image Files/JPG/Task Manager - Performance.jpg (1075x816)
 - Task Manager GPU page: RTX 4060 at 46% 3D, 51 C, driver 32.0.15.6094 (2024-08-14). No identifiers.
 
 ## Hardware photos (viewed in v1.3.3)
@@ -49,9 +49,9 @@ repo copies are byte-identical (same MD5) to the re-uploaded files.
 - **ZV E-10 File Format.jpg**: File Format list; **XAVC S HD** is the selected option (XAVC S 4K not selected).
 - **ZV E-10 4K Output Select.jpg**: options **Memory Card+HDMI** (selected) and **HDMI Only(25p)** (25p option appears because the camera is on PAL).
 - **ZV E-10 HDMI Settings.jpg**: HDMI Resolution = Auto, **HDMI Info. Display = Off**, TC Output = Off, REC Control greyed, CTRL FOR HDMI = On.
-- **OBS Cam Link 4K Settings 1.png**: Cam Link driver "Video Proc Amp" dialog: Brightness 0, Contrast 128, Hue 0, Saturation 128 (all defaults, Auto unticked); other controls greyed out.
-- **OBS Cam Link 4K Settings 2.png**: OBS Video Capture Device properties: Resolution/FPS Type = **Device Default** (Resolution and FPS greyed, FPS "Match Output FPS"), Video Format Any, Colour Space Default, Colour Range Default, Buffering Auto-Detect, Flip Vertically off, Apply rotation data on.
-- **OBS Cam Link 4K Settings 3.png**: lower part of the same dialog: Use hardware decoding off, Audio Output Mode = Capture audio only, custom audio device off.
+- **OBS Cam Link 4K Settings 1.jpg**: Cam Link driver "Video Proc Amp" dialog: Brightness 0, Contrast 128, Hue 0, Saturation 128 (all defaults, Auto unticked); other controls greyed out.
+- **OBS Cam Link 4K Settings 2.jpg**: OBS Video Capture Device properties: Resolution/FPS Type = **Device Default** (Resolution and FPS greyed, FPS "Match Output FPS"), Video Format Any, Colour Space Default, Colour Range Default, Buffering Auto-Detect, Flip Vertically off, Apply rotation data on.
+- **OBS Cam Link 4K Settings 3.jpg**: lower part of the same dialog: Use hardware decoding off, Audio Output Mode = Capture audio only, custom audio device off.
 
 ## Take-aways for the checklist
 - Target look = sharp, low-noise, evenly lit: supports Step 4 (low ISO, manual exposure) and Step 6 (more key light).
@@ -68,3 +68,38 @@ Color-WB-Img. Processing1 (White Balance Auto, Picture Profile Off, Creative Sty
 OBS screenshots of the same scene at ISO 500, F3.5, 1/50, WB 4700K with Picture Profile Off and PP1-PP10 (converted from PNG, q88, to save repo size).
 Measured on the main preview (luma 0-255): Off 60 (28% near-black), PP1 57, PP2 55, PP3 71 (5%), PP4 71 (5%), PP5 70 (1%), PP6 68 (1%), PP7 44, PP8 60, PP9 61, PP10 62.
 Face luma numbers in the first version of this note were measured on the wrong region and were removed (v1.8.0). Chainbrain reference: whole frame luma 59 (28% near-black), face luma about 163. With the right region, PP Off at ISO 500 has forehead luma about 159.
+
+## Frame comparison by measurement (v1.9.7, Pillow/NumPy in /tmp/venv)
+
+All files below are the JPG (q88) copies made in v1.9.7. Method: luma
+(Rec.709) mean, % pixels <16 (near-black), Laplacian variance (detail-energy
+proxy — higher = more fine detail, but also more noise; only comparable at
+the same scale), face patches on forehead/cheeks. Global numbers are NOT
+like-for-like across different rooms/overlays; use them as orders of magnitude.
+
+| Frame | Size | Luma | Near-black | Lap. var. |
+|---|---|---|---|---|
+| Chainbrain.jpg (reference, Twitch VOD frame) | 1922x1079 | 58.5 | 24.3% | 973 |
+| Mavo (OBS Zoom In).jpg (old, pre-final) | 1918x1078 | 51.1 | 32.0% | 689 |
+| Mavo (Camera Zoom In 1).jpg (old) | 1920x1080 | 67.7 | 26.7% | 792 |
+| Mavo (Camera Zoom In 2).jpg (old) | 1919x1076 | 64.5 | 23.7% | 755 |
+| Final PP Off OBS preview crop (proxy, not a stream frame) | 1090x590 | 58.6 | 26.1% | 481* |
+
+*Preview crop is shown at 56% in OBS, so its Laplacian is downscaled and
+not comparable to the fullscreen rows — do not conclude "final is softer".
+
+Face patches (same-pose caveat applies; poses differ, so treat as hints):
+Chainbrain cheek luma ~138; final PP Off cheek ~89-95, forehead ~135
+(this session's patches) — vs the trusted earlier forehead measurement
+of ~159 (PP Off, ISO 500) vs Chainbrain ~163 recorded in v1.8.0. The
+difference is patch placement/pose, which is exactly why the rule is
+"forehead/cheeks, same pose". Old Mavo (OBS Zoom In) face patches were
+far darker (~21-42) — that frame is pre-final (OBS crop-zoom, auto era).
+
+Conclusions: (1) the old fullscreen frames have ~25-40% less detail energy
+and (OBS Zoom) more crushed blacks than the reference — consistent with
+the diagnosed crop-zoom/low-light cause, now fixed in settings; (2) no
+true fullscreen 1080p final-settings stream frame exists in the repo yet,
+so a final like-for-like verdict is still pending (Step 7 item stays open);
+(3) remaining known reference gaps are frame rate (60 vs 25) and codec
+(AV1 vs H.264), not bitrate.

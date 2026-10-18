@@ -3,7 +3,7 @@
 A tested Sony ZV-E10 streaming setup (Cam Link 4K + OBS), written up step by step with photos and measurements.
 Rig: ZV-E10 (PAL) + E PZ 16-50mm, Elgato Cam Link 4K, USB-C power, OBS 32.1.2 on Windows 10, Elgato Key Light plus RGB floor lamps.
 
-**Current version:** see `VERSION.txt`. **Status:** Steps 1-6 done; Step 7 (quality fine-tuning) nearly done, Step 8 (ShaderFilter retune) started. Sharpening: `OBS & Stream Files/SHADER/edge_aware_sharpen.shader`.
+**Current version:** see `VERSION.txt`. **Status:** Steps 1-6 done; Step 7 (quality fine-tuning) nearly done, Step 8 (ShaderFilter retune) started. All screenshots are JPG (q88) since v1.9.7 — `Image Files/PNG/` is empty; do not commit large PNGs. Sharpening: `OBS & Stream Files/SHADER/edge_aware_sharpen.shader`.
 
 ## Final settings in one place
 | Area | Setting |
@@ -13,7 +13,7 @@ Rig: ZV-E10 (PAL) + E PZ 16-50mm, Elgato Cam Link 4K, USB-C power, OBS 32.1.2 on
 | Output | 4K Output Select = HDMI Only (25p), Cam Link source 3840x2160 @ 25 fps, Lanczos, Buffering Disable |
 | Exposure | Manual Exposure, 1/50, F3.5, ISO 500 |
 | Colour | Picture Profile Off, Creative Style Standard (0/0/0), WB 4700K |
-| Light | Elgato Key Light 4700K 48% (fixed position), LED lamps 28% (left blue, right red) |
+| Light | Elgato Key Light 4700K 44% (fixed position — NEVER move it), LED lamps 28% (left blue, right red) |
 | OBS crops | see `OBS & Stream Files/SCENE/crop_presets.yaml` |
 | Vertical | Aitum Vertical; black-and-white filter on purpose (main look); may change to no filter by default |
 | Streaming | OBS 1080p25, NVENC H.264 CBR 8000 kbps; Aitum Multistream to Twitch (main), Kick, Blaze |

@@ -3,6 +3,11 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.9.7] - PNG->JPG conversion, CONTEXT.md rewrite, frame comparison measured
+- Repo size: all 31 PNGs in Image Files/PNG (53.6 MB) converted to JPG q88 in Image Files/JPG (8.6 MB total, same basenames), PNG originals deleted from the working tree. No git history rewrite, no force-push (.git stays 64 MB). References in IMAGE_NOTES.md / OBS_ZOOM_GUIDE.md updated; Image Files/PNG kept as empty folder.
+- CONTEXT.md rewritten fully (was stale since ~v1.5): current rig, final settings, OBS, lessons/corrections, never-commit list, pending Step 8. AI_HANDOFF_CONTEXT.md marked superseded there.
+- Frame comparison by measurement (Pillow/NumPy): Chainbrain reference luma 58.5, 24.3% near-black, Laplacian var. 973; old fullscreen Mavo frames luma 51-68, 24-32% near-black, Lap. var. 689-792 (pre-final settings). Final-settings OBS preview is at 56% scale, so not like-for-like; no true fullscreen 1080p final stream frame in repo yet - Step 7 item remains open. README Key Light corrected 48% -> 44%.
+
 ## [1.9.6] - Sharpen filter confirmed, Step 8 started
 - User confirmed the black-and-white test (shader runs). Boost map: sharpening only on real edges, flat skin and shadows untouched. Close and far shots at 100%: natural detail, no halos or added noise. Step 7 sharpness item done.
 - Step 8 (ShaderFilter retune) started: need the list of the 25+ filters and the shader files.

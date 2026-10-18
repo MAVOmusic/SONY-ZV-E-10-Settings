@@ -5,7 +5,7 @@ Canvas: 1920x1080 @ 25 fps (PAL; status bar shows 25.00 / 25.00 FPS). Cam Link s
 ## Why sources suddenly look 2x / 4x bigger
 OBS places a source at 100% (1 source pixel = 1 canvas pixel). A 3840x2160 source on a 1920x1080 canvas
 is 2x wider and 2x taller (4x the area), so you only see its top-left quarter
-(see Image Files/PNG/OBS Main Settings (No Zoom In).png). Nothing is zoomed in the camera.
+(see Image Files/JPG/OBS Main Settings (No Zoom In).jpg). Nothing is zoomed in the camera.
 
 ## Step A - restore the old framing (do this on EVERY camera item, including each [CLONE])
 1. Select the item -> Ctrl+F (Fit to Screen). It becomes 1920x1080 at scale 0.5. Same framing as the old 1080p source,
@@ -34,7 +34,7 @@ Up to 2.0x every canvas pixel still comes from a real source pixel: sharp. Above
 This OBS (32.1.2) has no "Scale to inner bounds" entry; the bounds dropdown shows **Cover** (it scales until the bounds are filled and,
 with "Crop Bounds" ticked, trims the overflow). For a crop that is exactly 16:9 Cover behaves the same as scale-to-inner, so use:
 Position 0,0 / Bounds type **Cover** / Bounds 1920 x 1080 / Crop Bounds ticked. Crop fields then set the zoom.
-(Screenshots: OBS Edit Transform - Crop To 0 Changes Zoom Out.png, OBS Edit Transform - No Scale To Inner Bounds Option.png.)
+(Screenshots: OBS Edit Transform - Crop To 0 Changes Zoom Out.jpg, OBS Edit Transform - No Scale To Inner Bounds Option.jpg.)
 - Crop 0/0/0/0 with Cover = whole 4K frame fitted to the canvas = the widest ("zoomed out") view. That is correct, not a bug.
 - More crop = more zoom. Left+Right must stay under 3840 and Top+Bottom under 2160. The black screen in the second screenshot was
   Left/Right 3840 each and Top/Bottom 2160 each (everything cropped away). Use Reset, then type small numbers.

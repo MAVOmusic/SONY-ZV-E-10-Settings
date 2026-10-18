@@ -142,3 +142,9 @@ step7_v1_9_5:
 
 step7_sharpness_done_v1_9_6:
   edge_aware_sharpen: {works: true, amount: 2.0, threshold: 0.01, radius: 2.0, tested: close and far at 100%}
+
+v1_9_7:
+  png_to_jpg: {converted: 31 files in Image Files/PNG, before_mb: 53.6, after_mb: 8.6, quality: 88, location: "Image Files/JPG (same basenames)", png_originals_deleted: true, git_history_rewritten: false}
+  context_md: rewritten fully (was stale since ~v1.5); AI_HANDOFF_CONTEXT.md marked superseded
+  frame_comparison: {reference: "Image Files/JPG/Chainbrain.jpg (1922x1079, luma 58.5, near_black_pct 24.3, lap_var 973)", old_mavo_fullscreen: "luma 51-68, near_black 24-32%, lap_var 689-792 (pre-final settings)", final_settings_frame: "none in repo yet; PP Off OBS preview (56%) used as proxy only - Step 7 item remains open"}
+  key_light_final: {temperature_k: 4700, brightness_percent: 44}

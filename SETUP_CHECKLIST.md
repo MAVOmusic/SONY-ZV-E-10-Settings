@@ -73,6 +73,11 @@ Goal: close the "Chainbrain video looks cleaner" gap. The Vertical canvas keeps 
 - [ ] Light: optional diffusion over the Key Light panel (smoother skin); ISO 640 if the face looks dim
 - [ ] Optional: local recording at CQP/high bitrate for YouTube; faster lens later
 
+## Maintenance (v1.9.7)
+- [x] Repo size: 31 PNG screenshots (53.6 MB) converted to JPG q88 (8.6 MB) in Image Files/JPG, PNG originals deleted (working tree only, no history rewrite). Working tree now ~21 MB (plus 64 MB .git history)
+- [x] CONTEXT.md rewritten fully (stale since ~v1.5); AI_HANDOFF_CONTEXT.md is superseded history
+- [x] Frame comparison measured (see Text Files/MD/IMAGE_NOTES.md v1.9.7): old fullscreen Mavo frames have 25-40% less detail energy than Chainbrain; NO true fullscreen 1080p final-settings stream frame in repo yet, so the Step 7 like-for-like item below stays open
+
 ## Step 8 - ShaderFilter retune (STARTED v1.9.6, waiting for the filter list)
 25+ ShaderFilter looks were made for the old look. After Step 7 is final, re-check each against the new black level, brightness and colour.
 - [ ] List all filters and where each is used (horizontal clone, vertical clone, which song type)
