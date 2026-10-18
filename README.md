@@ -3,7 +3,7 @@
 A tested Sony ZV-E10 streaming setup (Cam Link 4K + OBS), written up step by step with photos and measurements.
 Rig: ZV-E10 (PAL) + E PZ 16-50mm, Elgato Cam Link 4K, USB-C power, OBS 32.1.2 on Windows 10, Elgato Key Light plus RGB floor lamps.
 
-**Current version:** see `VERSION.txt`. **Status:** Steps 1-6 done; Step 7 (quality fine-tuning) and Step 8 (ShaderFilter retune) in progress.
+**Current version:** see `VERSION.txt`. **Status:** Steps 1-6 done; Step 7 (quality fine-tuning) nearly done, Step 8 (ShaderFilter retune) started. Sharpening: `OBS & Stream Files/SHADER/edge_aware_sharpen.shader`.
 
 ## Final settings in one place
 | Area | Setting |

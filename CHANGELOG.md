@@ -3,6 +3,10 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.9.6] - Sharpen filter confirmed, Step 8 started
+- User confirmed the black-and-white test (shader runs). Boost map: sharpening only on real edges, flat skin and shadows untouched. Close and far shots at 100%: natural detail, no halos or added noise. Step 7 sharpness item done.
+- Step 8 (ShaderFilter retune) started: need the list of the 25+ filters and the shader files.
+
 ## [1.9.5] - Shader v2
 - User test: edge_aware_sharpen loads without errors but no visible change (screenshots at 56% preview, Threshold 0.015, Radius 1). Cause: on a 4K source the per-pixel detail is far below the old threshold, and a 56% preview hides the effect. A proxy test on a soft 4K-like frame: old defaults +14% edges; Amount 2 / Threshold 0.01 / Radius 2 gives +57% with noise unchanged.
 - Shader v2: new defaults and two test switches (black and white, boost map).

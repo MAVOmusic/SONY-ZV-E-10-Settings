@@ -68,12 +68,12 @@ Goal: close the "Chainbrain video looks cleaner" gap. The Vertical canvas keeps 
 - [x] Test stream done (user, v1.9.4): all OBS output/recording settings applied (keyframe 2 s, P5, Look-ahead, Adaptive Quantisation, recording encoder), no dropped frames, no lag, no crash. Frames received: close-up, Kick, Twitch (1080p) and MKV long/Shorts
 - [x] Key Light was lowered to 44% (4700K) for the 'DRO On 44Light' shot (was 48%): about -0.1 stop, so it does not explain the whole dimmer face (v1.9.5)
 - [x] Recording (screenshot v1.9.5): MKV, NVENC H.264, CQP 18, P5, High Quality, Two Passes Quarter, Look-ahead and AQ on, B-frames 2, keyframe 0 (auto). Aitum Vertical recording uses the main OBS settings (its greyed 'mp4' is only a placeholder; files are MKV)
-- [ ] Sharpness v2 (v1.9.5): the first test showed no visible change. Reasons: on a 4K source the per-pixel detail is tiny (threshold 0.03 removed it) and the preview was at 56%. Shader updated: defaults Amount 2.0, Threshold 0.01, Radius 2.0, plus TEST grayscale and boost-map switches. Test at 100% preview
+- [x] Sharpness v2 WORKS (v1.9.6): black-and-white test passed, boost map shows boost only on edges (glasses, beard, text, CD covers) and flat skin/hoodie stay grey; close and far results at 100% show natural skin detail, no visible halos or added noise. Defaults Amount 2.0 / Threshold 0.01 / Radius 2.0 kept. Tuning: more bite = Amount 2.5-3 and Threshold 0.008; gritty skin or shadow noise = Threshold 0.015. Earlier note: Sharpness v2 (v1.9.5): the first test showed no visible change. Reasons: on a 4K source the per-pixel detail is tiny (threshold 0.03 removed it) and the preview was at 56%. Shader updated: defaults Amount 2.0, Threshold 0.01, Radius 2.0, plus TEST grayscale and boost-map switches. Test at 100% preview
 - [ ] (history) Sharpness: Sharpen filter adds noise. New filter `OBS & Stream Files/SHADER/edge_aware_sharpen.shader` (threshold + shadow protect), to be tested by the user in ShaderFilter on each clone. Also need same-size fullscreen 1080p stream screenshots (current ones are scaled player windows) for a fair stream-vs-recording comparison
 - [ ] Light: optional diffusion over the Key Light panel (smoother skin); ISO 640 if the face looks dim
 - [ ] Optional: local recording at CQP/high bitrate for YouTube; faster lens later
 
-## Step 8 - ShaderFilter retune (NOT STARTED)
+## Step 8 - ShaderFilter retune (STARTED v1.9.6, waiting for the filter list)
 25+ ShaderFilter looks were made for the old look. After Step 7 is final, re-check each against the new black level, brightness and colour.
 - [ ] List all filters and where each is used (horizontal clone, vertical clone, which song type)
 - [ ] Decide the default (no filter by default, or black-and-white)

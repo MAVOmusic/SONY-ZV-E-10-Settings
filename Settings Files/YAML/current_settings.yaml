@@ -139,3 +139,6 @@ step7_v1_9_5:
   aitum_vertical_recording: uses main OBS recording settings (mkv)
   sharpen_shader_v2_defaults: {amount: 2.0, threshold: 0.01, radius: 2.0, shadow_protect: 0.2, max_boost: 0.12}
   shaderfilter_version: 2.4.3
+
+step7_sharpness_done_v1_9_6:
+  edge_aware_sharpen: {works: true, amount: 2.0, threshold: 0.01, radius: 2.0, tested: close and far at 100%}
