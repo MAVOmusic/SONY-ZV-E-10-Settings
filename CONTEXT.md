@@ -1,6 +1,6 @@
-# CONTEXT.md — Sony ZV-E10 Streaming Setup (current, v1.11.0)
+# CONTEXT.md — Sony ZV-E10 Streaming Setup (current, v1.11.1)
 
-Last updated: 2026-10-18 (v1.11.0). This file is the single current-state summary.
+Last updated: 2026-10-18 (v1.11.1). This file is the single current-state summary.
 It supersedes `AI_HANDOFF_CONTEXT.md` (v1.3-era, kept for history only — do not
 trust its settings, branch notes, or "vision check" instructions).
 Update this file on EVERY settings change, together with `SETUP_CHECKLIST.md`,
@@ -161,3 +161,9 @@ shaders moved there.
 done, READY). Agreed workflow: user's 25 tuned looks first
 (settings + example image, starting with hsl_hsv_saturation), then
 one-by-one ideas for the rest (moods/song styles). Step 8 continues.
+SHADER RULES (v1.11.1): every look needs separate Horizontal (PC) and
+Vertical (mobile) presets; ALL the user's old looks predate the 4K
+source + final camera settings, so each is re-validated before FINAL.
+Look 1/25 Black N White (= hsl_hsv_saturation at Gain 0 on both
+clones) is in TUNING: dedicated `NEW/mavo_black_and_white.shader`
+proposed with H/V presets, user test pending.

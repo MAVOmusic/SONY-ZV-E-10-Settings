@@ -174,3 +174,12 @@ lyrics_final_v1_10_3:
   status: CONFIRMED FINAL by user ("works, best we can do", Lyrics Corrected.jpg)
   final_values_user_tuned: {fill_solidity: 4.0, backing_plate_opacity: 0.4, threshold: 0.12, softness: 0.5, despeckle: 0.25, history_opacity: 0.6, outline_px: 3, outer_border_px: 2}
   note: these are now the defaults in lyrics_karaoke.shader
+
+shader_look_01_black_n_white_v1_11_1:
+  shader_used_by_user: hsl_hsv_saturation.shader
+  user_settings: {horizontal: {hsl_gain: 0.0, hsl_gamma: 1.0, hsv_gain: 0.0, hsv_gamma: 1.0, order: Parallel}, vertical: same values (but older shader copy - different slider names, reload same file), made_before: "4K source + final camera settings, must re-validate"}
+  measured_examples: {horizontal: {size: 1917x1080, luma: 52.9, saturation: 0.0}, vertical: {luma: 61.0, note: "orange overlay frame lifts it; camera area B&W"}}
+  rejected_alternative: "edge_aware_sharpen TEST grayscale (plain luma, sharpening bypassed)"
+  proposed: {file: "OBS & Stream Files/SHADER/NEW/mavo_black_and_white.shader", horizontal: {tone_gamma: 0.92, contrast: 0.10, denoise: 0.15, sharpen: 2.0, threshold: 0.01}, vertical: {tone_gamma: 0.88, contrast: 0.16, denoise: 0.25, sharpen: 2.5, threshold: 0.012}, simulation: {old_sat0: {luma: 53.8, near_black_pct: 26.2}, new_horizontal: {luma: 58.0, near_black_pct: 22.9}, new_vertical: {luma: 60.2, near_black_pct: 20.9}}}
+  status: waiting user OBS A/B test
+  standing_rule: every look = separate Horizontal + Vertical settings, all old looks re-validated at final settings

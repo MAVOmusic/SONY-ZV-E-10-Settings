@@ -7,12 +7,46 @@ by one); after those are done, the remaining files are reviewed one by
 one here for music-stream use (song styles, moods, camera vs lyrics vs
 vertical, GPU cost). Catalog of all files: `SHADER_CATALOG.md`.
 
+STANDING RULES (user, v1.11.1):
+- Every look gets SEPARATE Horizontal (PC) and Vertical (mobile)
+  settings - the vertical crop is tighter/upscaled and watched small,
+  so it usually wants a little more lift/contrast/sharpen/denoise.
+  A look is only FINAL when both presets are recorded.
+- ALL of the user's existing looks were made BEFORE the 4K source and
+  BEFORE the final camera/OBS settings, so every one must be
+  re-validated at the final settings (brightness, noise floor and
+  upscale all changed), even if its numbers are resolution-independent.
+
+### 1/25 Black N White (user look, uses hsl_hsv_saturation) - TUNING
+User settings (screenshots in `Image Files/JPG/Shaders/`):
+Horizontal AND Vertical both: HSL Sat Gain 0, HSL Gamma 1, HSV Sat
+Gain 0, HSV Gamma 1, Order Parallel. Measured on his examples: pure
+desaturation (saturation 0.000), frame luma 53 (H) / 61 (V, brighter
+because the vertical example's orange frame overlay lifts it).
+Difference spotted: the vertical clone's dialog shows older slider
+names ('HSL Saturation', Order as 1.00 number) - it is running an
+older pasted copy of the shader; both clones should load the same
+file from NEW/ so the two presets cannot drift apart.
+Verdict: saturation 0 works and is honest B&W, but it is only a
+desaturate (no tone shaping, no sharpening). Our edge_aware_sharpen
+'TEST grayscale' was checked as an alternative and REJECTED: with the
+switch on it returns plain luma and bypasses the sharpening entirely.
+Proposed replacement: `mavo_black_and_white.shader` (Rec.709 luma,
+denoise-before-sharpen, Tone Gamma, Contrast S-curve, alpha safe).
+Simulated on the user's frame (file `Black And White - Simulation.jpg`
+in Image Files/JPG/Shaders/): old way luma 53.8 / 26.2% near-black;
+Horizontal preset (Gamma 0.92, Contrast 0.10, Denoise 0.15, Sharpen
+2.0/Thr 0.01) -> 58.0 / 22.9%; Vertical preset (Gamma 0.88, Contrast
+0.16, Denoise 0.25, Sharpen 2.5/Thr 0.012) -> 60.2 / 20.9% - face and
+room lifted out of the crush with no extra grit. FINAL only after the
+user tests both presets on a song at the final camera settings.
+
 Status legend: READY = analysed, waiting for the user's settings/image.
 TUNING = their settings received, fine-tune in progress. FINAL = agreed.
 
 ---
 
-## hsl_hsv_saturation.shader — READY (starting shader)
+## hsl_hsv_saturation.shader — in use as 1/25 Black N White (see above)
 
 What it does (from the code): saturation-only control, twice over.
 Every pixel is converted to HSL and to HSV; each saturation is remapped
