@@ -189,3 +189,10 @@ shader_look_01_test1_v1_11_2:
   diagnosis: "Contrast S-curve darkens below 0.5 pivot (face at 0.3-0.4); Vertical Sharpen 2.5 grits the upscale"
   presets_v2: {horizontal: {tone_gamma: 0.85, contrast: 0.05, denoise: 0.15, sharpen: 2.0, threshold: 0.01}, vertical: {tone_gamma: 0.85, contrast: 0.08, denoise: 0.30, sharpen: 1.8, threshold: 0.015}}
   status: TUNING - user test 2 pending
+
+shader_look_01_final_v1_12_0:
+  status: FINAL (v2 wins measured: H near-black 24.0% vs v1 31.5/old 29.1; V 37.9% vs 43.8/40.4)
+  files: {horizontal: "OBS & Stream Files/SHADER/NEW/Black And White/mavo_black_and_white_horizontal.shader", vertical: "OBS & Stream Files/SHADER/NEW/Black And White/mavo_black_and_white_vertical.shader", memo: "OBS & Stream Files/SHADER/NEW/Black And White/SETTINGS_MEMO.md"}
+  folder_rule: "SHADER/OLD = user's 163 uploaded; SHADER/NEW/<Look>/ = ours only, always _horizontal + _vertical baked-in files"
+  stage_colour_pop: {files: "OBS & Stream Files/SHADER/NEW/Stage Colour Pop/mavo_stage_colour_pop_horizontal/vertical.shader", horizontal: {hsl_gain: 1.25, hsl_gamma: 0.95, hsv_gain: 1.15, order: Parallel}, vertical: {hsl_gain: 1.35, hsl_gamma: 0.95, hsv_gain: 1.25, order: Parallel}, status: recommended starting point}
+  images: "only Black And White - Before After (Horizontal/Vertical).jpg kept for shader 1; earlier shader-1 images removed from working tree (in git history)"

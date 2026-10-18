@@ -5,7 +5,7 @@ One section per shader, written after actually reading its code and
 looks come first (with their settings + example image, fine-tuned one
 by one); after those are done, the remaining files are reviewed one by
 one here for music-stream use (song styles, moods, camera vs lyrics vs
-vertical, GPU cost). Catalog of all files: `SHADER_CATALOG.md`.
+vertical, GPU cost). Catalog of all files: `../OLD/SHADER_CATALOG.md`. FOLDER RULE (v1.12.0): `SHADER/OLD/` = the user's uploaded library; `SHADER/NEW/<Look Name>/` = our shaders only, every look as TWO files `_horizontal` + `_vertical` with baked-in defaults, plus a SETTINGS_MEMO.md per look.
 
 STANDING RULES (user, v1.11.1):
 - Every look gets SEPARATE Horizontal (PC) and Vertical (mobile)
@@ -49,7 +49,16 @@ lift; Vertical Sharpen 2.5 is too much for the tighter upscale.
 Iteration 2 (shader defaults updated): H Gamma 0.85 / Contrast 0.05 /
 Denoise 0.15 / Sharpen 2.0 / Thr 0.01; V Gamma 0.85 / Contrast 0.08 /
 Denoise 0.30 / Sharpen 1.8 / Thr 0.015. Simulation: near-black
-22.9% (v1) -> 15.4% (v2). Awaiting user test 2 before FINAL.
+22.9% (v1) -> 15.4% (v2).
+Test 2 (v2): WINS vs v1 and old - H luma 53.9 (v1 48.1, old 52.9),
+near-black 24.0% (v1 31.5, old 29.1); V near-black 37.9% (v1 43.8,
+old 40.4), detail 1700 (v1 gritty 2203). **FINAL v1.12.0**: files
+`Black And White/mavo_black_and_white_horizontal.shader` and
+`..._vertical.shader` + SETTINGS_MEMO.md in that folder; before/after
+images are the only shader-1 images kept in Image Files/JPG/Shaders/.
+Also created: **MAVO Stage Colour Pop** (recommended colour use of
+hsl_hsv_saturation) in `Stage Colour Pop/` (H 1.25/1.15, V 1.35/1.25,
+Parallel, alpha preserved) + its SETTINGS_MEMO.md.
 
 Status legend: READY = analysed, waiting for the user's settings/image.
 TUNING = their settings received, fine-tune in progress. FINAL = agreed.
