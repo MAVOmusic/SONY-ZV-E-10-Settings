@@ -132,3 +132,10 @@ step7_v1_9_4:
   test_stream: no dropped frames, no lag, no crash
   dro_retest: {dro: On, frame_luma: 43, near_black_percent: 40, cheek_luma: "71-80"}
   sharpen_tool: OBS & Stream Files/SHADER/edge_aware_sharpen.shader (not yet tested in OBS)
+
+step7_v1_9_5:
+  key_light: {temperature_k: 4700, brightness_percent: 44}
+  recording: {format: mkv, encoder: NVENC H.264, rate_control: CQP 18, preset: P5, tuning: High Quality, multipass: Two Passes (Quarter Resolution), look_ahead: true, adaptive_quantisation: true, b_frames: 2, keyframe_s: 0 (auto)}
+  aitum_vertical_recording: uses main OBS recording settings (mkv)
+  sharpen_shader_v2_defaults: {amount: 2.0, threshold: 0.01, radius: 2.0, shadow_protect: 0.2, max_boost: 0.12}
+  shaderfilter_version: 2.4.3

@@ -3,6 +3,11 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.9.5] - Shader v2
+- User test: edge_aware_sharpen loads without errors but no visible change (screenshots at 56% preview, Threshold 0.015, Radius 1). Cause: on a 4K source the per-pixel detail is far below the old threshold, and a 56% preview hides the effect. A proxy test on a soft 4K-like frame: old defaults +14% edges; Amount 2 / Threshold 0.01 / Radius 2 gives +57% with noise unchanged.
+- Shader v2: new defaults and two test switches (black and white, boost map).
+- '44Light' = Key Light 44% at 4700K (was 48%). Recording settings read: CQP 18 NVENC, applies to Aitum Vertical too.
+
 ## [1.9.4] - Test stream, sharpness
 - User applied all OBS output/recording settings and streamed: no dropped frames, lag or crash.
 - DRO retest: DRO On and Off give almost the same frame stats (43/40% vs 44/41%). My earlier claim that DRO Off darkened the room was wrong; framing, pose and lights changed between shots.
