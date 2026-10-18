@@ -103,3 +103,53 @@ true fullscreen 1080p final-settings stream frame exists in the repo yet,
 so a final like-for-like verdict is still pending (Step 7 item stays open);
 (3) remaining known reference gaps are frame rate (60 vs 25) and codec
 (AV1 vs H.264), not bitrate.
+
+## Fullscreen stream frames vs Chainbrain (v1.9.8, measured, frames NOT committed)
+
+Three true fullscreen frames received 2026-10-18 (Twitch front-on,
+Kick front-on, Twitch close-up/profile). They show chat names and a
+sponsor panel, so per the never-commit rule only measurements are
+recorded here; the PNGs were not added to the repo.
+
+| Frame | Size | Luma | Near-black | Lap. var. | Skin median / top-quartile luma |
+|---|---|---|---|---|---|
+| Chainbrain.jpg (reference) | 1922x1079 | 58.5 | 24.3% | 973 | ~100 / ~175 |
+| New Twitch (front, playing) | 1920x1080 | 44.6 | 38.0% | 1147 | 68 / 112 |
+| New Kick (front, playing) | 1915x1080 | 44.3 | 37.8% | 1095 | 67 / 113 |
+| New Twitch close-up (profile) | 1919x1078 | 48.4 | 30.7% | 999 | 90 / 120 |
+| Old Mavo fullscreen (pre-final, for contrast) | ~1920x1080 | 51-68 | 24-32% | 689-792 | — |
+
+Method as v1.9.7 (Rec.709 luma, Laplacian variance). Skin = skin-mask
+pixels (R>G>B, R-B>20, luma 40-220) in the subject box; median is the
+robust face-brightness figure, top quartile approximates lit forehead.
+
+Findings:
+1. **Detail/sharpness gap is closed.** New frames' detail energy
+   (999-1147) matches/exceeds Chainbrain (973) and is ~40-60% above the
+   old pre-final frames (689-792). Caveat: overlays/game highway add
+   edges; mid-shelf-only detail is 850-921 (Twitch/Kick) — still in the
+   reference's range for a different room. No encoder change justified.
+2. **Twitch ≈ Kick.** Near-identical luma, skin and detail confirm Kick
+   via "Main Encoder" delivers the same picture; platform is not a factor.
+3. **Remaining gap is face brightness, not sharpness/bitrate.** Front-on
+   skin median ~67-68 vs Chainbrain ~100 (~0.6 stop; cap shadow and pose
+   contribute — the closer profile frame reads 90). Whole frames are
+   also darker/more contrasty (near-black 38% vs 24%), but rooms,
+   clothing and overlays differ, so that row is indicative only.
+   Already-pending options (ISO 640, Key Light diffusion) address this;
+   raising bitrate would not.
+4. Unchanged known gaps: 25 fps vs reference 60 fps, H.264 vs AV1.
+
+## Aitum Multistream > Vertical Canvas — YouTube outputs (v1.9.8)
+
+Screenshot received (committed as JPG q88: `Image Files/JPG/Aitum
+Multistream - Vertical Canvas YT Settings.jpg`; the BASS output's
+Advanced Settings shown): NVENC H.264, FPS "25 Original", Rescale
+Output off, CBR 8000 kbps, keyframe 0 s (auto), P5 Slow (Good Quality),
+High Quality tuning, Two Passes (Quarter Resolution), profile high,
+Look-ahead on, Adaptive Quantisation on, B-frames 2.
+**User clarification (v1.9.8): he does not stream from the vertical/YT
+outputs, and Aitum Vertical recording uses the main OBS horizontal
+settings.** So this encoder block is dormant: it does not affect the
+Twitch/Kick horizontal streams or the vertical recordings, its
+keyframe 0 (vs main 2 s) needs no fix, and no settings change follows.

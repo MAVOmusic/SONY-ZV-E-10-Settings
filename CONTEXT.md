@@ -1,6 +1,6 @@
-# CONTEXT.md — Sony ZV-E10 Streaming Setup (current, v1.9.7)
+# CONTEXT.md — Sony ZV-E10 Streaming Setup (current, v1.9.8)
 
-Last updated: 2026-10-18 (v1.9.7). This file is the single current-state summary.
+Last updated: 2026-10-18 (v1.9.8). This file is the single current-state summary.
 It supersedes `AI_HANDOFF_CONTEXT.md` (v1.3-era, kept for history only — do not
 trust its settings, branch notes, or "vision check" instructions).
 Update this file on EVERY settings change, together with `SETUP_CHECKLIST.md`,
@@ -105,11 +105,16 @@ pre-date this rule / were checked; new frames must be checked first.)
 
 ## Frame comparison (v1.9.7, measured — see IMAGE_NOTES.md)
 
-Measured with Pillow/NumPy (`/tmp/venv`) on the repo JPGs: the old
-fullscreen Mavo frames vs `Chainbrain.jpg`, plus the final-settings OBS
-preview (PP Off) as the best available current proxy. **There is still no
-true fullscreen 1080p final-settings stream frame in the repo** — the
-Step 7 checklist item stays open until one is added.
+v1.9.8 update: true fullscreen 1080p final-settings frames (Twitch,
+Kick, Twitch close-up) were received and measured — NOT committed (chat
+names + sponsor panel visible). Detail energy 999-1147 vs Chainbrain
+973 (old pre-final frames: 689-792): the sharpness gap is closed.
+Twitch ≈ Kick (Main Encoder confirmed). Remaining gap: face brightness
+(front-on skin median ~67-68 vs Chainbrain ~100; pose/cap shadow
+contribute) and 25 vs 60 fps — not bitrate. Also v1.9.8: the Aitum
+Multistream Vertical Canvas YouTube encoder block (8000 CBR, keyframe
+0, P5 — screenshot committed as JPG) is **dormant**: the user does not
+stream from it and vertical recording uses the main horizontal settings.
 
 ## Pending
 
@@ -117,7 +122,7 @@ Step 7 checklist item stays open until one is added.
   pictures → then Step 8: best-look settings per filter at the new
   exposure, filter list + where each is used, default (none vs B&W),
   GPU cost at 4K source size.
-- Still open: optional Key Light diffusion; final tick of Step 7
-  (like-for-like fullscreen frame check, OBS Stats after 10 min,
-  Aitum Multistream > Vertical Canvas screenshot, plugin updates after
-  a clean test stream).
+- Still open: optional Key Light diffusion / ISO 640 if the dimmer
+  front-on face is to be lifted; OBS Stats after 10 min; plugin updates
+  after a clean test stream. (Done v1.9.8: like-for-like fullscreen
+  frame check; Aitum Multistream > Vertical Canvas screenshot.)
