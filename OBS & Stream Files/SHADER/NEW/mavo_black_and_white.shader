@@ -1,4 +1,12 @@
-// MAVO Black and White for obs-shaderfilter (v1.11.1)
+// MAVO Black and White for obs-shaderfilter (v1.11.2 - preset iteration 2)
+// v1.11.2: user test of the v1 presets measured DARKER on the face than
+// the old saturation-0 (skin-band median 71 vs 98 horizontal; near-black
+// 31.5% vs 29.1%): the Contrast S-curve darkens everything below its
+// 0.5 pivot, and the face lives at 0.3-0.4, so it ate the Gamma lift.
+// Iteration 2: Tone Gamma 0.85 (stronger lift), Contrast halved
+// (H 0.05 / V 0.08), Vertical sharpen DOWN to 1.8 with threshold 0.015
+// and Denoise 0.30 (its detail energy measured ~2.5x the old vertical -
+// grit from sharpening the tighter upscale). Defaults = Horizontal v2.
 // Replaces using hsl_hsv_saturation.shader with both Sat Gains at 0 as the
 // "Black N White" look. Saturation 0 is fine, but it is ONLY a desaturate:
 // it adds no contrast shaping, no sharpening, and its HSL/HSV round trip
@@ -15,12 +23,12 @@
 //
 // FINAL PRESETS (start here, confirm on the final camera settings -
 // the old Black N White settings were made pre-4K / pre-final-exposure):
-//   Horizontal (PC): defaults below.  Tone Gamma 0.92, Contrast 0.10,
+//   Horizontal (PC): defaults below.  Tone Gamma 0.85, Contrast 0.05,
 //     Denoise 0.15, Sharpen 2.0, Threshold 0.01.
-//   Vertical (mobile): Tone Gamma 0.88, Contrast 0.16, Denoise 0.25,
-//     Sharpen 2.5, Threshold 0.012 - the vertical crop is tighter and
-//     watched on a small screen, so it gets a touch more lift, contrast
-//     and bite, and a little more denoise for the bigger upscale.
+//   Vertical (mobile): Tone Gamma 0.85, Contrast 0.08, Denoise 0.30,
+//     Sharpen 1.8, Threshold 0.015 - the vertical crop is a bigger
+//     upscale, so LESS sharpening (measured grit at 2.5) but more
+//     denoise; same face lift as horizontal.
 // The old hsl_hsv_saturation Black N White (Gain 0 / Gamma 1 / Parallel)
 // stays as backup; do not delete it until this is confirmed on a song.
 
@@ -30,7 +38,7 @@ uniform float tone_gamma<
     float minimum = 0.5;
     float maximum = 1.5;
     float step = 0.01;
-> = 0.92;
+> = 0.85;
 
 uniform float contrast<
     string label = "Contrast (gentle S-curve)";
@@ -38,7 +46,7 @@ uniform float contrast<
     float minimum = -0.5;
     float maximum = 0.8;
     float step = 0.01;
-> = 0.10;
+> = 0.05;
 
 uniform float denoise<
     string label = "Denoise before sharpening (0 = off)";

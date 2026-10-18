@@ -183,3 +183,9 @@ shader_look_01_black_n_white_v1_11_1:
   proposed: {file: "OBS & Stream Files/SHADER/NEW/mavo_black_and_white.shader", horizontal: {tone_gamma: 0.92, contrast: 0.10, denoise: 0.15, sharpen: 2.0, threshold: 0.01}, vertical: {tone_gamma: 0.88, contrast: 0.16, denoise: 0.25, sharpen: 2.5, threshold: 0.012}, simulation: {old_sat0: {luma: 53.8, near_black_pct: 26.2}, new_horizontal: {luma: 58.0, near_black_pct: 22.9}, new_vertical: {luma: 60.2, near_black_pct: 20.9}}}
   status: waiting user OBS A/B test
   standing_rule: every look = separate Horizontal + Vertical settings, all old looks re-validated at final settings
+
+shader_look_01_test1_v1_11_2:
+  measured: {horizontal: {new: {frame_luma: 48.1, near_black_pct: 31.5, skin_median: 71}, old_sat0: {frame_luma: 52.9, near_black_pct: 29.1, skin_median: 98}}, vertical_camera_area: {new: {near_black_pct: 43.8, skin_median: 70, lap_var: 2203}, old: {near_black_pct: 40.4, skin_median: 80, lap_var: 863}}, caveat: "framings differ; face-band + near-black are the trusted rows"}
+  diagnosis: "Contrast S-curve darkens below 0.5 pivot (face at 0.3-0.4); Vertical Sharpen 2.5 grits the upscale"
+  presets_v2: {horizontal: {tone_gamma: 0.85, contrast: 0.05, denoise: 0.15, sharpen: 2.0, threshold: 0.01}, vertical: {tone_gamma: 0.85, contrast: 0.08, denoise: 0.30, sharpen: 1.8, threshold: 0.015}}
+  status: TUNING - user test 2 pending

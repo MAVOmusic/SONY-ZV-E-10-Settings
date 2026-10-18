@@ -38,8 +38,18 @@ in Image Files/JPG/Shaders/): old way luma 53.8 / 26.2% near-black;
 Horizontal preset (Gamma 0.92, Contrast 0.10, Denoise 0.15, Sharpen
 2.0/Thr 0.01) -> 58.0 / 22.9%; Vertical preset (Gamma 0.88, Contrast
 0.16, Denoise 0.25, Sharpen 2.5/Thr 0.012) -> 60.2 / 20.9% - face and
-room lifted out of the crush with no extra grit. FINAL only after the
-user tests both presets on a song at the final camera settings.
+room lifted out of the crush with no extra grit. Test 1 (v1 presets, user's examples `Black And White New Shader
+Example (Horizontal/Vertical).jpg`): NOT the best yet. Measured: face
+skin-band median 71 (new) vs 98 (old) horizontal; near-black 31.5% vs
+29.1% H and 43.8% vs 40.4% V (camera area); vertical Laplacian detail
+2203 vs 863 (framing differs - hint only, but consistent with grit).
+Diagnosis: the Contrast S-curve darkens every tone below its 0.5
+pivot, the face lives at 0.3-0.4, so Contrast 0.10/0.16 ate the Gamma
+lift; Vertical Sharpen 2.5 is too much for the tighter upscale.
+Iteration 2 (shader defaults updated): H Gamma 0.85 / Contrast 0.05 /
+Denoise 0.15 / Sharpen 2.0 / Thr 0.01; V Gamma 0.85 / Contrast 0.08 /
+Denoise 0.30 / Sharpen 1.8 / Thr 0.015. Simulation: near-black
+22.9% (v1) -> 15.4% (v2). Awaiting user test 2 before FINAL.
 
 Status legend: READY = analysed, waiting for the user's settings/image.
 TUNING = their settings received, fine-tune in progress. FINAL = agreed.
