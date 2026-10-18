@@ -205,7 +205,7 @@ uniform float scroll_speed<
     float step = 0.005;
 > = 0.04;
 
-uniform float elapsed_time; // provided by obs-shaderfilter
+// NOTE: elapsed_time is ALREADY declared by the obs-shaderfilter wrapper (its built-in template) - never redeclare it in a .shader file or the effect parser fails with Expected 'name'/'type'. Fixed v1.13.1.
 
 uniform bool test_show_key<
     string label = "TEST: show cleaned key only (white = text, proves the shader is running)";
