@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.13.3] - Wide-scroll lyrics variant DROPPED; size budget checked
+- User test: the wide-scroll shader loads now but just moves the whole strip back and forth - not acceptable. Idea skipped by user decision; lyrics_karaoke_vertical_wide_scroll.shader removed from the repo. Plain lyrics_karaoke_vertical.shader stays FINAL; bigger Shorts lyrics await the future CDLC-extraction idea only.
+- SIZE BUDGET (user limit 128 MB): branch tree 26.3 MB / 381 tracked files; repo working tree 28 MB; .git 82 MB (81.5 MB of blobs across ALL history - the deleted pre-v1.9.7 PNGs still live in old commits; no history rewrite per repo rule). Biggest single tracked file 1.26 MB. Guardrails kept: screenshots only as JPG q88, no PNG/raw uploads committed, frames with chat/sponsors never committed. Watch item: .git grows ~0.3 MB per committed JPG - re-check size at each version.
+
 ## [1.13.2] - REAL fix for wide-scroll shader: naked prose lines, not (only) elapsed_time
 - The v1.13.1 fix was incomplete (user: 'same error'). Root cause actually found by mapping the parser's error lines through the plugin template (51 lines): the generated header text after the first // line was NOT commented - lines 2-12 were bare English prose in the code, so the parser failed at the first uniforms. The duplicate elapsed_time declaration would also have been wrong (wrapper declares it), so both fixes stand. All other NEW shaders were scanned: no other naked-prose lines, and no other file redeclares a wrapper uniform. LESSON recorded: multi-line replacement text inserted after a // marker must have // on EVERY line.
 

@@ -213,3 +213,7 @@ v1_13_1:
 
 v1_13_2:
   real_fix: "wide-scroll shader failed because header lines 2-12 were bare prose without // (inserted after a // first line). Parser error lines mapped through the 51-line plugin template pointed at the first uniforms. Fixed by commenting every line; the v1.13.1 elapsed_time fix was also valid and stands. All NEW shaders scanned clean."
+
+v1_13_3:
+  wide_scroll: {status: "DROPPED by user after test (whole strip slides back and forth)", file_removed: true, lyrics_vertical_final: "Karaoke/lyrics_karaoke_vertical.shader"}
+  size_budget: {branch_tree_mb: 26.3, tracked_files: 381, working_tree_mb: 28, dot_git_mb: 82, all_history_blobs_mb: 81.5, limit_mb: 128, largest_file_mb: 1.26, guardrail: "JPG q88 only, no raw PNG commits, re-check each version"}
