@@ -159,3 +159,8 @@ lyrics_v1_10_0:
   old_filters: {chroma_key: {key: "#000000 Custom Colour", similarity: 1, smoothness: 1, spill_reduction: 1, opacity: 1.0, contrast: -4.00, brightness: 1.0, gamma: 1.00}, colour_correction: {gamma: -3.00, contrast: 4.00, brightness: 1.0, saturation: 5.00, hue_shift: 180, opacity: 1.0, color_multiply: "#FFFF00", color_add: "#000000"}, chroma_key_2: disabled}
   old_result: yellow but semi-transparent and blobby (black-only key + extreme gamma/contrast crush anti-aliased letters)
   new_shader: {file: "OBS & Stream Files/SHADER/lyrics_karaoke.shader", replaces: "both old filters on the RAW source", defaults: {threshold: 0.25, softness: 0.35, despeckle: 0.5, text_color: [1.0, 0.85, 0.0], highlight_color: [0.2, 1.0, 0.35], highlight_split: 0.45, bold_px: 0, outline_px: 2, glow: 0.35}, status: simulation-validated, OBS test pending - keep old filters disabled as backup, guide: "Text Files/MD/LYRICS_SHADER_GUIDE.md"}
+
+lyrics_v1_10_1:
+  obs_test_1: {shader_loads: true, highlight_confirmed: "sung word 'look' rendered green, rest yellow (Lyrics Shader In Action.jpg)", problems: ["dim previous/next history line keyed out (Threshold 0.25, De-speckle 0.5) - user wants it kept", "shader running on full game frame, note highway painted - needs Crop/Pad above it or tight scene crop"]}
+  shader_v2: {threshold: 0.12, softness: 0.5, despeckle: 0.25, history_opacity: 0.6, note: "dim line kept readable but secondary, fainter outline; a shader cannot make a line linger after Rocksmith removes it (no previous-frame access)"}
+  status: user re-test pending

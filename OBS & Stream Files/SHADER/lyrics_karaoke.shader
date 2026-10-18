@@ -1,4 +1,17 @@
-// Karaoke lyrics cleaner for the obs-shaderfilter plugin (v1.10.0)
+// Karaoke lyrics cleaner for the obs-shaderfilter plugin (v1.10.1)
+// v1.10.1: KEEP THE LINE HISTORY. User test of v1.10.0: Rocksmith shows the
+// main line bright and the previous/next line DIM; the old threshold
+// (0.25) + de-speckle deleted that dim line, so there was no history of
+// the line on screen. Now: threshold defaults to 0.12, de-speckle is
+// gentler (0.25), and dim text is kept at History Opacity (default 0.6)
+// with a fainter outline instead of being removed - main line solid,
+// history line readable but clearly secondary.
+// IMPORTANT (also from the test screenshot): the Filters preview showed
+// this shader painting the whole Rocksmith frame (note highway included),
+// because it keys ANY bright pixel. Put a Crop/Pad effect filter ABOVE
+// this shader on the Lyrics source so only the lyric strip is processed,
+// or keep the existing tight scene crop - never run it on the full game
+// frame as the visible output.
 // Replaces the Chroma Key (black, Similarity/Smoothness/Spill all 1) +
 // Colour Correction (Gamma -3, Contrast 4, Saturation 5, Hue Shift 180,
 // Multiply #FFFF00) pair that was used on the Rocksmith lyrics source.
@@ -27,10 +40,12 @@
 // a per-pixel shader: the line changes and any sung-word highlight still
 // come from Rocksmith itself.
 //
-// Suggested starting values (the defaults): Threshold 0.25, Softness 0.35,
-// De-speckle 0.5, Bold 0, Outline width 2, Glow 0.35.
-// If letters look thin/broken: lower Threshold to 0.18 or raise Bold to 1.
-// If grey background haze remains: raise Threshold to 0.35.
+// Suggested starting values (the defaults): Threshold 0.12, Softness 0.5,
+// De-speckle 0.25, History Opacity 0.6, Bold 0, Outline width 2, Glow 0.35.
+// If the dim history line vanishes again: Threshold 0.08, History Opacity 0.75.
+// If letters look thin/broken: raise Bold to 1 (do NOT raise Threshold).
+// If grey background haze remains: raise Threshold in 0.02 steps only -
+// every step also eats the dim history line.
 // Put edge_aware_sharpen.shader AFTER this one only if the text still
 // looks soft at 100% preview; normally it is not needed on text.
 
@@ -55,7 +70,7 @@ uniform float threshold_key<
     float minimum = 0.0;
     float maximum = 0.9;
     float step = 0.01;
-> = 0.25;
+> = 0.12;
 
 uniform float softness<
     string label = "Key softness (edge smoothness)";
@@ -63,7 +78,7 @@ uniform float softness<
     float minimum = 0.02;
     float maximum = 0.8;
     float step = 0.01;
-> = 0.35;
+> = 0.5;
 
 uniform float despeckle<
     string label = "De-speckle (removes isolated noise dots)";
@@ -71,7 +86,15 @@ uniform float despeckle<
     float minimum = 0.0;
     float maximum = 1.0;
     float step = 0.05;
-> = 0.5;
+> = 0.25;
+
+uniform float history_opacity<
+    string label = "History opacity (dim previous/next line: kept, but at this opacity; 0 = old delete behaviour)";
+    string widget_type = "slider";
+    float minimum = 0.0;
+    float maximum = 1.0;
+    float step = 0.05;
+> = 0.6;
 
 uniform float highlight_split<
     string label = "Highlight split (source saturation above this uses Highlight colour, 1 = never)";
@@ -183,13 +206,19 @@ float4 mainImage(VertData v_in) : TARGET
     float use_highlight = smoothstep(highlight_split, highlight_split + 0.2, saturation);
     float3 fill_rgb = lerp(text_color, highlight_color, use_highlight);
 
-    float outline = saturate(outline_zone - fill);
-    float glow = saturate(glow_zone - outline_zone) * glow_strength;
+    // Bright main line: tier ~1 (solid, full outline). Dim history line:
+    // its key is weaker, so tier is lower and it is kept at
+    // history_opacity with only a faint outline - visible, not deleted.
+    float tier = saturate(fill * 1.5);
+    float keep = lerp(history_opacity, 1.0, tier);
+
+    float outline = saturate(outline_zone - fill) * (0.3 + 0.7 * tier);
+    float glow = saturate(glow_zone - outline_zone) * glow_strength * tier;
 
     // Composite glow -> outline -> text (straight alpha out).
     float a_glow = glow;
     float a_outline = outline;
-    float a_text = fill * text_opacity;
+    float a_text = fill * text_opacity * keep;
 
     float out_a = a_text + a_outline * (1.0 - a_text) + a_glow * (1.0 - a_text) * (1.0 - a_outline);
     float3 out_rgb = fill_rgb;
