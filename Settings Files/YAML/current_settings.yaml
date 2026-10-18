@@ -217,3 +217,8 @@ v1_13_2:
 v1_13_3:
   wide_scroll: {status: "DROPPED by user after test (whole strip slides back and forth)", file_removed: true, lyrics_vertical_final: "Karaoke/lyrics_karaoke_vertical.shader"}
   size_budget: {branch_tree_mb: 26.3, tracked_files: 381, working_tree_mb: 28, dot_git_mb: 82, all_history_blobs_mb: 81.5, limit_mb: 128, largest_file_mb: 1.26, guardrail: "JPG q88 only, no raw PNG commits, re-check each version"}
+
+stage_colour_pop_final_v1_13_4:
+  status: "FINAL as a live look (not the default recording look)"
+  measured: {mean_saturation: 0.409, baseline: 0.377, sat_p90: 0.882, clip_hi_pct: 0.86, baseline_clip_hi_pct: 0.86, skin_sat: 0.60}
+  decision: "default 'no filter' recording = Sharpen ONLY (clean master, grade in edit); Pop stacked after Sharpen for colourful songs live. Pop vs Sharpen is not either/or - detail vs colour."

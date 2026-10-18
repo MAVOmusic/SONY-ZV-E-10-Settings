@@ -1,4 +1,12 @@
-# SETTINGS MEMO — MAVO Stage Colour Pop (recommended hsl_hsv_saturation use, v1.12.0)
+# SETTINGS MEMO — MAVO Stage Colour Pop (FINAL as a look, v1.13.4)
+
+TESTED (v1.13.4): works as intended - saturation +8.5% vs baseline,
+no added highlight clipping, skin warmer but natural. FINAL as the
+live look for colourful songs, ON TOP OF the always-on Sharpen.
+NOT the default/'no filter' recording look: the default stays
+Sharpen ONLY (clean master - saturation can be added in edit, never
+removed). Examples: `Image Files/JPG/Shaders/Stage Colour Pop -
+Horizontal/Vertical.jpg`.
 
 Recommended fitting use of `hsl_hsv_saturation.shader` for music
 streams now that Black And White has its own dedicated shader.
