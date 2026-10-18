@@ -1,4 +1,10 @@
-# Lyrics karaoke shader — guide (v1.10.2)
+# Lyrics karaoke shader — guide (v1.10.3, CONFIRMED FINAL)
+
+## Final settings (user-tested and accepted, now the shader defaults)
+Fill Solidity **4.0**, Backing Plate **0.4**, Threshold 0.12, Softness 0.5,
+De-speckle 0.25, History Opacity 0.6, Outline 3 px black, Outer Border
+2 px red. A fresh load of `lyrics_karaoke.shader` is the final look - no
+tuning needed. Proof: `Image Files/JPG/Lyrics Corrected.jpg`.
 
 ## v1.10.2 — stronger borders (after OBS test 2)
 Test 2: the history line stayed, but the middle of the line still blended

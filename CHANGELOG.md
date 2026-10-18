@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.10.3] - Lyrics shader CONFIRMED FINAL (user-tested)
+- User OBS test 3 with own tuning: Fill Solidity 4.0 and Backing Plate 0.4 - "works... best we can do". Result screenshot committed (Image Files/JPG/Lyrics Corrected.jpg, 296x27 strip: solid text, red outer border readable over the whole line, sung word 'tell' green, dim part still legible). These two values are now the shader defaults, so the file loads as the final look. Lyrics shader item closed; remaining Step 8 work is the other 25+ look filters.
+
 ## [1.10.2] - Lyrics shader v3: solid fill, black + red borders, backing plate
 - User test of v1.10.1 (Lyrics better.jpg, 273x26 strip): history line now stays, but the middle of the line still blends into the CD wall and is unreadable at that size - letter centres were semi-transparent (soft key) so the background showed through, and the history tier thinned the outline again. User approved a red border if needed.
 - lyrics_karaoke.shader v1.10.2: new Fill Solidity (2.0) makes letter cores fully opaque; Outline default 3 px and no longer reduced for dim lines; new RED Outer Border (2 px) outside the black stroke; new Backing Plate (0.45) darkens the background right around the words; soft Glow slider removed (replaced by the plate). For Shorts-size text: Outline 4 / Outer Border 3. Simulation regenerated at the user's real 273 px width to check small-size readability. OBS re-test pending.

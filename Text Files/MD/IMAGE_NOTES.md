@@ -168,3 +168,6 @@ keyframe 0 (vs main 2 s) needs no fix, and no settings change follows.
 ## Lyrics shader OBS test 2 (v1.10.1 -> v1.10.2)
 - `Lyrics better.jpg` (user's real strip, 273x26): "We'll pretend it's okay" - history/timing is better and "it's" is green, "okay" solid yellow at right, but the dim middle words ("pretend") wash into the CD covers: letter centres are semi-transparent and the outline is too thin at this size.
 - Fix in shader v1.10.2 (user approved red): Fill Solidity 2.0, Outline 3 px (not thinned for dim lines), red Outer Border 2 px, Backing Plate 0.45. `Lyrics Shader - Simulated Preview.jpg` regenerated comparing the user's real 273 px strip vs the simulated new version shrunk to the same 273 px.
+
+## Lyrics shader OBS test 3 - FINAL (v1.10.3)
+- `Lyrics Corrected.jpg` (user's real strip, 296x27): "It's alright to tell me" - every word readable over the CD wall, red outer border visible along the whole line, sung word "tell" green, "me" yellow, the dimmer first half still legible. User verdict: works, best we can do. Final values: Fill Solidity 4.0, Backing Plate 0.4 (now shader defaults).

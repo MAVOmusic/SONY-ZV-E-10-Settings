@@ -1,4 +1,9 @@
-// Karaoke lyrics cleaner for the obs-shaderfilter plugin (v1.10.2)
+// Karaoke lyrics cleaner for the obs-shaderfilter plugin (v1.10.3 - CONFIRMED FINAL in OBS)
+// v1.10.3: user-tested and accepted ("works, best we can do"): final tuned
+// values are Fill Solidity 4.0 and Backing Plate 0.4 - now the defaults
+// below, so a fresh load of this file is the final look with no tuning.
+// Final stack: solid yellow text, green sung-word highlight, dim history
+// line kept at 0.6, black outline 3 px + red outer border 2 px + plate 0.4.
 // v1.10.2: STRONGER BORDERS. User test of v1.10.1: better, history line
 // stays, but the middle of the line still blends into the busy CD-wall
 // background and is unreadable at stream size. Three causes fixed:
@@ -151,7 +156,7 @@ uniform float plate_opacity<
     float minimum = 0.0;
     float maximum = 0.85;
     float step = 0.05;
-> = 0.45;
+> = 0.4;
 
 uniform float fill_solidity<
     string label = "Fill solidity (pushes letter centres to fully opaque; raise if background shows through letters)";
@@ -159,7 +164,7 @@ uniform float fill_solidity<
     float minimum = 1.0;
     float maximum = 4.0;
     float step = 0.25;
-> = 2.0;
+> = 4.0;
 
 uniform float text_opacity<
     string label = "Text opacity";

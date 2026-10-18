@@ -169,3 +169,8 @@ lyrics_v1_10_2:
   obs_test_2: {verdict: "history line stays, but middle of line blends into CD wall at 273px width - semi-transparent letter centres, outline too thin", user: "stronger borders around letters, red border allowed"}
   shader_v3: {fill_solidity: 2.0, outline_px: 3, outline_color: black, outer_border: {color: [1.0, 0.08, 0.08], px: 2}, backing_plate_opacity: 0.45, glow_slider: removed (replaced by plate), shorts_suggestion: {outline_px: 4, outer_px: 3, plate: 0.6}}
   status: user re-test pending
+
+lyrics_final_v1_10_3:
+  status: CONFIRMED FINAL by user ("works, best we can do", Lyrics Corrected.jpg)
+  final_values_user_tuned: {fill_solidity: 4.0, backing_plate_opacity: 0.4, threshold: 0.12, softness: 0.5, despeckle: 0.25, history_opacity: 0.6, outline_px: 3, outer_border_px: 2}
+  note: these are now the defaults in lyrics_karaoke.shader
