@@ -126,3 +126,9 @@ step7_v1_9_3:
   camera_applied: {af_transition_speed: 4, af_subj_shift_sens: "1 (Locked on)", dro_auto_hdr: "Off", white_balance: C.Temp./Filter}
   dro_off_measure: {frame_luma: 44, near_black_percent: 41, cheek_luma: 93}
   aitum_vertical_streaming_shown: {encoder: NVENC H.264, rate: CBR 6000, keyframe_s: 2, preset: P5, tuning: Ultra Low Latency, look_ahead: false, aq: false, b_frames: 2, note: controlled from Aitum Multistream Vertical Canvas tab}
+
+step7_v1_9_4:
+  obs_applied_by_user: {keyframe_s: 2, preset: P5, look_ahead: true, adaptive_quantisation: true, recording_encoder: changed (details not seen)}
+  test_stream: no dropped frames, no lag, no crash
+  dro_retest: {dro: On, frame_luma: 43, near_black_percent: 40, cheek_luma: "71-80"}
+  sharpen_tool: OBS & Stream Files/SHADER/edge_aware_sharpen.shader (not yet tested in OBS)

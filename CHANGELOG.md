@@ -3,6 +3,13 @@
 All notable changes to this repository are documented here.
 Versioning: MAJOR.MINOR.PATCH. Bump on each completed setup step.
 
+## [1.9.4] - Test stream, sharpness
+- User applied all OBS output/recording settings and streamed: no dropped frames, lag or crash.
+- DRO retest: DRO On and Off give almost the same frame stats (43/40% vs 44/41%). My earlier claim that DRO Off darkened the room was wrong; framing, pose and lights changed between shots.
+- Sharpness: the recording frame has about twice the fine-detail energy of the Twitch/Kick frames in the same shelf region (Laplacian variance 218 vs 106-126), but the stream screenshots are scaled player windows, so the number is only a hint.
+- New `OBS & Stream Files/SHADER/edge_aware_sharpen.shader` (ShaderFilter): luma-only, noise threshold, shadow protect, halo limit. Numpy simulation: dark-area noise unchanged, edges +36%; built-in style sharpen: noise +28%. HLSL untested in OBS.
+- Stream frames not committed (viewer chat names and sponsor panel visible); only measurements were recorded.
+
 ## [1.9.3] - Camera AF/DRO applied, vertical encoder read
 - User applied AF Transition Speed 4, AF Subj. Shift Sens. 1 and DRO Off (photos verified). OBS shot with a cap: frame luma 44, 41% near-black (more crushed than before); face unchanged. Recommendation: DRO back On, or ISO 640 plus brighter lamps if DRO stays Off.
 - Aitum Vertical streaming fields (NVENC H.264 6000 kbps, tuning Ultra Low Latency) are controlled from Aitum Multistream > Vertical Canvas; to be checked there. Added the new OBS screenshot (JPG).

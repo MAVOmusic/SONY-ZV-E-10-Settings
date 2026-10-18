@@ -87,6 +87,11 @@ Check View -> Stats for dropped frames after changing anything.
 HDMI capture adds about 100-200 ms. Set OBS Buffering = Disable, then delay the microphone with Advanced Audio Properties -> Sync Offset until a clap
 is in sync (record a clap and compare the spikes).
 
+## 10b. Sharpening without adding noise
+The built-in OBS Sharpen filter lifts every pixel difference, including sensor noise in dark areas. Better: sharpen brightness only, ignore small differences
+(noise), fade the effect out in shadows and limit halos. An obs-shaderfilter example is in `OBS & Stream Files/SHADER/edge_aware_sharpen.shader`
+(put it above any colour/look shaders; start with Amount 1.5, Threshold 0.03, Radius 1.0, raise the threshold if noise shows).
+
 ## 11. Things that did NOT help (so you can skip them)
 - Recommending PP11 (does not exist on this model).
 - Lowering white balance to 4300K for cooler skin (about the same, slightly worse).
