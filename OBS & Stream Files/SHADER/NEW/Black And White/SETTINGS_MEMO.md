@@ -30,8 +30,10 @@ pictures above were made WITHOUT the standalone
 own internal Sharpen sliders at 2.0 (H) / 1.8 (V) — that internal
 sharpening is part of why the look works. Do NOT run standalone
 Sharpen + internal sharpen together (double-sharpening) unless the
-internal amount is set to 0; a global always-on-Sharpen decision for
-all 25 looks is pending a dedicated test pack (see SHADER_NOTES).
+internal amount is set to 0; UPDATE v1.13.0: that decision is made - standalone Sharpen is
+ALWAYS ON (see `../Sharpen/`), and these files now ship with their
+internal Sharpen Amount = 0.0 as the default, exactly as tested.
+Measured better than internal-only (detail +53% H / +34% V).
 Filter order in OBS: this shader after the sharpen shader's slot,
 i.e. simply don't enable both on the same clone.
 

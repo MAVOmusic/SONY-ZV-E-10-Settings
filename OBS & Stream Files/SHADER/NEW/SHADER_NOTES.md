@@ -59,6 +59,14 @@ images are the only shader-1 images kept in Image Files/JPG/Shaders/.
 Also created: **MAVO Stage Colour Pop** (recommended colour use of
 hsl_hsv_saturation) in `Stage Colour Pop/` (H 1.25/1.15, V 1.35/1.25,
 Parallel, alpha preserved) + its SETTINGS_MEMO.md.
+SHARPEN POLICY (v1.13.0, applies to ALL 25 looks): standalone
+edge_aware Sharpen ALWAYS ON first on both clones (files in
+`Sharpen/edge_aware_sharpen_horizontal/vertical.shader`); looks with
+internal sharpen set it to 0. Decided by measurement on the B&W
+test pack (detail +53% H / +34% V vs internal-only, no grit).
+Karaoke settings burned in v1.13.0: colours #FFFF01/#33FF59/#FF1414,
+Text Opacity 0.95. Optional Shorts variant:
+`Karaoke/lyrics_karaoke_vertical_wide_scroll.shader`.
 
 Status legend: READY = analysed, waiting for the user's settings/image.
 TUNING = their settings received, fine-tune in progress. FINAL = agreed.

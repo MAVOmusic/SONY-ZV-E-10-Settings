@@ -1,6 +1,6 @@
-# CONTEXT.md — Sony ZV-E10 Streaming Setup (current, v1.12.1)
+# CONTEXT.md — Sony ZV-E10 Streaming Setup (current, v1.13.0)
 
-Last updated: 2026-10-18 (v1.12.1). This file is the single current-state summary.
+Last updated: 2026-10-18 (v1.13.0). This file is the single current-state summary.
 It supersedes `AI_HANDOFF_CONTEXT.md` (v1.3-era, kept for history only — do not
 trust its settings, branch notes, or "vision check" instructions).
 Update this file on EVERY settings change, together with `SETUP_CHECKLIST.md`,
@@ -53,7 +53,7 @@ and `README.md`.
   Aitum Vertical recording uses these main settings (its greyed "mp4"/6000
   is a placeholder). Vertical canvas: black-and-white filter is
   **intentional** (may become "no filter" by default in Step 8).
-- Sharpening: `OBS & Stream Files/SHADER/NEW/Sharpen/edge_aware_sharpen.shader`
+- Sharpening: `OBS & Stream Files/SHADER/NEW/Sharpen/edge_aware_sharpen_horizontal.shader (+ _vertical)`
   (Amount 2.0, Threshold 0.01, Radius 2.0) — confirmed working v1.9.6;
   keep it **first** in the filter list on each clone.
 - Lyrics (v1.10.0): Rocksmith lyric line is shown via Chroma Key

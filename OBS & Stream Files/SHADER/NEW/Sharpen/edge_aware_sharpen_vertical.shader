@@ -1,4 +1,4 @@
-// Edge-aware sharpen for the obs-shaderfilter plugin (v1.9.5: test switches added, defaults retuned for a 4K source)
+// Edge-aware sharpen VERTICAL for the obs-shaderfilter plugin (v1.9.5: test switches added, defaults retuned for a 4K source)
 // Why: the built-in Sharpen filter boosts every pixel difference, so sensor noise in dark areas gets louder.
 // This version (1) sharpens brightness only (no colour noise), (2) ignores small differences (noise)
 // and only boosts real edges ("coring" with a threshold), (3) sharpens less in dark areas, (4) limits halos.

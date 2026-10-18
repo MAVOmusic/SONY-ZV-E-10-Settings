@@ -73,12 +73,12 @@
 uniform float3 text_color<
     string label = "Text colour";
     string widget_type = "color";
-> = {1.0, 0.85, 0.0};
+> = {1.0, 1.0, 0.004}; // user exact #FFFF01
 
 uniform float3 highlight_color<
     string label = "Highlight colour (for coloured pixels in the source, e.g. sung syllable)";
     string widget_type = "color";
-> = {0.2, 1.0, 0.35};
+> = {0.2, 1.0, 0.349}; // user exact #33FF59
 
 uniform float3 outline_color<
     string label = "Outline colour";
@@ -131,7 +131,7 @@ uniform float bold_px<
     float minimum = 0.0;
     float maximum = 3.0;
     float step = 0.5;
-> = 1.0;
+> = 0.0;
 
 uniform float outline_px<
     string label = "Outline width (pixels, 0 = off)";
@@ -144,7 +144,7 @@ uniform float outline_px<
 uniform float3 outer_color<
     string label = "Outer border colour (second ring, outside the black outline)";
     string widget_type = "color";
-> = {1.0, 0.08, 0.08};
+> = {1.0, 0.078, 0.078}; // user exact #FF1414
 
 uniform float outer_px<
     string label = "Outer border width (pixels, 0 = off)";
@@ -152,7 +152,7 @@ uniform float outer_px<
     float minimum = 0.0;
     float maximum = 6.0;
     float step = 0.5;
-> = 3.0;
+> = 2.0;
 
 uniform float plate_opacity<
     string label = "Backing plate opacity (dark plate behind the whole line, 0 = off)";
@@ -176,7 +176,7 @@ uniform float text_opacity<
     float minimum = 0.0;
     float maximum = 1.0;
     float step = 0.05;
-> = 1.0;
+> = 0.95;
 
 uniform bool test_show_key<
     string label = "TEST: show cleaned key only (white = text, proves the shader is running)";

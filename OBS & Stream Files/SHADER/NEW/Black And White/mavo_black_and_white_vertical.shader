@@ -1,4 +1,4 @@
-// MAVO Black and White VERTICAL (mobile) for obs-shaderfilter (v1.12.0 - FINAL, defaults = vertical preset)
+// MAVO Black and White VERTICAL (mobile) for obs-shaderfilter (v1.13.0 - FINAL: standalone Sharpen always on, internal sharpen 0)
 // v1.11.2: user test of the v1 presets measured DARKER on the face than
 // the old saturation-0 (skin-band median 71 vs 98 horizontal; near-black
 // 31.5% vs 29.1%): the Contrast S-curve darkens everything below its
@@ -62,7 +62,7 @@ uniform float sharpen_amount<
     float minimum = 0.0;
     float maximum = 4.0;
     float step = 0.05;
-> = 1.8;
+> = 0.0;
 
 uniform float sharpen_threshold<
     string label = "Sharpen noise threshold (raise if grit appears)";
