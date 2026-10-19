@@ -1,6 +1,6 @@
-# CONTEXT.md — Sony ZV-E10 Streaming Setup (current, v1.14.0)
+# CONTEXT.md — Sony ZV-E10 Streaming Setup (current, v1.14.1)
 
-Last updated: 2026-10-18 (v1.14.0). This file is the single current-state summary.
+Last updated: 2026-10-18 (v1.14.1). This file is the single current-state summary.
 It supersedes `AI_HANDOFF_CONTEXT.md` (v1.3-era, kept for history only — do not
 trust its settings, branch notes, or "vision check" instructions).
 Update this file on EVERY settings change, together with `SETUP_CHECKLIST.md`,
