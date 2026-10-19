@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.15.0] - Look 2/25 Animate Me FINAL (real new-shader captures verified)
+- User re-sent correct captures (previous ones were the old frames, see v1.14.1). Measured vs old edge_detection frames: solid-white ink 20.4%->14.8% (H) and 15.4%->8.8% (V camera area), total ink 27.4%->23.8% (H) / 20.6%->14.4% (V), black sheet 64.7%->67.7% (H) / 73.6%->80.1% (V), grey anti-aliased line pixels up 7.0%->9.1% (H) - exactly the planned soft-ramp manga behaviour: fewer, cleaner lines, less speckle, outlines/bass/CD frames all readable in both views. Repo example JPGs replaced with the new captures. Look 2/25 FINAL with the memo values (H 0.05/0.13, V 0.065/0.15).
+
 ## [1.14.1] - Animate Me test images re-sent were the OLD frames (pixel-identical) - awaiting real new-shader captures
 - The two 'results' images received for look 2/25 are pixel-identical to the previous OLD-shader examples (mean abs difference 1.4/255 horizontal and 1.6/255 vertical = JPG q88 compression noise only; every stat matches exactly: white ink 20.4%, black 64.7% H). So they cannot be captures of the new mavo_manga_edges shader - either the old example files were re-attached, or the filter in OBS still loads OLD/edge_detection.shader. NOT marked final. Check for the user: the new filter's sliders are named Threshold / Softness / Line distance / Pre-blur (old one says Sensitivity). Re-send captures from the new shader to close look 2/25.
 

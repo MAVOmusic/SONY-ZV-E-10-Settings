@@ -72,8 +72,10 @@ ANIMATE ME (2/25) v1.14.0: user look = OLD/edge_detection.shader
 Sensitivity 0.05 both views (binary Sobel - code read). Ours:
 `Animate Me/mavo_manga_edges_horizontal.shader` (Threshold 0.05,
 Softness 0.13, Distance 2, Pre-blur 1.0) + `_vertical` (0.065/0.15).
-Simulation: 21.5% vs 29.8% edge coverage, speckle down. User A/B
-pending before FINAL. Original shader kept in OLD.
+Simulation: 21.5% vs 29.8% edge coverage, speckle down.
+User captures (the second send; first send was pixel-identical old
+frames): solid ink H 20.4->14.8%, V 15.4->8.8%; black 64.7->67.7% H,
+73.6->80.1% V. **FINAL v1.15.0.** Original shader kept in OLD.
 
 Status legend: READY = analysed, waiting for the user's settings/image.
 TUNING = their settings received, fine-tune in progress. FINAL = agreed.

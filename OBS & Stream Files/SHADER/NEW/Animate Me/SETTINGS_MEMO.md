@@ -17,4 +17,6 @@ Simulation on the user's colour frame: edge coverage 21.5% (new) vs 29.8%
 Use: white manga line-art on black for anime/retro/J-rock style songs,
 intros and alerts. Keep the always-on Sharpen in front (the pre-blur is
 designed for it). One knob in use: Threshold -0.01 = more lines,
-+0.01 = cleaner. Status: user A/B test pending.
++0.01 = cleaner. Status: FINAL (v1.15.0, user captures measured:
+solid ink H 20.4->14.8%, V 15.4->8.8% vs the old binary Sobel;
+black sheet 67.7% H / 80.1% V).
