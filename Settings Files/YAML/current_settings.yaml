@@ -231,3 +231,11 @@ shader_look_02_animate_me_v1_14_0:
 shader_look_02_final_v1_15_0:
   status: FINAL
   measured: {horizontal: {solid_ink_old_pct: 20.4, new: 14.8, black_old_pct: 64.7, new: 67.7}, vertical: {solid_ink_old_pct: 15.4, new: 8.8, black_old_pct: 73.6, new: 80.1}}
+
+shader_looks_03_04_burn_embers_v1_16_0:
+  status: "combined into MAVO Hellfire, built, awaiting user OBS test (not FINAL)"
+  user_originals:
+    burn: {file: "OLD/burn.shader", speed: 0.63, gradient_adjust: 0.85, dissolve: 2.0, animated: false, apply_to_channel: true, apply_smoke: true, smoke_h: 0.30, smoke_v: 0.17, iterations: 15, gradient: "OLD/burngradient_small.png", verdict: "red gradient multiply = flat dark-red wash, no flames"}
+    embers: {file: "OLD/embers.effect", animation_speed: 1.50, movement_h: 5.0, movement_v: 10.0, speed_percent: 5, layers: 15, luma_min_smooth: 0.15, alpha_percent: 99.9, apply_to_alpha: true, verdict: "full .effect, sparks only, cannot be a plain .shader"}
+  ours: {folder: "OBS & Stream Files/SHADER/NEW/Burn", horizontal: {flame_height: 0.35, flame_speed: 1.0, smoke: 0.35, embers: 0.8, hell_tint: 0.25}, vertical: {flame_height: 0.30, flame_speed: 1.0, smoke: 0.30, embers: 0.9, hell_tint: 0.25}, method: "hell tint + fbm fire-wave front (tongues, white core at base) + drifting smoke + embers flaring on picture edges (fake contact sparks; no depth in per-pixel shader)"}
+  size_note: ".git 121 MB - deleted 39 MB intake PNGs remain in dbaf6e0 history; deletions do not shrink .git; no history rewrite"

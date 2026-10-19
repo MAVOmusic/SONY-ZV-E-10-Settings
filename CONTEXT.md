@@ -1,6 +1,6 @@
-# CONTEXT.md — Sony ZV-E10 Streaming Setup (current, v1.15.0)
+# CONTEXT.md — Sony ZV-E10 Streaming Setup (current, v1.16.0)
 
-Last updated: 2026-10-18 (v1.15.0). This file is the single current-state summary.
+Last updated: 2026-10-19 (v1.16.0). This file is the single current-state summary.
 It supersedes `AI_HANDOFF_CONTEXT.md` (v1.3-era, kept for history only — do not
 trust its settings, branch notes, or "vision check" instructions).
 Update this file on EVERY settings change, together with `SETUP_CHECKLIST.md`,
@@ -169,3 +169,27 @@ clones) is in TUNING: dedicated `NEW/mavo_black_and_white.shader`;
 test 1 measured darker on the face than saturation-0 (S-curve pivot
 flaw), iteration-2 presets (Gamma 0.85, Contrast H 0.05 / V 0.08,
 Vertical sharpen down to 1.8) awaiting user test 2.
+
+## v1.16.0 (2026-10-19) - Looks 3+4 combined: MAVO Hellfire (built, awaiting test)
+User pushed the Burn + Embers intake (39 MB PNGs, dbaf6e0) and ordered
+most of it deleted: 21 PNGs removed, 9 keepers as JPG q88 in
+Image Files/JPG/Shaders/ (Burn/Embers/Burn With Embers examples H+V,
+both settings, gradient stroke). Staging folder deleted; burn.shader
+and embers.effect already existed byte-identical in SHADER/OLD, and
+burngradient_small.png now sits in OLD/ next to burn.shader.
+SIZE: working tree 31 MB excl. .git, but .git is 121 MB - the deleted
+39 MB remains in dbaf6e0 history; file deletions cannot shrink it and
+history rewrite is forbidden. Flagged to user.
+Read both originals: burn.shader (Speed 0.63, GradAdj 0.85, Dissolve
+2.0, Channel ON, Smoke ON, Iter 15) = red gradient multiply, flat
+dark-red wash, no flames. embers.effect (Speed 1.50, Move H5/V10,
+Layers 15, Alpha 99.9) = full .effect, sparks only, cannot be a
+plain .shader. Combined replacement: NEW/Burn/
+mavo_hellfire_horizontal.shader + _vertical.shader - hell tint,
+procedural fire waves (fbm flame front scrolling up, tongues with
+gaps, white core at base only), drifting smoke/fog, rising embers
+that flare on picture edges (silhouette/bass) to fake contact
+sparks (true collision impossible per-pixel). Presets H 0.35/1.0/
+0.35/0.8/0.25, V 0.30/1.0/0.30/0.9/0.25 (Flame/Speed/Smoke/Embers/
+Tint). Python simulation committed (Hellfire - Simulation.jpg).
+Status: awaiting user OBS test frames H+V; not FINAL.

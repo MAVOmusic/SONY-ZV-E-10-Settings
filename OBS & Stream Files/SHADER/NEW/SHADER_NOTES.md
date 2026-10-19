@@ -124,3 +124,13 @@ shader (where it's used: which clone/source, what mood/song it was
 made for). Fine-tune then: compare their example against simulations,
 propose per-order values, and record the FINAL values here and in
 `current_settings.yaml`.
+
+## Burn + Embers (looks 3/25 + 4/25) -> NEW/Burn/mavo_hellfire (v1.16.0, test pending)
+Combined per user brief (fire waves OR sparks added to burn / hell +
+smoke/fog combo). Originals stay in OLD/ (burn.shader is a red
+gradient-noise multiply - no flames at Dissolve 2.0; embers.effect is
+a full .effect, sparks only). Ours: hell tint + procedural fbm fire
+waves at the bottom + drifting smoke + embers flaring on picture
+edges (contact-spark illusion; no depth available per-pixel).
+Presets H 0.35/1.0/0.35/0.8/0.25, V 0.30/1.0/0.30/0.9/0.25. Details:
+NEW/Burn/SETTINGS_MEMO.md. Simulation: Hellfire - Simulation.jpg.
