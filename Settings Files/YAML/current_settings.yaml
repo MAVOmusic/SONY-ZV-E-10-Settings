@@ -222,3 +222,8 @@ stage_colour_pop_final_v1_13_4:
   status: "FINAL as a live look (not the default recording look)"
   measured: {mean_saturation: 0.409, baseline: 0.377, sat_p90: 0.882, clip_hi_pct: 0.86, baseline_clip_hi_pct: 0.86, skin_sat: 0.60}
   decision: "default 'no filter' recording = Sharpen ONLY (clean master, grade in edit); Pop stacked after Sharpen for colourful songs live. Pop vs Sharpen is not either/or - detail vs colour."
+
+shader_look_02_animate_me_v1_14_0:
+  user_look: {shader: "OLD/edge_detection.shader", sensitivity: 0.05, edge_color: "#FFFFFF", non_edge_color: "#00000000", all_else: off, same_both_views: true}
+  ours: {folder: "OBS & Stream Files/SHADER/NEW/Animate Me", horizontal: {threshold: 0.05, softness: 0.13, line_distance: 2.0, pre_blur: 1.0}, vertical: {threshold: 0.065, softness: 0.15, line_distance: 2.0, pre_blur: 1.0}, method: "pre-blur + 2px gradient + soft ramp (not binary Sobel)", simulation: {edge_coverage_new_pct: 21.5, old_pct: 29.8}}
+  status: user A/B test pending
